@@ -88,15 +88,6 @@
       "subtitle": "Collaborations that strengthen our mission",
       "names": ["Pousadas de Portugal", "University of Minho", "Partner 3", "Partner 4"]
     },
-    "nurses": {
-      "title": "Nurses",
-      "subtitle": "Healthcare professionals dedicated to your well-being",
-      "team": [
-        { "name": "Tatiana Imperadeiro", "role": "Technical Director / Rehabilitation Specialist Nurse" },
-        { "name": "Marina Lobo", "role": "Rehabilitation Nurse Specialist" },
-        { "name": "Ana Raquel Neves", "role": "Specialist in Rehabilitation Nursing" }
-      ]
-    },
     "contactSection": {
       "title": "Contact Us",
       "subtitle": "We\u2019re here to help. Get in touch with us",

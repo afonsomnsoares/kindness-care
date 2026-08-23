@@ -119,15 +119,6 @@
       "subtitle": "Colaborações que fortalecem a nossa missão",
       "names": ["Pousadas de Portugal", "Universidade do Minho", "Parceiro 3", "Parceiro 4"]
     },
-    "nurses": {
-      "title": "Enfermeiras",
-      "subtitle": "Profissionais de saúde dedicados ao seu bem-estar",
-      "team": [
-        { "name": "Tatiana Imperadeiro", "role": "Diretora técnica / Enfermeira Especialista em Reabilitação" },
-        { "name": "Marina Lobo", "role": "Enfermeira Especialista em Reabilitação" },
-        { "name": "Ana Raquel Neves", "role": "Especialista em Enfermagem de Reabilitação" }
-      ]
-    },
     "contactSection": {
       "title": "Contacte-nos",
       "subtitle": "Estamos aqui para ajudar. Entre em contacto connosco",

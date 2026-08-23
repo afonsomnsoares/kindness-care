@@ -12,9 +12,6 @@ import parceiro1 from '../images/partner-1.webp';
 import parceiro2 from '../images/partner-2.webp';
 import parceiro3 from '../images/partner-3.webp';
 import parceiro4 from '../images/image-11.webp';
-import enfermeiro1 from '../images/enfermeira-1.webp';
-import enfermeiro2 from '../images/enfermeira-2.webp';
-import enfermeiro3 from '../images/enfermeira-3.webp';
 
 function Home() {
   const { t } = useTranslation();
@@ -42,27 +39,6 @@ function Home() {
     { id: 2, nome: t('home.partners.names.1'), imagem: parceiro2 },
     { id: 3, nome: t('home.partners.names.2'), imagem: parceiro3 },
     { id: 4, nome: t('home.partners.names.3'), imagem: parceiro4 },
-  ];
-
-  const enfermeiros = [
-    {
-      id: 1,
-      nome: t('home.nurses.team.0.name'),
-      cargo: t('home.nurses.team.0.role'),
-      imagem: enfermeiro1,
-    },
-    {
-      id: 2,
-      nome: t('home.nurses.team.1.name'),
-      cargo: t('home.nurses.team.1.role'),
-      imagem: enfermeiro2,
-    },
-    {
-      id: 3,
-      nome: t('home.nurses.team.2.name'),
-      cargo: t('home.nurses.team.2.role'),
-      imagem: enfermeiro3,
-    },
   ];
 
   const services = [
@@ -257,38 +233,6 @@ function Home() {
                     alt={parceiro.nome}
                     className="partner-image"
                   />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SEÇÃO EQUIPA */}
-      <section className="nurses-section">
-        <div className="container-xxl py-5">
-          <div className="container">
-            <div className="text-center mb-5">
-              <h2 className="nurses-title">{t('home.nurses.title')}</h2>
-              <p className="nurses-subtitle">
-                {t('home.nurses.subtitle')}
-              </p>
-            </div>
-
-            <div className="nurses-grid">
-              {enfermeiros.map((enfermeiro) => (
-                <div key={enfermeiro.id} className="nurse-card">
-                  <div className="nurse-image-container">
-                    <img loading="lazy"
-                      src={enfermeiro.imagem}
-                      alt={enfermeiro.nome}
-                      className="nurse-image"
-                    />
-                  </div>
-                  <div className="nurse-info">
-                    <h3 className="nurse-name">{enfermeiro.nome}</h3>
-                    <p className="nurse-role">{enfermeiro.cargo}</p>
-                  </div>
                 </div>
               ))}
             </div>
