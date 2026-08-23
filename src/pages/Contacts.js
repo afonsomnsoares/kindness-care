@@ -1,24 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocalizedPath } from '../i18n/useLocalizedPath';
-import { useToast } from '../components/Toast';
 import { MetaTags } from '../components/MetaTags';
-import useAntiSpam from '../hooks/useAntiSpam';
+import useContactForm from '../hooks/useContactForm';
 import './Contacts.css';
+
+const INITIAL_DATA = {
+  nome: '',
+  email: '',
+  telefone: '',
+  assunto: '',
+  mensagem: ''
+};
+
+function buildPayload(formData) {
+  return {
+    _captcha: false,
+    _subject: 'Novo Contacto Website - ' + formData.nome,
+    nome: formData.nome,
+    email: formData.email,
+    telefone: formData.telefone || 'Não fornecido',
+    assunto: formData.assunto,
+    mensagem: formData.mensagem
+  };
+}
 
 function Contacts() {
   const { t } = useTranslation();
-  const addToast = useToast();
-  const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    telefone: '',
-    assunto: '',
-    mensagem: ''
+  const {
+    formData,
+    handleChange,
+    handleSubmit,
+    isSubmitting,
+    honeypot,
+    setHoneypot,
+  } = useContactForm({
+    initialData: INITIAL_DATA,
+    buildPayload,
+    successKey: 'contacts.form.successToast',
+    errorKey: 'contacts.form.errorToast',
   });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { honeypot, setHoneypot, isBot } = useAntiSpam();
 
   const contactSchema = {
     "@context": "https://schema.org",
@@ -30,58 +51,6 @@ function Contacts() {
       "name": "Kindness & Care",
       "telephone": "+351968844420",
       "email": "geral@kindnesscare.pt"
-    }
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (isBot()) {
-      addToast(t('contacts.form.successToast'), 'success');
-      setFormData({ nome: '', email: '', telefone: '', assunto: '', mensagem: '' });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('https://formsubmit.co/ajax/geral@kindnesscare.pt', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          _captcha: false,
-          _subject: 'Novo Contacto Website - ' + formData.nome,
-          nome: formData.nome,
-          email: formData.email,
-          telefone: formData.telefone || 'Não fornecido',
-          assunto: formData.assunto,
-          mensagem: formData.mensagem
-        })
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        addToast(t('contacts.form.successToast'), 'success');
-        setFormData({ nome: '', email: '', telefone: '', assunto: '', mensagem: '' });
-      } else {
-        throw new Error(result.message || 'Erro no envio');
-      }
-    } catch (error) {
-      addToast(t('contacts.form.errorToast'), 'error');
-    } finally {
-      setIsSubmitting(false);
     }
   };
 

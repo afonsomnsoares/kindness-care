@@ -2,30 +2,57 @@ import React, { useState, useRef, useEffect } from 'react';
 import ReactCountryFlag from "react-country-flag";
 import { useTranslation } from 'react-i18next';
 import { useLocalizedPath } from '../i18n/useLocalizedPath';
-import { useToast } from '../components/Toast';
 import { MetaTags } from '../components/MetaTags';
-import useAntiSpam from '../hooks/useAntiSpam';
+import useContactForm from '../hooks/useContactForm';
 import './Health-Tourism.css';
+
+const INITIAL_DATA = {
+  nome: '',
+  morada: '',
+  contactoTelefonico: '+351 ',
+  pais: 'PT',
+  email: '',
+  pousada: '',
+  dataInicio: '',
+  dataFim: '',
+  servicoSolicitado: ''
+};
+
+function buildPayload(formData) {
+  return {
+    _captcha: false,
+    _subject: 'Pedido Pousadas de Portugal - ' + formData.nome,
+    nome: formData.nome,
+    email: formData.email,
+    morada: formData.morada,
+    pais: formData.pais,
+    contacto: formData.contactoTelefonico,
+    pousada: formData.pousada,
+    check_in: formData.dataInicio,
+    check_out: formData.dataFim,
+    servico: formData.servicoSolicitado
+  };
+}
 
 function PousadasForm() {
   const { t } = useTranslation();
-  const addToast = useToast();
-  const [formData, setFormData] = useState({
-    nome: '',
-    morada: '',
-    contactoTelefonico: '+351 ',
-    pais: 'PT',
-    email: '',
-    pousada: '',
-    dataInicio: '',
-    dataFim: '',
-    servicoSolicitado: ''
+  const {
+    formData,
+    setFormData,
+    handleChange,
+    handleSubmit,
+    isSubmitting,
+    honeypot,
+    setHoneypot,
+  } = useContactForm({
+    initialData: INITIAL_DATA,
+    buildPayload,
+    successKey: 'healthTourism.form.successToast',
+    errorKey: 'healthTourism.form.errorToast',
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
   const dropdownRef = useRef(null);
-  const { honeypot, setHoneypot, isBot } = useAntiSpam();
 
   const pousadasSchema = {
     "@context": "https://schema.org",
@@ -217,14 +244,6 @@ function PousadasForm() {
     };
   }, []);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
   const handleCountrySelect = (pais) => {
     setFormData(prevState => ({
       ...prevState,
@@ -246,61 +265,6 @@ function PousadasForm() {
       contactoTelefonico: phoneNumber
     }));
   };
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  if (isBot()) {
-    addToast(t('healthTourism.form.successToast'), 'success');
-    setFormData({
-      nome: '', morada: '', contactoTelefonico: '+351 ', pais: 'PT',
-      email: '', pousada: '', dataInicio: '', dataFim: '', servicoSolicitado: ''
-    });
-    return;
-  }
-
-  setIsSubmitting(true);
-
-  try {
-    const response = await fetch('https://formsubmit.co/ajax/geral@kindnesscare.pt', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        _captcha: false,
-        _subject: 'Pedido Pousadas de Portugal - ' + formData.nome,
-        nome: formData.nome,
-        email: formData.email,
-        morada: formData.morada,
-        pais: formData.pais,
-        contacto: formData.contactoTelefonico,
-        pousada: formData.pousada,
-        check_in: formData.dataInicio,
-        check_out: formData.dataFim,
-        servico: formData.servicoSolicitado
-      })
-    });
-
-    const result = await response.json();
-
-    if (result.success) {
-      addToast(t('healthTourism.form.successToast'), 'success');
-      setFormData({
-        nome: '', morada: '', contactoTelefonico: '+351 ', pais: 'PT',
-        email: '', pousada: '', dataInicio: '', dataFim: '', servicoSolicitado: ''
-      });
-    } else {
-      throw new Error(result.message || 'Erro no envio');
-    }
-  } catch (error) {
-    addToast(t('healthTourism.form.errorToast'), 'error');
-  } finally {
-    setIsSubmitting(false);
-  }
-};
-
 
   const currentPais = paises.find(p => p.code === formData.pais);
 
