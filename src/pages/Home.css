@@ -1,0 +1,1267 @@
+/* Home Page */
+.home-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.50);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.hero-text {
+  max-width: 600px;
+  color: var(--color-heading);
+}
+
+.hero-main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: var(--color-text-muted);
+  max-width: 500px;
+  font-weight: 400;
+}
+
+.hero-contact-button {
+  background: var(--color-primary);
+  color: #ffffff;
+  border: 2px solid var(--color-primary);
+  padding: 12px 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.hero-contact-button:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(9, 67, 82, 0.3);
+}
+
+.hero-contact-button:active {
+  transform: translateY(0);
+}
+
+/* Seção Sobre Nós */
+.container-xxl {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.sobre-nos-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.sobre-nos-imagens {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.imagem-principal {
+  width: 85%;
+  align-self: flex-end;
+}
+
+.imagem-principal img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.imagem-principal img:hover {
+  transform: translateY(-5px);
+}
+
+.imagem-secundaria {
+  width: 60%;
+  align-self: flex-start;
+  margin-top: -20%;
+  position: relative;
+  z-index: 2;
+}
+
+.imagem-secundaria img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border: 8px solid white;
+}
+
+.imagem-secundaria img:hover {
+  transform: translateY(-5px);
+}
+
+.sobre-nos-texto {
+  flex: 1;
+}
+
+.sobre-nos-titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.sobre-nos-titulo::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
+  border-radius: 2px;
+}
+
+.sobre-nos-paragrafo {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.sobre-nos-paragrafo strong {
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+/* ===== SEÇÃO SERVIÇOS ===== */
+.services-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary), var(--color-secondary));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: -200% 0; }
+  50% { background-position: 200% 0; }
+}
+
+.services-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.services-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.services-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 4rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.service-card {
+  background: var(--color-secondary);
+  border: none;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 8px 25px rgba(126, 180, 197, 0.2),
+    0 4px 12px rgba(9, 67, 82, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(126, 180, 197, 0.3),
+    0 8px 25px rgba(9, 67, 82, 0.15);
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: var(--color-primary);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.service-icon i {
+  font-size: 2rem;
+  color: white;
+  transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+  background: var(--color-primary-dark);
+}
+
+.service-card:hover .service-icon i {
+  transform: scale(1.1);
+}
+
+.service-card h3 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: var(--color-primary);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.service-features li {
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.service-features li::before {
+  content: '✓';
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-right: 0.5rem;
+  opacity: 0.8;
+}
+
+.service-read-more {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  font-size: 14px;
+  width: fit-content;
+  align-self: center;
+}
+
+.service-read-more:hover {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(9, 67, 82, 0.3);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+/* ===== SEÇÃO PARCEIROS ===== */
+.partners-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.partners-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark), var(--color-accent));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.partners-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.partners-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
+  border-radius: 2px;
+}
+
+.partners-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  margin-bottom: 4rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.partner-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.partner-image {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.partner-item:hover .partner-image {
+  transform: scale(1.05);
+}
+
+/* ===== SEÇÃO EQUIPA DE ENFERMEIROS ===== */
+.nurses-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.nurses-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark), var(--color-accent));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.nurses-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.nurses-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
+  border-radius: 2px;
+}
+
+.nurses-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  margin-bottom: 4rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.nurses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nurse-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.nurse-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.nurse-image-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.nurse-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.nurse-card:hover .nurse-image {
+  transform: scale(1.05);
+}
+
+.nurse-info {
+  padding: 1.5rem;
+  text-align: center;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nurse-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 0.5rem;
+}
+
+.nurse-role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.nurse-experience {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+/* ===== SEÇÃO CONTACTO ATUALIZADA ===== */
+.contact-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary), var(--color-secondary));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.contact-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  margin-bottom: 4rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* Grid dos contactos lado a lado */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: var(--color-secondary);
+  border: none;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 8px 25px rgba(126, 180, 197, 0.2),
+    0 4px 12px rgba(9, 67, 82, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(126, 180, 197, 0.3),
+    0 8px 25px rgba(9, 67, 82, 0.15);
+}
+
+.contact-card:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: var(--color-primary);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.1);
+  background: var(--color-primary-dark);
+}
+
+.contact-icon i {
+  font-size: 2rem;
+  color: var(--color-secondary);
+}
+
+.contact-card-title {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.contact-info {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.contact-description {
+  color: var(--color-primary);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  opacity: 0.95;
+  flex-grow: 1;
+}
+
+/* BOTÕES DE CONTACTO ATUALIZADOS - IGUAIS AOS "LER MAIS" */
+.contact-button {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  font-size: 14px;
+  width: fit-content;
+  align-self: center;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.contact-button:hover {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(9, 67, 82, 0.3);
+}
+
+.contact-button:active {
+  transform: translateY(0);
+}
+
+/* ===== ÍCONE DO WHATSAPP FLUTUANTE ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-whatsapp);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+  z-index: 10000;
+  transition: all 0.3s ease;
+  animation: pulse-whatsapp 2s infinite;
+  border: 3px solid white;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7);
+}
+
+.whatsapp-icon {
+  font-size: 42px;
+  color: white;
+}
+
+/* Animação de pulsação */
+@keyframes pulse-whatsapp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* Tooltip */
+.whatsapp-tooltip {
+  position: absolute;
+  right: 90px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--color-whatsapp-dark);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-tooltip::after {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-left: 8px solid var(--color-whatsapp-dark);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-section {
+    height: 70vh;
+    min-height: 500px;
+  }
+  
+  .hero-main-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content {
+    padding: 0 30px;
+  }
+  
+  .sobre-nos-container {
+    gap: 3rem;
+  }
+  
+  .sobre-nos-titulo {
+    font-size: 2.2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .services-title {
+    font-size: 2.5rem;
+  }
+  
+  .partners-title {
+    font-size: 2.5rem;
+  }
+  
+  .partners-grid {
+    gap: 2rem;
+  }
+  
+  .nurses-title {
+    font-size: 2.5rem;
+  }
+  
+  .nurses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .contact-title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .whatsapp-float {
+    width: 75px;
+    height: 75px;
+    bottom: 25px;
+    right: 25px;
+  }
+  
+  .whatsapp-icon {
+    font-size: 38px;
+  }
+  
+  .whatsapp-float::before {
+    font-size: 14px;
+    padding: 10px 14px;
+    right: 85px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh;
+    min-height: 400px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding: 0 20px;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+  }
+  
+  .hero-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-contact-button {
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+  
+  .sobre-nos-container {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .sobre-nos-imagens {
+    width: 100%;
+    order: 2;
+  }
+  
+  .sobre-nos-texto {
+    width: 100%;
+    order: 1;
+  }
+  
+  .imagem-secundaria {
+    margin-top: -15%;
+  }
+  
+  .sobre-nos-titulo {
+    font-size: 2rem;
+  }
+  
+  .sobre-nos-paragrafo {
+    font-size: 1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .services-title {
+    font-size: 2.2rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .service-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .service-icon i {
+    font-size: 1.8rem;
+  }
+
+  .service-read-more {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+  
+  .partners-title {
+    font-size: 2.2rem;
+  }
+  
+  .partners-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .partners-grid {
+    gap: 1.5rem;
+  }
+  
+  .partner-image {
+    max-height: 100px;
+  }
+  
+  .nurses-title {
+    font-size: 2.2rem;
+  }
+  
+  .nurses-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .nurses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .nurse-info {
+    padding: 1.25rem;
+  }
+
+  .contact-title {
+    font-size: 2.2rem;
+  }
+  
+  .contact-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 500px;
+  }
+
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-card-title {
+    font-size: 1.3rem;
+  }
+
+  .contact-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .contact-icon i {
+    font-size: 1.8rem;
+  }
+
+  .contact-button {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
+  .hero-main-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-contact-button {
+    padding: 8px 25px;
+    font-size: 0.8rem;
+  }
+  
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .container-xxl {
+    padding: 0 15px;
+  }
+
+  .sobre-nos-titulo {
+    font-size: 1.8rem;
+  }
+
+  .sobre-nos-paragrafo {
+    font-size: 0.9rem;
+  }
+  
+  .imagem-secundaria {
+    margin-top: -10%;
+  }
+
+  .service-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .service-icon i {
+    font-size: 1.6rem;
+  }
+
+  .service-read-more {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+  
+  .partners-title {
+    font-size: 2rem;
+  }
+  
+  .partners-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .partners-grid {
+    gap: 1rem;
+  }
+  
+  .partner-image {
+    max-height: 80px;
+  }
+  
+  .nurses-title {
+    font-size: 2rem;
+  }
+  
+  .nurses-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .nurses-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .nurse-name {
+    font-size: 1.3rem;
+  }
+  
+  .nurse-role {
+    font-size: 1rem;
+  }
+  
+  .nurse-experience {
+    font-size: 0.9rem;
+  }
+  
+  .nurse-info {
+    padding: 1rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .contact-icon i {
+    font-size: 1.6rem;
+  }
+  
+  .contact-info {
+    font-size: 1.1rem;
+  }
+  
+  .contact-description {
+    font-size: 0.9rem;
+  }
+  
+  .contact-button {
+    padding: 8px 18px;
+    font-size: 12px;
+    min-width: 120px;
+  }
+
+  .whatsapp-float {
+    width: 65px;
+    height: 65px;
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .whatsapp-icon {
+    font-size: 30px;
+  }
+  
+  .whatsapp-float::before {
+    font-size: 12px;
+    padding: 6px 10px;
+    right: 75px;
+  }
+}

@@ -1,0 +1,548 @@
+.mission-values-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.mission-hero-section {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mission-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-hero-gradient-end) 100%);
+}
+
+.mission-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mission-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.mission-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.mission-hero-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Common Section Styles */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-hero-gradient-end) 100%);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Missão Section - ATUALIZADO para estilo da Home */
+.mission-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary), var(--color-secondary));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: -200% 0; }
+  50% { background-position: 200% 0; }
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.mission-card {
+  background: var(--color-secondary);
+  border: none;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 8px 25px rgba(126, 180, 197, 0.2),
+    0 4px 12px rgba(9, 67, 82, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  will-change: transform;
+}
+
+.mission-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(126, 180, 197, 0.3),
+    0 8px 25px rgba(9, 67, 82, 0.15);
+}
+
+.mission-card:hover::before {
+  transform: scaleX(1);
+}
+
+.mission-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: var(--color-primary);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.mission-card:hover .mission-icon {
+  transform: scale(1.1);
+  background: var(--color-primary-dark);
+}
+
+.mission-icon i {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.mission-card p {
+  color: var(--color-primary);
+  line-height: 1.7;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* Objetivos Section - ATUALIZADO para estilo da Home */
+.objectives-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.objectives-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary), var(--color-secondary));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.objective-card {
+  background: var(--color-secondary);
+  border: none;
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 8px 25px rgba(126, 180, 197, 0.2),
+    0 4px 12px rgba(9, 67, 82, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  will-change: transform;
+}
+
+.objective-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.objective-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(126, 180, 197, 0.3),
+    0 8px 25px rgba(9, 67, 82, 0.15);
+}
+
+.objective-card:hover::before {
+  transform: scaleX(1);
+}
+
+.objective-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.3;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  line-height: 1;
+}
+
+.objective-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.objective-description {
+  color: var(--color-primary);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* Valores Section - ATUALIZADO para estilo da Home */
+.values-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.values-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary), var(--color-secondary));
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.value-item {
+  background: var(--color-secondary);
+  border: none;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 
+    0 8px 25px rgba(126, 180, 197, 0.2),
+    0 4px 12px rgba(9, 67, 82, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  will-change: transform;
+}
+
+.value-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 40px rgba(126, 180, 197, 0.3),
+    0 8px 25px rgba(9, 67, 82, 0.15);
+}
+
+.value-item:hover::before {
+  transform: scaleX(1);
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: var(--color-primary);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.value-item:hover .value-icon {
+  transform: scale(1.1);
+  background: var(--color-primary-dark);
+}
+
+.value-icon i {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.value-item h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.value-item p {
+  color: var(--color-primary);
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* CTA Section */
+.mission-cta-section {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-hero-gradient-end) 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.mission-cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+  color: white;
+}
+
+.mission-cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.mission-cta-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.mission-cta-button {
+  background: white;
+  color: var(--color-primary);
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mission-cta-button:hover {
+  background: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design - ATUALIZADO */
+@media (max-width: 768px) {
+  .mission-hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .mission-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .mission-grid,
+  .objectives-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .mission-card,
+  .objective-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .value-item {
+    padding: 2rem 1.5rem;
+  }
+  
+  .mission-icon,
+  .value-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .mission-icon i,
+  .value-icon i {
+    font-size: 1.8rem;
+  }
+  
+  .objective-number {
+    font-size: 2.5rem;
+  }
+  
+  .mission-cta-title {
+    font-size: 2rem;
+  }
+  
+  .mission-cta-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-card,
+  .objective-card,
+  .value-item {
+    padding: 1.5rem 1rem;
+  }
+  
+  .mission-icon,
+  .value-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .mission-icon i,
+  .value-icon i {
+    font-size: 1.5rem;
+  }
+  
+  .objective-number {
+    font-size: 2rem;
+    top: 0.5rem;
+    right: 1rem;
+  }
+}
+
+/* Otimizações de performance */
+.mission-card,
+.objective-card,
+.value-item {
+  will-change: transform;
+}
+
+/* Suporte para reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .mission-card,
+  .objective-card,
+  .value-item {
+    transition: none;
+  }
+  
+  .mission-section::before,
+  .objectives-section::before,
+  .values-section::before {
+    animation: none;
+  }
+  
+  .mission-card:hover,
+  .objective-card:hover,
+  .value-item:hover {
+    transform: none;
+  }
+}

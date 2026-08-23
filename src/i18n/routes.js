@@ -1,0 +1,36 @@
+const routes = {
+  pt: {
+    home: '/',
+    history: '/historia',
+    valueProposal: '/proposta-de-valor',
+    mission: '/missao-objetivos-valores',
+    homeCare: '/apoio-domiciliario',
+    nursing: '/enfermagem-reabilitacao',
+    medical: '/assistencia-medica',
+    caregiver: '/apoio-cuidador-familia',
+    postpartum: '/apoio-pos-parto',
+    contacts: '/contactos',
+    healthTourism: '/turismo-saude-bem-estar',
+    pousadas: '/pousadas-portugal',
+    privacy: '/privacidade',
+    terms: '/termos',
+  },
+  en: {
+    home: '/en',
+    history: '/en/history',
+    valueProposal: '/en/value-proposal',
+    mission: '/en/mission-objectives-values',
+    homeCare: '/en/home-care',
+    nursing: '/en/nursing-rehabilitation',
+    medical: '/en/medical-assistance',
+    caregiver: '/en/caregiver-support',
+    postpartum: '/en/postpartum-support',
+    contacts: '/en/contacts',
+    healthTourism: '/en/health-tourism',
+    pousadas: '/en/pousadas-portugal',
+    privacy: '/en/privacy',
+    terms: '/en/terms',
+  },
+};
+
+export default routes;

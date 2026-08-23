@@ -1,0 +1,324 @@
+{
+  "topbar": {
+    "locations": "Atuamos em:",
+    "cities": "Braga | Guimarães | Viana do Castelo",
+    "availability": "Disponível 24h",
+    "allDays": "todos os dias do ano"
+  },
+  "nav": {
+    "home": "INÍCIO",
+    "history": "A NOSSA HISTÓRIA",
+    "kindnessCare": "KINDNESS & CARE",
+    "valueProposal": "Proposta de Valor",
+    "missionObjectivesValues": "Missão | Objetivos | Valores",
+    "services": "SERVIÇOS",
+    "homeCare": "Apoio Domiciliário",
+    "nursingRehabilitation": "Enfermagem e Reabilitação",
+    "medicalAssistance": "Assistência Médica",
+    "caregiverSupport": "Apoio ao Cuidador e Família",
+    "postpartumSupport": "Apoio Pós Parto",
+    "healthTourism": "Turismo de Saúde e Bem-Estar",
+    "pousadasPortugal": "Pousadas de Portugal",
+    "language": "IDIOMA",
+    "portuguese": "Português",
+    "english": "Inglês",
+    "contact": "CONTACTOS",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "mainMenu": "Menu principal"
+  },
+  "footer": {
+    "description": "Cuidados de saúde ao domicílio com excelência técnica e humana. Spin-off da Universidade do Minho.",
+    "quickLinks": "Links Rápidos",
+    "home": "Início",
+    "history": "A Nossa História",
+    "valueProposal": "Proposta de Valor",
+    "mission": "Missão | Objetivos | Valores",
+    "services": "Serviços",
+    "homeCare": "Apoio Domiciliário",
+    "nursing": "Enfermagem e Reabilitação",
+    "medical": "Assistência Médica",
+    "caregiver": "Apoio ao Cuidador",
+    "postpartum": "Apoio Pós Parto",
+    "healthTourism": "Turismo de Saúde",
+    "contacts": "Contactos",
+    "contactTitle": "Contactos",
+    "phone1": "+351 968 844 420",
+    "phone2": "+351 933 929 761",
+    "email": "geral@kindnesscare.pt",
+    "location": "Braga | Guimarães | Viana do Castelo",
+    "hours": "Disponível 24h • todos os dias do ano",
+    "rights": "Todos os direitos reservados.",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos e Condições"
+  },
+  "home": {
+    "hero": {
+      "title": "Care brings humanity",
+      "subtitle": "Humanity defines Kindness & Care",
+      "description": "A nossa equipa é formada por profissionais experientes e com formação técnica e humana de elevada qualidade.",
+      "button": "Contacto"
+    },
+    "about": {
+      "title": "Sobre Nós",
+      "alt1": "Equipa de cuidados de saúde",
+      "alt2": "Cuidados ao domicílio",
+      "paragraphs": [
+        "A Kindness & Care presta serviços de apoio ao domicílio a pessoas com perda de funcionalidade e consequente dependência para o autocuidado, que necessitem de suporte profissional especializado. Integra profissionais de saúde envolvidos na sua formação e que trabalham em equipa sob a liderança de um gestor de caso. Atuam na capacitação do familiar cuidador para que este possa exercer o seu papel de forma saudável, sustentável e autónoma.",
+        "Somos uma Spin-off da Universidade do Minho (UM), e o nosso objetivo é transferir o conhecimento gerado na universidade, colocando esse conhecimento ao serviço da comunidade.",
+        "Com uma equipa de profissionais qualificados e experientes, a Kindness & Care presta um serviço de apoio ao domicílio 24 horas por dia, 7 dias por semana.",
+        "Embora a Kindness & Care tenha nascido como um projeto centrado no apoio domiciliário, a estratégia da empresa passa pela procura constante de novos segmentos de mercado. Identificamos no turismo de saúde e bem-estar uma oportunidade de crescimento sustentável, que nos permite aproveitar o know-how, a experiência adquirida e a qualidade dos profissionais que dispomos ao serviço do cuidado e das necessidades dos turistas que procuram conforto, segurança e qualidade de vida durante as suas estadias.",
+        "Em outubro de 2025, a Kindness & Care estabeleceu uma parceria estratégica com as Pousadas de Portugal, marca ícone da hospitalidade nacional. Esta colaboração surge do reconhecimento mútuo de valores como a qualidade, o cuidado e a atenção genuína ao bem-estar de cada pessoa.",
+        "Esta parceria abrange as Pousadas de Viana do Castelo, Guimarães, Santa Maria do Bouro."
+      ]
+    },
+    "services": {
+      "title": "Os Nossos Serviços",
+      "subtitle": "Cuidados de saúde especializados no conforto do seu lar",
+      "cards": [
+        {
+          "title": "Apoio Domiciliário",
+          "description": "Cuidados no lar, promovendo conforto, higiene e bem-estar diário.",
+          "features": ["Cuidados pessoais e higiene", "Apoio na alimentação", "Companhia e supervisão", "Tarefas domésticas"],
+          "button": "Ler Mais"
+        },
+        {
+          "title": "Enfermagem e Reabilitação",
+          "description": "Acompanhamento focado na recuperação física e funcional, promovendo autonomia e mobilidade.",
+          "features": ["Cuidados de enfermagem", "Exercícios de reabilitação", "Gestão de medicação", "Avaliação e plano individual de cuidados"],
+          "button": "Ler Mais"
+        },
+        {
+          "title": "Assistência Médica",
+          "description": "Atendimento clínico profissional, com diagnósticos precisos, acompanhamento médico e cuidados personalizados.",
+          "features": ["Consultas médicas domiciliárias", "Diagnóstico e tratamento", "Acompanhamento especializado", "Articulação com os serviços de saúde"],
+          "button": "Ler Mais"
+        },
+        {
+          "title": "Apoio ao Cuidador e Família",
+          "description": "Orientação, escuta e suporte emocional para familiares e cuidadores, promovendo equilíbrio, informação e qualidade no cuidado diário.",
+          "features": ["Orientação e suporte emocional", "Escuta ativa e acompanhamento", "Capacitação do cuidador familiar", "Promoção do equilíbrio familial"],
+          "button": "Ler Mais"
+        },
+        {
+          "title": "Apoio Pós Parto",
+          "description": "Cuidado especializado para mães e recém-nascidos, promovendo recuperação física, bem-estar emocional e apoio nas rotinas do bebê, no conforto do lar.",
+          "features": ["Cuidados à mãe e recém-nascido", "Apoio na recuperação pós-parto", "Orientação em amamentação", "Auxílio nas rotinas do bebê"],
+          "button": "Ler Mais"
+        },
+        {
+          "title": "Turismo de Saúde e Bem-Estar",
+          "description": "Serviços personalizados de cuidados pessoais e de saúde aos hóspedes das Pousadas de Viana do Castelo, Guimarães, Santa Maria do Bouro.",
+          "features": ["Apoio no autocuidado", "Reabilitação (motora e respiratória)", "Tratamento de feridas", "Administração de injetaveis", "Apoio na toma de medicação", "Apoio a famílias com membros com necessidades especiais"],
+          "button": "Ler Mais"
+        }
+      ]
+    },
+    "partners": {
+      "title": "Os Nossos Parceiros",
+      "subtitle": "Colaborações que fortalecem a nossa missão",
+      "names": ["Pousadas de Portugal", "Universidade do Minho", "Parceiro 3", "Parceiro 4"]
+    },
+    "nurses": {
+      "title": "Enfermeiras",
+      "subtitle": "Profissionais de saúde dedicados ao seu bem-estar",
+      "team": [
+        { "name": "Tatiana Imperadeiro", "role": "Diretora técnica / Enfermeira Especialista em Reabilitação" },
+        { "name": "Marina Lobo", "role": "Enfermeira Especialista em Reabilitação" },
+        { "name": "Ana Raquel Neves", "role": "Especialista em Enfermagem de Reabilitação" }
+      ]
+    },
+    "contactSection": {
+      "title": "Contacte-nos",
+      "subtitle": "Estamos aqui para ajudar. Entre em contacto connosco",
+      "phone": { "title": "Telefone", "info": "+351 968 844 420", "description": "Disponível 24 horas por dia, 7 dias por semana", "button": "Ligar Agora" },
+      "email": { "title": "Email", "info": "geral@kindnesscare.pt", "description": "Respondemos a todas as suas questões em 24 horas", "button": "Enviar Email" }
+    },
+    "whatsappTooltip": "Fale connosco no WhatsApp",
+    "whatsappMessage": "Olá! Gostaria de obter mais informações sobre os vossos serviços."
+  },
+  "history": {
+    "hero": { "title": "A Nossa História", "subtitle": "A jornada de cuidado, empatia e propósito que deu origem à Kindness & Care" },
+    "sections": [
+      {
+        "title": "O momento que mudou tudo",
+        "paragraphs": [
+          "No início de 2025 perdi a minha mãe. Foi um momento de profunda dor. Uma queda em 2023 deixou a minha mãe com dificuldade em andar. A partir desse momento, foi progressivamente perdendo capacidade funcional para o autocuidado, obrigando a família a procurar um serviço de apoio domiciliário que a ajudasse a efetuar a sua higiene pessoal.",
+          "Foram dois anos de recurso a empresas de SAD (Serviço de Apoio Domiciliário) que nos possibilitou ver, em todas a que recorremos, um serviço dominado por profissionais com poucos conhecimentos técnicos, com rotinas mecânicas, profissionais apressados, com pouca atenção às emoções da minha mãe e quase nenhuma preocupação em perceber quem ela ainda era: uma mulher com uma história, com expetativas e memórias que mereciam ser cuidadas com ternura."
+        ]
+      },
+      {
+        "title": "A frustração que virou propósito",
+        "paragraphs": [
+          "Ver a falta de humanidade — e até de alguma competência — nos cuidados diários prestados à minha mãe ao longo daqueles dois anos deixou-nos revoltados. Não conseguíamos compreender nem aceitar que os serviços oferecidos pela maioria das empresas no mercado não correspondessem às necessidades e expetativas de quem deles depende (clientes e seus familiares).",
+          "A frustração deu lugar a uma pergunta simples e urgente: «E se fosse diferente? E se existisse um serviço que combinasse competência técnica e calor humano verdadeiro, um serviço com humanidade?»"
+        ]
+      },
+      {
+        "title": "Nasce a Kindness & Care",
+        "paragraphs": [
+          "Foi essa pergunta que se transformou em missão. Em vez de mais uma empresa de apoio domiciliário, eu e a minha mulher quisemos criar um projeto que, com foco na competência técnica dos profissionais, colocasse a pessoa em primeiro lugar.",
+          "Em que cada cuidador não fosse apenas um prestador de serviço, mas um companheiro de jornada. Em que cada visita fosse uma oportunidade para escutar o utente, ouvir as suas histórias, escutar os seus medos e expetativas, celebrar pequenas conquistas, promovendo a dignidade."
+        ]
+      },
+      {
+        "title": "O nosso compromisso de excelência e humanidade",
+        "commitments": [
+          { "title": "Excelência clínica", "description": "com profissionais competentes e experientes nesta área, com formação contínua e protocolos atualizados;" },
+          { "title": "Calor humano", "description": "com cuidadores selecionados pela empatia, conscientes da importância de que um sorriso vale mais do que mil palavras;" },
+          { "title": "Personalização", "description": "porque cada história de vida é única, adaptamos o cuidado ao ritmo, aos gostos e às memórias de quem servimos." }
+        ]
+      },
+      {
+        "title": "A homenagem que inspira o nosso dia a dia",
+        "paragraphs": [
+          "Desde o despoletar da ideia até à criação da empresa decorreu ano e meio. Embora a Kindness & Care não tenha conseguido cuidar da minha mãe, levo-a sempre no coração. Cada gesto de atenção para cada um dos nossos utentes é uma homenagem àquele olhar de ternura que perdemos – e um compromisso para que outras famílias não sintam as mesmas sensações que a nossa sentiu."
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Junte-se a nós nesta missão",
+      "text": "Se procura um Serviço de Apoio Domiciliário que concilia competência técnica com humanidade venha falar connosco. Na Kindness & Care cada história importa – e a sua também.",
+      "button": "Contacte-nos"
+    }
+  },
+  "valueProposal": {
+    "hero": { "title": "A Nossa Proposta de Valor", "subtitle": "O Que Nos Diferencia e Como Garantimos o Melhor Serviço para Nossos Clientes" },
+    "cards": [
+      { "title": "Serviço Personalizado", "description": "Apostamos num conhecimento profundo do cliente para antecipar e apresentar soluções ajustadas." },
+      { "title": "Profissionais Qualificados", "description": "Os nossos profissionais são especializados, garantindo segurança e qualidade nos serviços prestados." },
+      { "title": "Transparência e Informação", "description": "Fornecemos relatórios de evolução do estado de saúde para garantir acompanhamento rigoroso." },
+      { "title": "Formação Contínua", "description": "Investimos no desenvolvimento técnico e humano dos nossos colaboradores." },
+      { "title": "Atendimento Aberto", "description": "Mantemos canais de comunicação acessíveis com clientes e famílias." },
+      { "title": "Avaliação de Satisfação", "description": "Realizamos avaliações periódicas para assegurar a qualidade do serviço." }
+    ]
+  },
+  "missionValues": {
+    "hero": { "title": "Missão, Objetivos e Valores", "subtitle": "Os princípios que guiam o nosso trabalho e a nossa relação com a comunidade" },
+    "mission": { "title": "A Nossa Missão", "cards": [
+      "Proporcionar cuidados ao domicílio de excelência a pessoas idosas ou com comprometimento no autocuidado, garantindo bem-estar, autonomia e qualidade de vida.",
+      "Oferecer um serviço inovador com qualidade técnica e humana, beneficiando da transferência de conhecimento gerado na academia."
+    ]},
+    "objectives": { "title": "Objetivos", "cards": [
+      { "number": "01", "title": "Referência Nacional", "description": "Ser referência nacional na prestação de cuidados domiciliários, destacando-nos pela qualidade, inovação e compromisso." },
+      { "number": "02", "title": "Ligação Academia-Sociedade", "description": "Queremos ser um elo entre a academia e a sociedade, elevando o serviço de cuidados à pessoa." }
+    ]},
+    "values": { "title": "Os Nossos Valores", "items": [
+      { "title": "Excelência", "description": "Serviço de alta qualidade baseado nas melhores práticas e formação contínua." },
+      { "title": "Humanização", "description": "Cuidados centrados na pessoa, com respeito, empatia e dignidade." },
+      { "title": "Inovação", "description": "Aplicamos conhecimento académico na melhoria contínua do serviço." },
+      { "title": "Compromisso", "description": "Atuamos com ética, responsabilidade e dedicação." },
+      { "title": "Consistência", "description": "Manter um padrão de qualidade estável e confiável." },
+      { "title": "Comunidade", "description": "Promovemos o bem-estar e o impacto positivo na sociedade." }
+    ]}
+  },
+  "homeCare": {
+    "hero": { "title": "Apoio Domiciliário", "subtitle": "Cuidados personalizados no conforto do seu lar" },
+    "content": { "title": "Apoio Domiciliário", "description": "Prestamos serviço de apoio domiciliário a pessoas que necessitem de ajuda para a companhia e estimulação cognitiva, acompanhamento a consultas, entre outros. O nosso objetivo é contribuir para que a pessoa continue a ter condições para permanecer em sua casa, junto da sua família, com dignidade.", "alt": "Apoio Domiciliário - Cuidados em casa" }
+  },
+  "nursingRehabilitation": {
+    "hero": { "title": "Enfermagem e Reabilitação", "subtitle": "Cuidados especializados no conforto do seu lar" },
+    "content": { "title": "Enfermagem e Reabilitação", "description": "Uma equipa de profissionais competentes assegura cuidados de enfermagem e de enfermagem de reabilitação (reabilitação motora, respiratória entre outras) no domicílio.", "alt": "Enfermagem e Reabilitação domiciliária" }
+  },
+  "medicalAssistance": {
+    "hero": { "title": "Assistência Médica", "subtitle": "Consultas médicas no conforto do seu lar" },
+    "content": { "title": "Assistência Médica", "description": "Um médico de medicina interna assegura uma consulta médica no conforto do seu lar, evitando recurso a deslocação às Instituições de Saúde.", "alt": "Assistência Médica domiciliária" }
+  },
+  "caregiverSupport": {
+    "hero": { "title": "Apoio ao Cuidador e Família", "subtitle": "Suporte especializado para quem cuida" },
+    "content": { "title": "Apoio ao Cuidador e Família", "description": "Capacitamos o cuidador para que se sinta preparado para cuidar do seu familiar e com suporte para as suas dúvidas e necessidades.", "alt": "Apoio ao cuidador e família" }
+  },
+  "postpartumSupport": {
+    "hero": { "title": "Apoio no Pós-Parto", "subtitle": "Cuidados especializados para mãe e recém-nascido" },
+    "content": { "title": "Apoio no Pós-Parto", "description": "Apoio à mãe e recém-nascido no período pós-parto, contribuindo para o equilíbrio familiar numa altura de transição desafiante para toda a família.", "alt": "Apoio no pós-parto para mãe e recém-nascido" }
+  },
+  "healthTourismService": {
+    "hero": { "title": "Turismo e Saúde e Bem Estar", "subtitle": "Cuidados de saúde especializados em ambientes únicos de Portugal" },
+    "content": {
+      "title": "Turismo e Saúde e Bem Estar",
+      "description": "A Kindness & Care em parceria com as Pousadas de Portugal passa a disponibilizar serviços personalizados de cuidados pessoais de saúde durante a estadia nas Pousadas de Viana do Castelo, Guimarães, Santa Maria do Bouro, Gerês, reforçando o compromisso de proporcionar experiências únicas, seguras e personalizadas, onde o conforto do corpo e da alma se encontram.",
+      "intro": "Entre os serviços prestados contam-se:",
+      "features": [
+        "Apoio no Autocuidado (Cuidados de Higiene, Alimentação, etc.)",
+        "Reabilitação (Motora e Respiratória)",
+        "Tratamento de feridas",
+        "Administração de Injetáveis",
+        "Apoio na toma da medicação",
+        "Descanso do cuidador",
+        "Apoio à Família (Pós-Parto, Famílias com crianças e/ou idosos com necessidades especiais)",
+        "Acompanhamento (Incluindo passeios) e estimulação cognitiva de pessoas idosas",
+        "Consulta Médica"
+      ],
+      "alt": "Apoio ao cuidador e família"
+    },
+    "cta": {
+      "title": "Como aceder aos nossos serviços?",
+      "text": "Preencha o formulário e entraremos em contacto para explicar como funcionam os nossos serviços de forma a ir ao encontro das suas necessidades.",
+      "button": "Preencher Formulário"
+    }
+  },
+  "contacts": {
+    "hero": { "title": "Contactos", "subtitle": "Estamos aqui para ajudar. Entre em contacto connosco." },
+    "info": {
+      "title": "Entre em Contacto",
+      "description": "Tem alguma questão ou precisa dos nossos serviços? Não hesite em contactar-nos através dos meios abaixo ou preencha o formulário."
+    },
+    "form": {
+      "title": "Envie-nos uma Mensagem",
+      "submitButton": "Enviar Mensagem",
+      "submittingButton": "A enviar...",
+      "successToast": "Mensagem enviada com sucesso! Entraremos em contacto brevemente.",
+      "errorToast": "Erro ao enviar a mensagem. Por favor, tente novamente ou contacte-nos diretamente através do email/telefone."
+    }
+  },
+  "healthTourism": {
+    "hero": { "title": "Pousadas de Portugal", "subtitle": "Solicite os nossos serviços durante a sua estadia" },
+    "form": {
+      "title": "Pedido de Serviço",
+      "subtitle": "Preencha o formulário abaixo para solicitar os nossos serviços durante a sua estadia numa das Pousadas de Portugal.",
+      "submitButton": "Enviar Pedido",
+      "submittingButton": "A enviar...",
+      "successToast": "Pedido enviado com sucesso! Entraremos em contacto em breve.",
+      "errorToast": "Erro ao enviar o pedido. Por favor, tente novamente."
+    }
+  },
+  "privacy": {
+    "hero": { "title": "Política de Privacidade", "subtitle": "Como tratamos e protegemos os seus dados" },
+    "updated": "Última atualização: junho de 2026",
+    "sections": [
+      { "heading": "1. Introdução", "paragraphs": ["A Kindness & Care (doravante \"nós\", \"nosso\" ou \"empresa\") está comprometida com a proteção da privacidade dos seus clientes, parceiros e visitantes do nosso site. A presente Política de Privacidade explica como recolhemos, utilizamos, partilhamos e protegemos os seus dados pessoais, em conformidade com o Regulamento Geral de Proteção de Dados (RGPD) e a legislação portuguesa aplicável."] },
+      { "heading": "2. Responsável pelo Tratamento", "paragraphs": ["Kindness & Care", "Email: geral@kindnesscare.pt", "Telefone: +351 968 844 420"] },
+      { "heading": "3. Dados que Recolhemos", "paragraphs": ["Podemos recolher os seguintes dados pessoais:"], "list": ["Dados de identificação: nome completo, data de nascimento, número de identificação fiscal (quando necessário);", "Dados de contacto: morada, número de telefone, endereço de email;", "Dados de saúde: informação clínica relevante para a prestação dos nossos serviços (apenas com consentimento explícito);", "Dados de navegação: endereço IP, tipo de browser, páginas visitadas, duração da visita (através de cookies);", "Dados de faturação: informações necessárias para emissão de faturas e processamento de pagamentos."] },
+      { "heading": "4. Finalidades do Tratamento", "paragraphs": ["Utilizamos os seus dados para as seguintes finalidades:"], "list": ["Prestação de serviços de apoio domiciliário e cuidados de saúde;", "Gestão de pedidos de informação e orçamentos;", "Comunicação sobre agendamentos, alterações de serviços e informações relevantes;", "Cumprimento de obrigações legais e fiscais;", "Melhoria dos nossos serviços e experiência do utilizador no site;", "Envio de comunicações informativas (apenas com consentimento)."] },
+      { "heading": "5. Base Legal para o Tratamento", "paragraphs": ["O tratamento dos seus dados pessoais é realizado com base nas seguintes bases legais:"], "list": ["Consentimento: para dados de saúde e comunicações de marketing;", "Execução de contrato: para a prestação dos serviços contratados;", "Cumprimento de obrigação legal: para faturação e obrigações fiscais;", "Interesse legítimo: para melhoria dos nossos serviços e segurança do site."] },
+      { "heading": "6. Partilha de Dados", "paragraphs": ["Não partilhamos os seus dados pessoais com terceiros, exceto quando necessário para a prestação dos serviços (como entidades de saúde parceiras), para cumprimento de obrigações legais, ou com o seu consentimento explícito."] },
+      { "heading": "7. Prazo de Conservação", "paragraphs": ["Conservamos os seus dados pessoais pelo período necessário para cumprir as finalidades para as quais foram recolhidos, incluindo o cumprimento de obrigações legais (nomeadamente fiscais, pelo período de 10 anos) e a defesa de direitos em caso de litígio."] },
+      { "heading": "8. Os Seus Direitos", "paragraphs": ["Ao abrigo do RGPD, tem os seguintes direitos:"], "list": ["Direito de acesso: saber que dados tratamos e como;", "Direito de retificação: solicitar a correção de dados inexatos;", "Direito ao apagamento: solicitar a eliminação dos seus dados (exceto quando a lei obrigue à sua conservação);", "Direito à limitação: solicitar a limitação do tratamento;", "Direito de oposição: opor-se ao tratamento para certas finalidades;", "Direito à portabilidade: receber os dados num formato estruturado;", "Direito a retirar consentimento: a qualquer momento, sem comprometer a licitude do tratamento efetuado até essa data."] },
+      { "heading": "9. Segurança", "paragraphs": ["Implementamos medidas técnicas e organizativas adequadas para proteger os seus dados pessoais contra acesso não autorizado, perda, destruição ou divulgação. O nosso site utiliza HTTPS para garantir a segurança da transmissão de dados."] },
+      { "heading": "10. Cookies", "paragraphs": ["O nosso site utiliza cookies essenciais para o seu funcionamento. Pode configurar o seu browser para bloquear ou alertar sobre cookies, mas algumas funcionalidades do site podem ficar indisponíveis."] },
+      { "heading": "11. Alterações a esta Política", "paragraphs": ["Reservamo-nos o direito de atualizar esta Política de Privacidade em qualquer momento. As alterações serão publicadas nesta página com a data de atualização correspondente. Recomendamos a consulta periódica desta página."] },
+      { "heading": "12. Contacto e Autoridade de Controlo", "paragraphs": ["Se tiver dúvidas sobre esta Política de Privacidade ou sobre o tratamento dos seus dados, contacte-nos através do email geral@kindnesscare.pt.", "Caso considere que os seus direitos não foram respeitados, tem o direito de apresentar reclamação à Comissão Nacional de Proteção de Dados (CNPD) — www.cnpd.pt."] }
+    ]
+  },
+  "terms": {
+    "hero": { "title": "Termos e Condições", "subtitle": "Regras de utilização dos nossos serviços e website" },
+    "updated": "Última atualização: junho de 2026",
+    "sections": [
+      { "heading": "1. Âmbito e Aceitação", "paragraphs": ["Os presentes Termos e Condições regulam a utilização do website da Kindness & Care (doravante \"site\") e a contratação dos serviços de apoio domiciliário e cuidados de saúde prestados pela empresa. A utilização do site implica a aceitação plena e sem reservas destes Termos e Condições."] },
+      { "heading": "2. Identificação da Empresa", "paragraphs": ["Kindness & Care", "Email: geral@kindnesscare.pt", "Telefone: +351 968 844 420", "Spin-off da Universidade do Minho"] },
+      { "heading": "3. Serviços Prestados", "paragraphs": ["A Kindness & Care presta os seguintes serviços:"], "list": ["Apoio Domiciliário;", "Enfermagem e Reabilitação;", "Assistência Médica;", "Apoio ao Cuidador e Família;", "Apoio Pós Parto;", "Turismo de Saúde e Bem-Estar (em parceria com as Pousadas de Portugal)."] },
+      { "heading": "4. Utilização do Site", "paragraphs": ["Ao utilizar o nosso site, compromete-se a:"], "list": ["Fornecer informações verdadeiras, precisas e atualizadas nos formulários;", "Não utilizar o site para fins ilegais ou não autorizados;", "Não interferir com a segurança ou funcionamento do site;", "Não reproduzir, distribuir ou modificar conteúdos sem autorização prévia."] },
+      { "heading": "5. Propriedade Intelectual", "paragraphs": ["Todo o conteúdo do site (textos, imagens, logótipos, gráficos) é propriedade exclusiva da Kindness & Care ou dos seus parceiros, estando protegido pelas leis de propriedade intelectual. É proibida a reprodução, distribuição ou utilização não autorizada sem consentimento prévio por escrito."] },
+      { "heading": "6. Limitação de Responsabilidade", "paragraphs": ["A Kindness & Care não se responsabiliza por danos decorrentes da utilização inadequada do site, falhas técnicas fora do seu controlo, ou informações imprecisas fornecidas pelo utilizador. As informações no site são de caráter geral e não substituem aconselhamento médico personalizado."] },
+      { "heading": "7. Links Externos", "paragraphs": ["O nosso site pode conter links para sites de terceiros. Não nos responsabilizamos pelo conteúdo ou práticas de privacidade desses sites. A utilização de links externos é da responsabilidade do utilizador."] },
+      { "heading": "8. Alterações aos Serviços e Termos", "paragraphs": ["Reservamo-nos o direito de modificar os nossos serviços, preços e estes Termos e Condições a qualquer momento. As alterações serão comunicadas oportunamente e publicadas nesta página."] },
+      { "heading": "9. Lei Aplicável e Foro", "paragraphs": ["Estes Termos e Condições são regidos pela lei portuguesa. Qualquer litígio decorrente da interpretação ou execução destes termos será submetido ao foro da comarca de Braga, com renúncia expressa a qualquer outro."] },
+      { "heading": "10. Contacto", "paragraphs": ["Para esclarecimentos sobre estes Termos e Condições, contacte-nos através do email geral@kindnesscare.pt ou do telefone +351 968 844 420."] }
+    ]
+  },
+  "notFound": {
+    "heading": "Página Não Encontrada",
+    "message": "A página que procura não existe ou foi movida.",
+    "button": "Voltar ao Início"
+  }
+}

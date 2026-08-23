@@ -1,0 +1,81 @@
+.topbar {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary) 100%);
+  color: #ffffff;
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.topbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e8f5e8;
+}
+
+.topbar-icon {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.topbar-item strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.topbar-contacts {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topbar-separator {
+  width: 1px;
+  height: 16px;
+  background: #4a7058;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 6px 0;
+    font-size: 12px;
+  }
+  
+  .topbar-container {
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 15px;
+  }
+  
+  .topbar-contacts {
+    gap: 10px;
+  }
+  
+  .topbar-separator {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    font-size: 11px;
+  }
+  
+  .topbar-item {
+    gap: 5px;
+  }
+  
+  .topbar-icon {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.kindnesscare.pt/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/en</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/historia</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/historia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/history" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/proposta-de-valor</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/proposta-de-valor" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/value-proposal" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/missao-objetivos-valores</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/missao-objetivos-valores" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/mission-objectives-values" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/apoio-domiciliario</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/apoio-domiciliario" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/home-care" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/enfermagem-reabilitacao</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/enfermagem-reabilitacao" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/nursing-rehabilitation" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/assistencia-medica</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/assistencia-medica" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/medical-assistance" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/apoio-cuidador-familia</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/apoio-cuidador-familia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/caregiver-support" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/apoio-pos-parto</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/apoio-pos-parto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/postpartum-support" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/turismo-saude-bem-estar</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/turismo-saude-bem-estar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/health-tourism" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/pousadas-portugal</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/pousadas-portugal" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/pousadas-portugal" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/contactos</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/contactos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/contacts" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/privacidade</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/privacidade" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/privacy" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.kindnesscare.pt/termos</loc>
+    <lastmod>2026-06-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.kindnesscare.pt/termos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.kindnesscare.pt/en/terms" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

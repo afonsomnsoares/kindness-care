@@ -1,0 +1,210 @@
+{
+  "topbar": {
+    "locations": "We operate in:",
+    "cities": "Braga | Guimarães | Viana do Castelo",
+    "availability": "Available 24/7",
+    "allDays": "all year round"
+  },
+  "nav": {
+    "home": "HOME",
+    "history": "OUR HISTORY",
+    "kindnessCare": "KINDNESS & CARE",
+    "valueProposal": "Value Proposal",
+    "missionObjectivesValues": "Mission | Objectives | Values",
+    "services": "SERVICES",
+    "homeCare": "Home Care",
+    "nursingRehabilitation": "Nursing and Rehabilitation",
+    "medicalAssistance": "Medical Assistance",
+    "caregiverSupport": "Caregiver and Family Support",
+    "postpartumSupport": "Postpartum Support",
+    "healthTourism": "Health and Wellness Tourism",
+    "pousadasPortugal": "Pousadas de Portugal",
+    "language": "LANGUAGE",
+    "portuguese": "Portuguese",
+    "english": "English",
+    "contact": "CONTACTS",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainMenu": "Main menu"
+  },
+  "footer": {
+    "description": "Home healthcare with technical excellence and human warmth. Spin-off of the University of Minho.",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "history": "Our History",
+    "valueProposal": "Value Proposal",
+    "mission": "Mission | Objectives | Values",
+    "services": "Services",
+    "homeCare": "Home Care",
+    "nursing": "Nursing and Rehabilitation",
+    "medical": "Medical Assistance",
+    "caregiver": "Caregiver Support",
+    "postpartum": "Postpartum Support",
+    "healthTourism": "Health Tourism",
+    "contacts": "Contacts",
+    "contactTitle": "Contact",
+    "phone1": "+351 968 844 420",
+    "phone2": "+351 933 929 761",
+    "email": "geral@kindnesscare.pt",
+    "location": "Braga | Guimarães | Viana do Castelo",
+    "hours": "Available 24/7 • all year round",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions"
+  },
+  "home": {
+    "hero": {
+      "title": "Care brings humanity",
+      "subtitle": "Humanity defines Kindness & Care",
+      "description": "Our team is made up of experienced professionals with high-quality technical and human training.",
+      "button": "Contact Us"
+    },
+    "about": {
+      "title": "About Us",
+      "alt1": "Healthcare team",
+      "alt2": "Home care",
+      "paragraphs": [
+        "Kindness & Care provides home support services to people experiencing loss of functionality and consequent dependence for self-care who require specialized professional assistance. The team includes healthcare professionals involved in ongoing training and working together under the leadership of a case manager. They focus on empowering family caregivers so they can carry out their role in a healthy, sustainable, and autonomous way.",
+        "We are a Spin-off of the University of Minho (UM), and our goal is to transfer the knowledge generated within the university, putting that knowledge at the service of the community.",
+        "With a team of qualified and experienced professionals, Kindness & Care provides home support services 24 hours a day, 7 days a week.",
+        "Although Kindness & Care was originally created as a project focused on home support, the company\u2019s strategy is based on the continuous pursuit of new market segments. We have identified health and wellness tourism as an opportunity for sustainable growth, allowing us to leverage our know-how, experience, and the high quality of our professionals to meet the care needs of tourists seeking comfort, safety, and quality of life during their stay.",
+        "In October 2025, Kindness & Care established a strategic partnership with Pousadas de Portugal, an iconic brand in Portuguese hospitality. This collaboration stems from the mutual recognition of shared values \u2014 genuine quality, care, and attention to the well-being of each person."
+      ]
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Specialized healthcare in the comfort of your home",
+      "cards": [
+        { "title": "Home Support", "description": "Care at home, promoting comfort, hygiene, and daily well-being.", "features": ["Personal care and hygiene", "Assistance with meals", "Companionship and supervision", "Light household tasks"], "button": "Read More" },
+        { "title": "Nursing and Rehabilitation", "description": "Support focused on physical and functional recovery, promoting autonomy and mobility.", "features": ["Nursing care", "Rehabilitation exercises", "Medication management", "Ongoing assessment"], "button": "Read More" },
+        { "title": "Medical Assistance", "description": "Professional clinical care, providing accurate diagnoses, medical follow-up, and personalized treatment.", "features": ["Home medical consultations", "Diagnosis and treatment", "Specialized follow-up", "Coordination with hospitals"], "button": "Read More" },
+        { "title": "Caregiver and Family Support", "description": "Guidance, listening, and emotional support for families and caregivers, promoting balance, knowledge, and quality in daily care.", "features": ["Guidance and emotional support", "Active listening and follow-up", "Training for family caregivers", "Promotion of family balance"], "button": "Read More" },
+        { "title": "Postpartum Support", "description": "Specialized care for mothers and newborns, promoting physical recovery, emotional well-being, and assistance with baby routines — all in the comfort of home.", "features": ["Care for mother and newborn", "Support for postpartum recovery", "Guidance on breastfeeding", "Assistance with baby routines"], "button": "Read More" },
+        { "title": "Health and Wellness Tourism", "description": "Through the partnership with Pousadas de Portugal, Kindness & Care now offers personalized personal care and health services to guests during their stay at the Pousadas of Viana do Castelo | Guimarães | Santa Maria do Bouro, reinforcing the commitment to providing unique, safe, and human-centered experiences where the comfort of body and soul come together.", "features": [], "button": "Read More" }
+      ]
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "Collaborations that strengthen our mission",
+      "names": ["Pousadas de Portugal", "University of Minho", "Partner 3", "Partner 4"]
+    },
+    "nurses": {
+      "title": "Nurses",
+      "subtitle": "Healthcare professionals dedicated to your well-being",
+      "team": [
+        { "name": "Tatiana Imperadeiro", "role": "Technical Director / Rehabilitation Specialist Nurse" },
+        { "name": "Marina Lobo", "role": "Rehabilitation Nurse Specialist" },
+        { "name": "Ana Raquel Neves", "role": "Specialist in Rehabilitation Nursing" }
+      ]
+    },
+    "contactSection": {
+      "title": "Contact Us",
+      "subtitle": "We\u2019re here to help. Get in touch with us",
+      "phone": { "title": "Phone", "info": "+351 968 844 420", "description": "Available 24 hours a day, 7 days a week", "button": "Call Now" },
+      "email": { "title": "Email", "info": "geral@kindnesscare.pt", "description": "We respond to all inquiries within 24 hours", "button": "Send Email" }
+    },
+    "whatsappTooltip": "Chat with us on WhatsApp",
+    "whatsappMessage": "Hello! I would like more information about your services."
+  },
+  "history": {
+    "hero": { "title": "Our Story", "subtitle": "The journey of care, empathy, and purpose that gave rise to Kindness & Care" },
+    "sections": [
+      { "title": "The Moment That Changed Everything", "paragraphs": ["At the beginning of 2025, I lost my mother. It was a moment of profound pain. A fall in 2023 left my mother with difficulty walking. From that moment on, she gradually lost functional capacity for self-care, forcing the family to seek a home support service to assist her with personal hygiene.", "It was two years of relying on home support service companies (SAD), which allowed us to see, in every service we used, a care system dominated by professionals with limited technical knowledge, mechanical routines, rushed staff, little attention to my mother's emotions, and almost no concern for understanding who she still was: a woman with a story, with expectations and memories that deserved to be cared for with tenderness."] },
+      { "title": "The Frustration That Turned into Purpose", "paragraphs": ["Seeing the lack of humanity\u2014and even of some competence\u2014in the daily care provided to my mother over those two years left us outraged. We could neither understand nor accept that the services offered by most companies on the market did not meet the needs and expectations of those who rely on them (clients and their families).", "The frustration gave rise to a simple and urgent question: \u00abWhat if it were different? What if there were a service that combined technical competence with genuine human warmth, a service with humanity?\u00bb"] },
+      { "title": "Kindness & Care Is Born", "paragraphs": ["It was that question that turned into our mission. Instead of creating just another home support company, my wife and I wanted to build a project that, while focusing on the technical competence of professionals, would put the person first.", "Where each caregiver would not be just a service provider, but a companion on the journey. Where every visit would be an opportunity to truly listen to the client \u2014 to hear their stories, understand their fears and expectations, and celebrate small victories \u2014 always upholding their dignity."] },
+      { "title": "Our Commitment to Excellence and Humanity", "commitments": [{ "title": "Clinical Excellence", "description": "With skilled and experienced professionals in this field, continuous training, and up-to-date protocols." }, { "title": "Human Warmth", "description": "With caregivers chosen for their empathy, aware of the importance of the belief that \u00aba smile is worth more than a thousand words.\u00bb" }, { "title": "Personalization", "description": "Because every life story is unique, we tailor our care to the pace, preferences, and memories of those we serve." }] },
+      { "title": "The Tribute That Inspires Our Everyday Work", "paragraphs": ["From the spark of the idea to the creation of the company, a year and a half went by. Although Kindness & Care was not able to care for my mother, I carry her in my heart always. Every gesture of care toward each of our clients is a tribute to that look of tenderness we lost \u2014 and a commitment to ensure that other families do not experience the same feelings ours did."] }
+    ],
+    "cta": { "title": "Join us in this mission", "text": "If you\u2019re looking for a Home Support Service that combines technical expertise with genuine humanity, come talk to us. At Kindness & Care, every story matters \u2014 including yours.", "button": "Contact Us" }
+  },
+  "valueProposal": {
+    "hero": { "title": "Our Value Proposition", "subtitle": "What Sets Us Apart and How We Ensure the Best Service for Our Clients" },
+    "cards": [
+      { "title": "Customized Service", "description": "We bet on an in-depth knowledge of the customer to anticipate and present tailored solutions." },
+      { "title": "Qualified Professionals", "description": "Our professionals are specialized, ensuring safety and quality in the services provided." },
+      { "title": "Transparency and Information", "description": "We provide health status progress reports to ensure rigorous monitoring." },
+      { "title": "Continuous Training", "description": "We invest in the technical and personal development of our employees." },
+      { "title": "Open Service", "description": "We maintain accessible communication channels with clients and families." },
+      { "title": "Satisfaction Assessment", "description": "We conduct periodic evaluations to ensure service quality." }
+    ]
+  },
+  "missionValues": {
+    "hero": { "title": "Mission | Objectives | Values", "subtitle": "The principles that guide our work and our relationship with the community" },
+    "mission": { "title": "Our Mission", "cards": ["To provide excellent home care for the elderly or individuals with impaired self-care abilities, ensuring well-being, autonomy, and quality of life.", "To deliver an innovative service with technical and human quality, benefiting from the knowledge transfer generated in academia."] },
+    "objectives": { "title": "Objectives", "cards": [{ "number": "01", "title": "National Benchmark", "description": "To become the national benchmark in home care provision, distinguished by our quality, innovation, and commitment." }, { "number": "02", "title": "Academia-Society Connection", "description": "We aim to serve as a bridge between academia and society, elevating personal care services." }] },
+    "values": { "title": "Our Values", "items": [{ "title": "Excellence", "description": "High-quality service based on best practices and continuous training." }, { "title": "Humanization", "description": "Person-centered care with respect, empathy, and dignity." }, { "title": "Innovation", "description": "We apply academic knowledge to the continuous improvement of our services." }, { "title": "Commitment", "description": "We operate with ethics, responsibility, and dedication." }, { "title": "Consistency", "description": "Maintaining a stable and reliable quality standard." }, { "title": "Community", "description": "We promote well-being and positive societal impact." }] }
+  },
+  "homeCare": {
+    "hero": { "title": "Home Care", "subtitle": "Personalized care in the comfort of your home" },
+    "content": { "title": "Home Care", "description": "We provide home support services to individuals who require assistance with companionship and cognitive stimulation, accompaniment to appointments, among other needs. Our goal is to help individuals maintain the conditions to remain in their own homes, with their families, with dignity.", "alt": "Home Care - Care at home" }
+  },
+  "nursingRehabilitation": {
+    "hero": { "title": "Nursing and Rehabilitation", "subtitle": "Specialized care in the comfort of your home" },
+    "content": { "title": "Nursing and Rehabilitation", "description": "A team of skilled professionals provides nursing and rehabilitation nursing care (including motor and respiratory rehabilitation, among others) at home.", "alt": "Home Nursing and Rehabilitation" }
+  },
+  "medicalAssistance": {
+    "hero": { "title": "Medical Assistance", "subtitle": "Medical consultations in the comfort of your home" },
+    "content": { "title": "Medical Assistance", "description": "An internal medicine physician provides medical consultations in the comfort of your home, eliminating the need for travel to healthcare facilities.", "alt": "Home Medical Assistance" }
+  },
+  "caregiverSupport": {
+    "hero": { "title": "Caregiver and Family Support", "subtitle": "Specialized support for those who care" },
+    "content": { "title": "Caregiver and Family Support", "description": "We empower caregivers to feel prepared in caring for their family members and provide support for their questions and needs.", "alt": "Caregiver and family support" }
+  },
+  "postpartumSupport": {
+    "hero": { "title": "Postpartum Support", "subtitle": "Specialized care for mother and newborn" },
+    "content": { "title": "Postpartum Support", "description": "Support for the mother and newborn during the postpartum period, helping to maintain family balance during a challenging time of transition for the entire family.", "alt": "Postpartum support for mother and newborn" }
+  },
+  "healthTourismService": {
+    "hero": { "title": "Tourism and Health and Wellness", "subtitle": "Tourism and Health and Wellness" },
+    "content": { "title": "Tourism and Health and Wellness", "description": "Kindness & Care, in partnership with Pousadas de Portugal, will now offer personalized personal healthcare services during stays at the Pousadas in Viana do Castelo, Guimarães, and Santa Maria do Bouro. This reinforces our commitment to providing unique, safe, and personalized experiences, where the comfort of body and soul come together.", "intro": "Among the services provided are:", "features": ["Self-Care Assistance (Hygiene, Meals, etc.)", "Rehabilitation (Motor and Respiratory)", "Wound Care", "Administration of Injections", "Medication Management Support", "Respite Care for Caregivers", "Family Support (Postpartum, Families with Children and/or Seniors with Special Needs)", "Senior Companion Services (Including Outings) and Cognitive Stimulation", "Medical Consultations"], "alt": "Caregiver and family support" },
+    "cta": { "title": "How to access our services?", "text": "Fill out the form and we will contact you to explain how our services work in order to meet your needs.", "button": "Fill Form" }
+  },
+   "contacts": {
+     "hero": { "title": "Contacts", "subtitle": "We're here to help. Get in touch with us." },
+     "info": { "title": "Get in Touch", "description": "Do you have any questions or need our services? Don't hesitate to contact us through the options below or fill out the form." },
+     "form": { "title": "Send Us a Message", "submitButton": "Send Message", "submittingButton": "Sending...", "successToast": "Message sent successfully! We will contact you shortly.", "errorToast": "Error sending message. Please try again or contact us directly via email/phone." }
+   },
+  "healthTourism": {
+    "hero": { "title": "Pousadas de Portugal", "subtitle": "Request our services during your stay" },
+    "form": { "title": "Service Request", "subtitle": "Fill out the form below to request our services during your stay at one of the Pousadas de Portugal.", "submitButton": "Submit Request", "submittingButton": "Sending...", "successToast": "Request submitted successfully. We will contact you shortly.", "errorToast": "Error submitting request. Please try again." }
+  },
+  "privacy": {
+    "hero": { "title": "Privacy Policy", "subtitle": "How we handle and protect your data" },
+    "updated": "Last updated: June 2026",
+    "sections": [
+      { "heading": "1. Introduction", "paragraphs": ["Kindness & Care (hereinafter \"we\", \"our\" or \"the company\") is committed to protecting the privacy of its clients, partners, and website visitors. This Privacy Policy explains how we collect, use, share, and protect your personal data, in compliance with the General Data Protection Regulation (GDPR) and applicable Portuguese law."] },
+      { "heading": "2. Data Controller", "paragraphs": ["Kindness & Care", "Email: geral@kindnesscare.pt", "Phone: +351 968 844 420"] },
+      { "heading": "3. Data We Collect", "paragraphs": ["We may collect the following personal data:"], "list": ["Identification data: full name, date of birth, tax identification number (when required);", "Contact data: address, phone number, email address;", "Health data: relevant clinical information for service provision (only with explicit consent);", "Browsing data: IP address, browser type, visited pages, visit duration (via cookies);", "Billing data: information required for invoicing and payment processing."] },
+      { "heading": "4. Purposes of Processing", "paragraphs": ["We use your data for the following purposes:"], "list": ["Provision of home care and healthcare services;", "Management of information requests and quotes;", "Communication regarding appointments, service changes, and relevant information;", "Compliance with legal and tax obligations;", "Improvement of our services and website user experience;", "Sending informational communications (only with consent)."] },
+      { "heading": "5. Legal Basis for Processing", "paragraphs": ["Your personal data is processed based on the following legal bases:"], "list": ["Consent: for health data and marketing communications;", "Contract execution: for the provision of contracted services;", "Legal obligation: for invoicing and tax obligations;", "Legitimate interest: for improving our services and website security."] },
+      { "heading": "6. Data Sharing", "paragraphs": ["We do not share your personal data with third parties, except when necessary for service provision (such as partner healthcare entities), to comply with legal obligations, or with your explicit consent."] },
+      { "heading": "7. Retention Period", "paragraphs": ["We retain your personal data for as long as necessary to fulfill the purposes for which it was collected, including compliance with legal obligations (notably tax obligations, for a period of 10 years) and the defense of rights in legal disputes."] },
+      { "heading": "8. Your Rights", "paragraphs": ["Under the GDPR, you have the following rights:"], "list": ["Right of access: to know what data we process and how;", "Right to rectification: to request correction of inaccurate data;", "Right to erasure: to request deletion of your data (except where law requires retention);", "Right to restriction: to request limitation of processing;", "Right to object: to object to processing for certain purposes;", "Right to data portability: to receive data in a structured format;", "Right to withdraw consent: at any time, without affecting the lawfulness of processing carried out prior to withdrawal."] },
+      { "heading": "9. Security", "paragraphs": ["We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, loss, destruction, or disclosure. Our website uses HTTPS to ensure secure data transmission."] },
+      { "heading": "10. Cookies", "paragraphs": ["Our website uses essential cookies for its operation. You can configure your browser to block or alert you about cookies, but some website features may become unavailable."] },
+      { "heading": "11. Changes to This Policy", "paragraphs": ["We reserve the right to update this Privacy Policy at any time. Changes will be published on this page with the corresponding update date. We recommend periodic consultation of this page."] },
+      { "heading": "12. Contact and Supervisory Authority", "paragraphs": ["If you have questions about this Privacy Policy or about the processing of your data, contact us at geral@kindnesscare.pt.", "If you believe your rights have not been respected, you have the right to lodge a complaint with the Comissão Nacional de Proteção de Dados (CNPD) — www.cnpd.pt."] }
+    ]
+  },
+  "terms": {
+    "hero": { "title": "Terms and Conditions", "subtitle": "Rules for using our services and website" },
+    "updated": "Last updated: June 2026",
+    "sections": [
+      { "heading": "1. Scope and Acceptance", "paragraphs": ["These Terms and Conditions govern the use of the Kindness & Care website (hereinafter \"site\") and the contracting of home care and healthcare services provided by the company. Use of the site implies full and unreserved acceptance of these Terms and Conditions."] },
+      { "heading": "2. Company Identification", "paragraphs": ["Kindness & Care", "Email: geral@kindnesscare.pt", "Phone: +351 968 844 420", "Spin-off of the University of Minho"] },
+      { "heading": "3. Services Provided", "paragraphs": ["Kindness & Care provides the following services:"], "list": ["Home Care;", "Nursing and Rehabilitation;", "Medical Assistance;", "Caregiver and Family Support;", "Postpartum Support;", "Health and Wellness Tourism (in partnership with Pousadas de Portugal)."] },
+      { "heading": "4. Website Use", "paragraphs": ["By using our site, you agree to:"], "list": ["Provide true, accurate, and up-to-date information in forms;", "Not use the site for illegal or unauthorized purposes;", "Not interfere with the security or operation of the site;", "Not reproduce, distribute, or modify content without prior authorization."] },
+      { "heading": "5. Intellectual Property", "paragraphs": ["All content on the site (texts, images, logos, graphics) is the exclusive property of Kindness & Care or its partners, protected by intellectual property laws. Unauthorized reproduction, distribution, or use is prohibited without prior written consent."] },
+      { "heading": "6. Limitation of Liability", "paragraphs": ["Kindness & Care is not liable for damages arising from improper use of the site, technical failures beyond its control, or inaccurate information provided by the user. The information on the site is of a general nature and does not replace personalized medical advice."] },
+      { "heading": "7. External Links", "paragraphs": ["Our site may contain links to third-party websites. We are not responsible for the content or privacy practices of those sites. Use of external links is at the user\u2019s own risk."] },
+      { "heading": "8. Changes to Services and Terms", "paragraphs": ["We reserve the right to modify our services, prices, and these Terms and Conditions at any time. Changes will be communicated in a timely manner and published on this page."] },
+      { "heading": "9. Applicable Law and Jurisdiction", "paragraphs": ["These Terms and Conditions are governed by Portuguese law. Any dispute arising from the interpretation or execution of these terms shall be submitted to the jurisdiction of the district of Braga, with express waiver of any other."] },
+      { "heading": "10. Contact", "paragraphs": ["For clarification on these Terms and Conditions, contact us at geral@kindnesscare.pt or by phone at +351 968 844 420."] }
+    ]
+  },
+  "notFound": {
+    "heading": "Page Not Found",
+    "message": "The page you are looking for does not exist or has been moved.",
+    "button": "Back to Home"
+  }
+}
