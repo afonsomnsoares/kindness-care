@@ -130,7 +130,7 @@
 }
 
 /* Seção CTA - ATUALIZADA para combinar com History */
-.value-cta-section {
+.tourism-cta-section {
   text-align: center;
   padding: 4rem 2rem;
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-hero-gradient-start) 100%);
@@ -140,25 +140,25 @@
   max-width: 1200px;
 }
 
-.value-cta-content {
+.tourism-cta-content {
   max-width: 700px;
   margin: 0 auto;
 }
 
-.value-cta-title {
+.tourism-cta-title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
 
-.value-cta-text {
+.tourism-cta-text {
   font-size: 1.2rem;
   margin: 0 auto 2rem;
   opacity: 0.9;
   line-height: 1.6;
 }
 
-.value-cta-button {
+.tourism-cta-button {
   background: white;
   color: var(--color-primary);
   border: none;
@@ -173,7 +173,7 @@
   display: inline-block;
 }
 
-.value-cta-button:hover {
+.tourism-cta-button:hover {
   background: #f0f0f0;
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
@@ -202,11 +202,11 @@
     font-size: 1.8rem;
   }
   
-  .value-cta-title {
+  .tourism-cta-title {
     font-size: 2rem;
   }
   
-  .value-cta-text {
+  .tourism-cta-text {
     font-size: 1rem;
   }
 }
@@ -220,12 +220,12 @@
     font-size: 2rem;
   }
   
-  .value-cta-section {
+  .tourism-cta-section {
     padding: 3rem 1rem;
     margin: 2rem 1rem;
   }
   
-  .value-cta-button {
+  .tourism-cta-button {
     padding: 10px 25px;
     font-size: 1rem;
   }

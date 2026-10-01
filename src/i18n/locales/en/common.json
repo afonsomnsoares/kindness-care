@@ -50,7 +50,8 @@
     "hours": "Available 24/7 • all year round",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms and Conditions"
+    "terms": "Terms and Conditions",
+    "cookieSettings": "Cookie settings"
   },
   "home": {
     "hero": {
@@ -152,12 +153,47 @@
   },
    "contacts": {
      "hero": { "title": "Contacts", "subtitle": "We're here to help. Get in touch with us." },
-     "info": { "title": "Get in Touch", "description": "Do you have any questions or need our services? Don't hesitate to contact us through the options below or fill out the form." },
-     "form": { "title": "Send Us a Message", "submitButton": "Send Message", "submittingButton": "Sending...", "successToast": "Message sent successfully! We will contact you shortly.", "errorToast": "Error sending message. Please try again or contact us directly via email/phone." }
+     "info": { "title": "Get in Touch", "description": "Do you have any questions or need our services? Don't hesitate to contact us through the options below or fill out the form.", "phone": "Phone", "email": "Email", "location": "Location" },
+     "form": {
+       "title": "Send Us a Message",
+       "name": "Full Name",
+       "namePlaceholder": "Your full name",
+       "email": "Email",
+       "emailPlaceholder": "your@email.com",
+       "phone": "Phone",
+       "phonePlaceholder": "+351 XXX XXX XXX",
+       "subject": "Subject",
+       "subjectPlaceholder": "Select a subject",
+       "subjects": {
+         "homeCare": "Home Care",
+         "nursing": "Nursing and Rehabilitation",
+         "medical": "Medical Assistance",
+         "caregiver": "Caregiver Support",
+         "postpartum": "Postpartum Support",
+         "pousadas": "Pousadas de Portugal",
+         "other": "Other"
+       },
+       "message": "Message",
+       "messagePlaceholder": "Describe how we can help you...", "submitButton": "Send Message", "submittingButton": "Sending...", "successToast": "Message sent successfully! We will contact you shortly.", "errorToast": "Error sending message. Please try again or contact us directly via email/phone." }
    },
   "healthTourism": {
     "hero": { "title": "Pousadas de Portugal", "subtitle": "Request our services during your stay" },
-    "form": { "title": "Service Request", "subtitle": "Fill out the form below to request our services during your stay at one of the Pousadas de Portugal.", "submitButton": "Submit Request", "submittingButton": "Sending...", "successToast": "Request submitted successfully. We will contact you shortly.", "errorToast": "Error submitting request. Please try again." }
+    "form": { "title": "Service Request", "subtitle": "Fill out the form below to request our services during your stay at one of the Pousadas de Portugal.",
+      "name": "Name",
+      "namePlaceholder": "Enter your full name",
+      "address": "Address",
+      "addressPlaceholder": "Enter your full address",
+      "phone": "Phone Number",
+      "phonePlaceholder": "XXX XXX XXX",
+      "country": "Country calling code",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "pousada": "Pousada where you will be staying",
+      "pousadaPlaceholder": "Select a pousada",
+      "checkIn": "Check-in Date",
+      "checkOut": "Check-out Date",
+      "service": "Requested service",
+      "servicePlaceholder": "Describe the service you need", "submitButton": "Submit Request", "submittingButton": "Sending...", "successToast": "Request submitted successfully. We will contact you shortly.", "errorToast": "Error submitting request. Please try again." }
   },
   "privacy": {
     "hero": { "title": "Privacy Policy", "subtitle": "How we handle and protect your data" },
@@ -172,7 +208,7 @@
       { "heading": "7. Retention Period", "paragraphs": ["We retain your personal data for as long as necessary to fulfill the purposes for which it was collected, including compliance with legal obligations (notably tax obligations, for a period of 10 years) and the defense of rights in legal disputes."] },
       { "heading": "8. Your Rights", "paragraphs": ["Under the GDPR, you have the following rights:"], "list": ["Right of access: to know what data we process and how;", "Right to rectification: to request correction of inaccurate data;", "Right to erasure: to request deletion of your data (except where law requires retention);", "Right to restriction: to request limitation of processing;", "Right to object: to object to processing for certain purposes;", "Right to data portability: to receive data in a structured format;", "Right to withdraw consent: at any time, without affecting the lawfulness of processing carried out prior to withdrawal."] },
       { "heading": "9. Security", "paragraphs": ["We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, loss, destruction, or disclosure. Our website uses HTTPS to ensure secure data transmission."] },
-      { "heading": "10. Cookies", "paragraphs": ["Our website uses essential cookies for its operation. You can configure your browser to block or alert you about cookies, but some website features may become unavailable."] },
+      { "heading": "10. Cookies", "paragraphs": ["Our website stores your cookie choice in your browser, so that we do not ask you again.", "If you accept, we also use Google Analytics cookies, which collect statistics about how the website is used (pages visited, visit duration, device type). If you decline, these cookies are not enabled.", "You can change your choice at any time through the \u201cCookie settings\u201d link in the website footer, or configure your browser to block cookies."] },
       { "heading": "11. Changes to This Policy", "paragraphs": ["We reserve the right to update this Privacy Policy at any time. Changes will be published on this page with the corresponding update date. We recommend periodic consultation of this page."] },
       { "heading": "12. Contact and Supervisory Authority", "paragraphs": ["If you have questions about this Privacy Policy or about the processing of your data, contact us at geral@kindnesscare.pt.", "If you believe your rights have not been respected, you have the right to lodge a complaint with the Comissão Nacional de Proteção de Dados (CNPD) — www.cnpd.pt."] }
     ]
@@ -199,6 +235,19 @@
     "button": "Back to Home"
   },
   "loading": "Loading...",
+  "common": {
+    "close": "Close",
+    "backToTop": "Back to top"
+  },
+  "forms": {
+    "consent": "I have read and accept the <privacyLink>Privacy Policy</privacyLink> and consent to the processing of the data I provide, including health information, to respond to this request. *"
+  },
+  "cookies": {
+    "label": "Cookie consent",
+    "message": "We use analytics cookies (Google Analytics) to understand how the website is used. They are only enabled if you accept. You can change your choice at any time via \u201cCookie settings\u201d in the footer.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
   "meta": {
     "default": { "title": "Kindness & Care — Home Care Services | Braga, Guimarães, Viana do Castelo" },
     "home": { "title": "Home Care Services | 24h Nursing", "description": "Kindness & Care provides nursing, rehabilitation, medical assistance and health tourism in Braga, Guimarães and Viana do Castelo. Specialised professionals available 24 hours a day." },

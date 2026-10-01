@@ -27,6 +27,30 @@ function loadGa() {
   document.head.appendChild(script2);
 }
 
+// Apaga os cookies do Google Analytics (_ga, _ga_XXXX) quando o visitante
+// recusa ou retira o consentimento. O GA cria-os no domínio principal
+// (.kindnesscare.pt), por isso tentamos cada nível do domínio atual.
+function clearGaCookies() {
+  const names = document.cookie
+    .split(';')
+    .map((c) => c.split('=')[0].trim())
+    .filter((name) => name === '_ga' || name.startsWith('_ga_'));
+  if (names.length === 0) return;
+
+  const parts = window.location.hostname.split('.');
+  const domains = [''];
+  for (let i = 0; i < parts.length - 1; i++) {
+    const domain = parts.slice(i).join('.');
+    domains.push(`; domain=${domain}`, `; domain=.${domain}`);
+  }
+
+  for (const name of names) {
+    for (const domain of domains) {
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${domain}`;
+    }
+  }
+}
+
 function GAnalytics() {
   const location = useLocation();
 
@@ -39,6 +63,7 @@ function GAnalytics() {
         loadGa();
       } else {
         window[disableKey] = true;
+        clearGaCookies();
       }
     };
 

@@ -5,6 +5,18 @@
 DirectorySlash Off
 RewriteEngine On
 
+# kindnesscare.pt -> https://www.kindnesscare.pt (endereço canónico)
+RewriteCond %{HTTP_HOST} ^kindnesscare\.pt$ [NC]
+RewriteRule ^ https://www.kindnesscare.pt%{REQUEST_URI} [R=301,L]
+
+# http://www -> https://www. O X-Forwarded-Proto evita um ciclo de
+# redirecionamentos quando o alojamento está atrás de um proxy/CDN que já
+# trata do HTTPS. Só se aplica ao domínio de produção.
+RewriteCond %{HTTP_HOST} ^www\.kindnesscare\.pt$ [NC]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://www.kindnesscare.pt%{REQUEST_URI} [R=301,L]
+
 # /historia/ -> /historia (redirecionamento permanente)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)/$ /$1 [R=301,L]
@@ -17,9 +29,27 @@ RewriteRule ^(.+)$ /$1/index.html [L]
 # Caminhos desconhecidos: a app arranca e mostra a página 404.
 ErrorDocument 404 /404.html
 
-# Ficheiros em /assets têm um hash no nome: podem ficar em cache para sempre.
 <IfModule mod_headers.c>
+  # Segurança. (O HSTS só é respeitado pelos browsers em respostas HTTPS.)
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Ficheiros em /assets têm um hash no nome: podem ficar em cache para sempre.
   <If "%{REQUEST_URI} =~ m#^/assets/#">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </If>
+
+  # As páginas HTML são revalidadas a cada visita, para que uma nova versão
+  # do site (que aponta para novos ficheiros em /assets) apareça logo.
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# Compressão de texto (HTML, CSS, JS, JSON, XML, SVG).
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript text/javascript application/json application/manifest+json application/xml image/svg+xml
 </IfModule>

@@ -1,7 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
-import { useLocalizedPath } from '../i18n/useLocalizedPath';
+import { useLocalizedRoutes } from '../i18n/useLocalizedPath';
 import { MetaTags } from '../components/MetaTags';
 import './Home.css';
 import { FaHome, FaUserNurse, FaUserMd, FaHandsHelping, FaBaby, FaHotel, FaWhatsapp } from 'react-icons/fa';
@@ -15,24 +15,8 @@ import parceiro4 from '../images/image-11.webp';
 
 function Home() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
-  const contactsPath = useLocalizedPath('contacts');
-
-  const handleContactClick = () => {
-    navigate(contactsPath);
-  };
-
-  const handleServiceClick = (servicePath) => {
-    navigate(servicePath);
-  };
-
-  const handleWhatsAppClick = () => {
-    const phoneNumber = '351968844420';
-    const message = t('home.whatsappMessage');
-    const encodedMessage = encodeURIComponent(message);
-
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-  };
+  const r = useLocalizedRoutes();
+  const whatsappUrl = `https://wa.me/351968844420?text=${encodeURIComponent(t('home.whatsappMessage'))}`;
 
   const parceiros = [
     { id: 1, nome: t('home.partners.names.0'), imagem: parceiro1 },
@@ -48,7 +32,7 @@ function Home() {
       descKey: 'home.services.cards.0.description',
       featuresKeys: ['home.services.cards.0.features.0', 'home.services.cards.0.features.1', 'home.services.cards.0.features.2', 'home.services.cards.0.features.3'],
       buttonKey: 'home.services.cards.0.button',
-      path: useLocalizedPath('homeCare'),
+      path: r.homeCare,
     },
     {
       icon: FaUserNurse,
@@ -56,7 +40,7 @@ function Home() {
       descKey: 'home.services.cards.1.description',
       featuresKeys: ['home.services.cards.1.features.0', 'home.services.cards.1.features.1', 'home.services.cards.1.features.2', 'home.services.cards.1.features.3'],
       buttonKey: 'home.services.cards.1.button',
-      path: useLocalizedPath('nursing'),
+      path: r.nursing,
     },
     {
       icon: FaUserMd,
@@ -64,7 +48,7 @@ function Home() {
       descKey: 'home.services.cards.2.description',
       featuresKeys: ['home.services.cards.2.features.0', 'home.services.cards.2.features.1', 'home.services.cards.2.features.2', 'home.services.cards.2.features.3'],
       buttonKey: 'home.services.cards.2.button',
-      path: useLocalizedPath('medical'),
+      path: r.medical,
     },
     {
       icon: FaHandsHelping,
@@ -72,7 +56,7 @@ function Home() {
       descKey: 'home.services.cards.3.description',
       featuresKeys: ['home.services.cards.3.features.0', 'home.services.cards.3.features.1', 'home.services.cards.3.features.2', 'home.services.cards.3.features.3'],
       buttonKey: 'home.services.cards.3.button',
-      path: useLocalizedPath('caregiver'),
+      path: r.caregiver,
     },
     {
       icon: FaBaby,
@@ -80,7 +64,7 @@ function Home() {
       descKey: 'home.services.cards.4.description',
       featuresKeys: ['home.services.cards.4.features.0', 'home.services.cards.4.features.1', 'home.services.cards.4.features.2', 'home.services.cards.4.features.3'],
       buttonKey: 'home.services.cards.4.button',
-      path: useLocalizedPath('postpartum'),
+      path: r.postpartum,
     },
     {
       icon: FaHotel,
@@ -88,7 +72,7 @@ function Home() {
       descKey: 'home.services.cards.5.description',
       featuresKeys: ['home.services.cards.5.features.0', 'home.services.cards.5.features.1', 'home.services.cards.5.features.2', 'home.services.cards.5.features.3', 'home.services.cards.5.features.4', 'home.services.cards.5.features.5'],
       buttonKey: 'home.services.cards.5.button',
-      path: useLocalizedPath('pousadas'),
+      path: r.pousadas,
     },
   ];
 
@@ -116,9 +100,9 @@ function Home() {
               {t('home.hero.description')}
             </p>
 
-            <button className="hero-contact-button" onClick={handleContactClick}>
+            <Link to={r.contacts} className="hero-contact-button">
               {t('home.hero.button')}
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -172,12 +156,9 @@ function Home() {
                       <li key={fi}>{t(fk)}</li>
                     ))}
                   </ul>
-                  <button
-                    className="service-read-more"
-                    onClick={() => handleServiceClick(service.path)}
-                  >
+                  <Link to={service.path} className="service-read-more">
                     {t(service.buttonKey)}
-                  </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -225,30 +206,24 @@ function Home() {
             <div className="contact-cards">
               <div className="contact-card">
                 <h3 className="contact-card-title">{t('home.contactSection.phone.title')}</h3>
-                <p className="contact-info">{t('home.contactSection.phone.info')}</p>
+                <p className="contact-card-info">{t('home.contactSection.phone.info')}</p>
                 <p className="contact-description">
                   {t('home.contactSection.phone.description')}
                 </p>
-                <button
-                  className="contact-button"
-                  onClick={() => window.open('tel:+351968844420')}
-                >
+                <a href="tel:+351968844420" className="contact-button">
                   {t('home.contactSection.phone.button')}
-                </button>
+                </a>
               </div>
 
               <div className="contact-card">
                 <h3 className="contact-card-title">{t('home.contactSection.email.title')}</h3>
-                <p className="contact-info">{t('home.contactSection.email.info')}</p>
+                <p className="contact-card-info">{t('home.contactSection.email.info')}</p>
                 <p className="contact-description">
                   {t('home.contactSection.email.description')}
                 </p>
-                <button
-                  className="contact-button"
-                  onClick={() => window.open('mailto:geral@kindnesscare.pt')}
-                >
+                <a href="mailto:geral@kindnesscare.pt" className="contact-button">
                   {t('home.contactSection.email.button')}
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -256,10 +231,16 @@ function Home() {
       </section>
 
       {/* ÍCONE DO WHATSAPP FLUTUANTE */}
-      <div className="whatsapp-float" onClick={handleWhatsAppClick}>
-        <span className="whatsapp-tooltip">{t('home.whatsappTooltip')}</span>
-        <FaWhatsapp className="whatsapp-icon" />
-      </div>
+      <a
+        className="whatsapp-float"
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={t('home.whatsappTooltip')}
+      >
+        <span className="whatsapp-tooltip" aria-hidden="true">{t('home.whatsappTooltip')}</span>
+        <FaWhatsapp className="whatsapp-icon" aria-hidden="true" />
+      </a>
     </div>
   );
 }

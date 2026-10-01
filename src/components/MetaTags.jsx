@@ -1,11 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import routes from '../i18n/routes';
-
-export const BASE_URL = 'https://www.kindnesscare.pt';
-
-function absoluteUrl(path) {
-  return path === '/' ? BASE_URL : `${BASE_URL}${path}`;
-}
+import { BASE_URL, absoluteUrl } from '../lib/site';
 
 /**
  * Meta tags por página. `page` é a chave da rota em src/i18n/routes.js;

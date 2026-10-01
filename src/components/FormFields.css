@@ -1,0 +1,33 @@
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.form-consent input {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.form-consent label {
+  cursor: pointer;
+}
+
+.form-consent a {
+  color: var(--color-primary);
+  font-weight: 600;
+}

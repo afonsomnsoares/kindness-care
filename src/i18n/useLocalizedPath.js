@@ -1,10 +1,15 @@
 import { useTranslation } from 'react-i18next';
 import routes, { routeKeyForPath } from './routes';
 
-export function useLocalizedPath(key) {
+/** Todos os caminhos no idioma atual (ex.: useLocalizedRoutes().contacts). */
+export function useLocalizedRoutes() {
   const { i18n } = useTranslation();
   const lang = i18n.language?.startsWith('en') ? 'en' : 'pt';
-  return routes[lang][key] || '/';
+  return routes[lang];
+}
+
+export function useLocalizedPath(key) {
+  return useLocalizedRoutes()[key] || '/';
 }
 
 export function localizePath(pathname, targetLang) {

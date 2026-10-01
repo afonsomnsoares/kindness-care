@@ -3,10 +3,15 @@ import { useTranslation } from 'react-i18next';
 import { useToast } from '../components/Toast';
 import useAntiSpam from './useAntiSpam';
 
-const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/geral@kindnesscare.pt';
+// Endereço para onde os formulários são enviados. Por omissão é o FormSubmit;
+// VITE_FORM_ENDPOINT permite usar o alias aleatório do FormSubmit (para não
+// expor o email no código) ou o servidor de teste local (ver .env.example).
+export const FORM_ENDPOINT =
+  import.meta.env.VITE_FORM_ENDPOINT ||
+  'https://formsubmit.co/ajax/geral@kindnesscare.pt';
 
 /**
- * Lógica partilhada pelos formulários de Contacts.jsx e Health-Tourism.jsx:
+ * Lógica partilhada pelos formulários de Contacts.jsx e Pousadas.jsx:
  * estado dos campos, anti-spam (honeypot + time-trap) e envio para o
  * FormSubmit, com toasts de sucesso/erro e reset do formulário.
  *
@@ -27,10 +32,10 @@ function useContactForm({ initialData, buildPayload, successKey, errorKey }) {
   const { honeypot, setHoneypot, isBot } = useAntiSpam();
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: type === 'checkbox' ? checked : value,
     }));
   };
 
@@ -48,7 +53,7 @@ function useContactForm({ initialData, buildPayload, successKey, errorKey }) {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(FORMSUBMIT_URL, {
+      const response = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

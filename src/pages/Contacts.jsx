@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { MetaTags } from '../components/MetaTags';
+import { Honeypot, PrivacyConsent } from '../components/FormFields';
 import useContactForm from '../hooks/useContactForm';
 import './Contacts.css';
 
@@ -9,8 +10,21 @@ const INITIAL_DATA = {
   email: '',
   telefone: '',
   assunto: '',
-  mensagem: ''
+  mensagem: '',
+  consentimento: false
 };
+
+// Valores enviados no email (em PT, para a equipa); o texto visível vem das
+// traduções em contacts.form.subjects.
+const SUBJECTS = [
+  { value: 'apoio-domiciliario', key: 'homeCare' },
+  { value: 'enfermagem', key: 'nursing' },
+  { value: 'medicina', key: 'medical' },
+  { value: 'cuidador', key: 'caregiver' },
+  { value: 'pos-parto', key: 'postpartum' },
+  { value: 'pousadas', key: 'pousadas' },
+  { value: 'outro', key: 'other' },
+];
 
 function buildPayload(formData) {
   return {
@@ -20,7 +34,8 @@ function buildPayload(formData) {
     email: formData.email,
     telefone: formData.telefone || 'Não fornecido',
     assunto: formData.assunto,
-    mensagem: formData.mensagem
+    mensagem: formData.mensagem,
+    consentimento: 'Aceitou a Política de Privacidade e o tratamento dos dados'
   };
 }
 
@@ -43,8 +58,8 @@ function Contacts() {
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contactos",
-    "description": "Página de contactos da Kindness & Care",
+    "name": t('meta.contacts.title'),
+    "description": t('meta.contacts.description'),
     "organization": {
       "@type": "LocalBusiness",
       "name": "Kindness & Care",
@@ -96,8 +111,9 @@ function Contacts() {
                       </svg>
                     </div>
                     <div className="contact-details">
-                      <h3>Telefone</h3>
-                      <p>+351 968 844 420</p>
+                      <h3>{t('contacts.info.phone')}</h3>
+                      <p><a href="tel:+351968844420">+351 968 844 420</a></p>
+                      <p><a href="tel:+351933929761">+351 933 929 761</a></p>
                     </div>
                   </div>
 
@@ -109,8 +125,8 @@ function Contacts() {
                       </svg>
                     </div>
                     <div className="contact-details">
-                      <h3>Email</h3>
-                      <p>geral@kindnesscare.pt</p>
+                      <h3>{t('contacts.info.email')}</h3>
+                      <p><a href="mailto:geral@kindnesscare.pt">geral@kindnesscare.pt</a></p>
                     </div>
                   </div>
 
@@ -122,7 +138,7 @@ function Contacts() {
                       </svg>
                     </div>
                     <div className="contact-details">
-                      <h3>Localização</h3>
+                      <h3>{t('contacts.info.location')}</h3>
                       <p>Braga | Guimarães | Viana do Castelo</p>
                     </div>
                   </div>
@@ -133,23 +149,11 @@ function Contacts() {
               <div className="contact-form-container">
                 <h2 className="form-title">{t('contacts.form.title')}</h2>
                 <form onSubmit={handleSubmit} className="contact-form">
-                  <div style={{ position: 'absolute', left: '-9999px', top: '-9999px' }} aria-hidden="true">
-                    <label htmlFor="empresa">Não preencha este campo</label>
-                    <input
-                      type="text"
-                      id="empresa"
-                      name="empresa"
-                      value={honeypot}
-                      onChange={(e) => setHoneypot(e.target.value)}
-                      tabIndex={-1}
-                      autoComplete="off"
-                      aria-hidden="true"
-                    />
-                  </div>
+                  <Honeypot value={honeypot} onChange={setHoneypot} />
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="nome" className="form-label">
-                        Nome Completo *
+                        {t('contacts.form.name')}
                       </label>
                       <input
                         type="text"
@@ -160,13 +164,13 @@ function Contacts() {
                         className="form-input"
                         required
                         aria-required="true"
-                        placeholder="O seu nome completo"
+                        placeholder={t('contacts.form.namePlaceholder')}
                       />
                     </div>
 
                     <div className="form-group">
                       <label htmlFor="email" className="form-label">
-                        Email *
+                        {t('contacts.form.email')}
                       </label>
                       <input
                         type="email"
@@ -177,7 +181,7 @@ function Contacts() {
                         className="form-input"
                         required
                         aria-required="true"
-                        placeholder="seu@email.com"
+                        placeholder={t('contacts.form.emailPlaceholder')}
                       />
                     </div>
                   </div>
@@ -185,7 +189,7 @@ function Contacts() {
                   <div className="form-row">
                     <div className="form-group">
                       <label htmlFor="telefone" className="form-label">
-                        Telefone
+                        {t('contacts.form.phone')}
                       </label>
                       <input
                         type="tel"
@@ -194,13 +198,13 @@ function Contacts() {
                         value={formData.telefone}
                         onChange={handleChange}
                         className="form-input"
-                        placeholder="+351 XXX XXX XXX"
+                        placeholder={t('contacts.form.phonePlaceholder')}
                       />
                     </div>
 
                     <div className="form-group">
                       <label htmlFor="assunto" className="form-label">
-                        Assunto *
+                        {t('contacts.form.subject')}
                       </label>
                       <select
                         id="assunto"
@@ -211,21 +215,19 @@ function Contacts() {
                         required
                         aria-required="true"
                       >
-                        <option value="">Selecione um assunto</option>
-                        <option value="apoio-domiciliario">Apoio Domiciliário</option>
-                        <option value="enfermagem">Enfermagem e Reabilitação</option>
-                        <option value="medicina">Assistência Médica</option>
-                        <option value="cuidador">Apoio ao Cuidador</option>
-                        <option value="pos-parto">Apoio Pós-Parto</option>
-                        <option value="pousadas">Pousadas de Portugal</option>
-                        <option value="outro">Outro</option>
+                        <option value="">{t('contacts.form.subjectPlaceholder')}</option>
+                        {SUBJECTS.map(({ value, key }) => (
+                          <option key={value} value={value}>
+                            {t(`contacts.form.subjects.${key}`)}
+                          </option>
+                        ))}
                       </select>
                     </div>
                   </div>
 
                   <div className="form-group">
                     <label htmlFor="mensagem" className="form-label">
-                      Mensagem *
+                      {t('contacts.form.message')}
                     </label>
                     <textarea
                       id="mensagem"
@@ -235,10 +237,15 @@ function Contacts() {
                       className="form-textarea"
                       required
                       aria-required="true"
-                      placeholder="Descreva como podemos ajudá-lo..."
+                      placeholder={t('contacts.form.messagePlaceholder')}
                       rows="6"
                     />
                   </div>
+
+                  <PrivacyConsent
+                    checked={formData.consentimento}
+                    onChange={handleChange}
+                  />
 
                   <div className="form-actions">
                     <button

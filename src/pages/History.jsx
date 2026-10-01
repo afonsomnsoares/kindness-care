@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { useLocalizedPath } from '../i18n/useLocalizedPath';
 import { MetaTags } from '../components/MetaTags';
@@ -8,12 +8,7 @@ import { FaStethoscope, FaHeart, FaUserFriends } from 'react-icons/fa';
 
 function History() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const contactsPath = useLocalizedPath('contacts');
-
-  const handleContactClick = () => {
-    navigate(contactsPath);
-  };
 
   const sections = t('history.sections', { returnObjects: true });
 
@@ -89,9 +84,9 @@ function History() {
                 <p className="history-cta-text">
                   {t('history.cta.text')}
                 </p>
-                <button className="history-cta-button" onClick={handleContactClick}>
+                <Link to={contactsPath} className="history-cta-button">
                   {t('history.cta.button')}
-                </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
 import { useLocalizedPath } from '../i18n/useLocalizedPath';
 import { MetaTags } from '../components/MetaTags';
@@ -8,15 +8,14 @@ import caregiverImage from '../images/image-10.webp';
 
 function HealthTourismService() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const pousadasPath = useLocalizedPath('pousadas');
   const features = t('healthTourismService.content.features', { returnObjects: true });
-  
+
   const healthTourismSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Turismo de Saúde e Bem-Estar",
-    "description": "Serviço de cuidados personalizados de saúde durante estadia em Pousadas de Portugal, em parceria com marca icónica de hospitalidade portuguesa.",
+    "name": t('meta.healthTourism.title'),
+    "description": t('meta.healthTourism.description'),
     "provider": {
       "@type": "LocalBusiness",
       "name": "Kindness & Care"
@@ -27,10 +26,6 @@ function HealthTourismService() {
       {"@type": "City", "name": "Amares"}
     ],
     "serviceType": "Healthcare"
-  };
-
-  const handleFormClick = () => {
-    navigate(pousadasPath);
   };
 
   return (
@@ -93,18 +88,15 @@ function HealthTourismService() {
       </section>
 
       {/* Botão CTA */}
-      <div className="value-cta-section">
-        <div className="value-cta-content">
-          <h3 className="value-cta-title">{t('healthTourismService.cta.title')}</h3>
-          <p className="value-cta-text">
+      <div className="tourism-cta-section">
+        <div className="tourism-cta-content">
+          <h3 className="tourism-cta-title">{t('healthTourismService.cta.title')}</h3>
+          <p className="tourism-cta-text">
             {t('healthTourismService.cta.text')}
           </p>
-          <button
-            className="value-cta-button"
-            onClick={handleFormClick}
-          >
+          <Link to={pousadasPath} className="tourism-cta-button">
             {t('healthTourismService.cta.button')}
-          </button>
+          </Link>
         </div>
       </div>
     </div>

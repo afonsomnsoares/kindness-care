@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './Footer.css';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import routes from '../i18n/routes';
+import { openConsentSettings } from '../lib/consent';
 
 function Footer() {
   const { t, i18n } = useTranslation();
@@ -62,6 +63,7 @@ function Footer() {
           <div className="footer-bottom-links">
             <Link to={r.privacy}>{t('footer.privacy')}</Link>
             <Link to={r.terms}>{t('footer.terms')}</Link>
+            <button type="button" onClick={openConsentSettings}>{t('footer.cookieSettings')}</button>
           </div>
           <div className="footer-social">
             <a href="https://facebook.com/kindnesscare" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>

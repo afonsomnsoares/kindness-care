@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaArrowUp } from 'react-icons/fa';
 import './BackToTop.css';
 
 function BackToTop() {
   const [visible, setVisible] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +23,7 @@ function BackToTop() {
     <button
       className={`back-to-top ${visible ? 'visible' : ''}`}
       onClick={scrollToTop}
-      aria-label="Voltar ao topo"
+      aria-label={t('common.backToTop')}
     >
       <FaArrowUp />
     </button>

@@ -7,14 +7,15 @@ import { getI18n } from '../i18n/i18n';
 import Contacts from './Contacts';
 
 // Testes de fumo (smoke tests) para o formulário de contacto:
-// - validação HTML5 dos campos obrigatórios bloqueia o envio;
-// - um envio válido chama o FormSubmit com os dados certos.
+// - validação HTML5 dos campos obrigatórios (e do consentimento) bloqueia o envio;
+// - um envio válido chama o FormSubmit com os dados certos;
+// - os textos aparecem no idioma da página.
 // Não testa a integração real com formsubmit.co, só o comportamento do form.
 
-function renderContacts() {
+function renderContacts(lang = 'pt') {
   return render(
     <MemoryRouter>
-      <I18nextProvider i18n={getI18n('pt')}>
+      <I18nextProvider i18n={getI18n(lang)}>
         <ToastProvider>
           <Contacts />
         </ToastProvider>
@@ -55,6 +56,7 @@ test('envia o formulário para o FormSubmit quando os campos obrigatórios estã
   await userEvent.type(screen.getByLabelText(/^email/i), 'maria@example.com');
   await userEvent.selectOptions(screen.getByLabelText(/assunto/i), 'enfermagem');
   await userEvent.type(screen.getByLabelText(/mensagem/i), 'Gostaria de mais informações.');
+  await userEvent.click(screen.getByRole('checkbox', { name: /política de privacidade/i }));
 
   now += 3100;
   fireEvent.click(screen.getByRole('button', { name: /enviar mensagem/i }));
@@ -72,6 +74,32 @@ test('envia o formulário para o FormSubmit quando os campos obrigatórios estã
   });
 });
 
+test('não envia o formulário sem o consentimento para o tratamento dos dados', async () => {
+  let now = 1_700_000_000_000;
+  vi.spyOn(Date, 'now').mockImplementation(() => now);
+
+  renderContacts();
+
+  await userEvent.type(screen.getByLabelText(/nome completo/i), 'Maria Silva');
+  await userEvent.type(screen.getByLabelText(/^email/i), 'maria@example.com');
+  await userEvent.selectOptions(screen.getByLabelText(/assunto/i), 'enfermagem');
+  await userEvent.type(screen.getByLabelText(/mensagem/i), 'Gostaria de mais informações.');
+
+  now += 3100;
+  await userEvent.click(screen.getByRole('button', { name: /enviar mensagem/i }));
+
+  expect(global.fetch).not.toHaveBeenCalled();
+});
+
+test('mostra o formulário em inglês na página em inglês', () => {
+  renderContacts('en');
+
+  expect(screen.getByLabelText(/full name/i)).toHaveAttribute('placeholder', 'Your full name');
+  expect(screen.getByRole('option', { name: 'Select a subject' })).toBeInTheDocument();
+  expect(screen.getByRole('checkbox', { name: /privacy policy/i })).toBeInTheDocument();
+  expect(screen.queryByText(/nome completo/i)).not.toBeInTheDocument();
+});
+
 test('não envia o formulário se o campo honeypot estiver preenchido (bot)', async () => {
   let now = 1_700_000_000_000;
   vi.spyOn(Date, 'now').mockImplementation(() => now);
@@ -82,6 +110,7 @@ test('não envia o formulário se o campo honeypot estiver preenchido (bot)', as
   await userEvent.type(screen.getByLabelText(/^email/i), 'bot@example.com');
   await userEvent.selectOptions(screen.getByLabelText(/assunto/i), 'outro');
   await userEvent.type(screen.getByLabelText(/mensagem/i), 'mensagem automática');
+  await userEvent.click(screen.getByRole('checkbox', { name: /política de privacidade/i }));
 
   // O honeypot está escondido de utilizadores reais (CSS) mas continua
   // acessível a bots que preenchem todos os inputs do formulário.

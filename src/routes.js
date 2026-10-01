@@ -16,7 +16,7 @@ const pages = {
   postpartum: 'components/ServicePage.jsx',
   contacts: 'pages/Contacts.jsx',
   healthTourism: 'pages/Health-Tourism-Service.jsx',
-  pousadas: 'pages/Health-Tourism.jsx',
+  pousadas: 'pages/Pousadas.jsx',
   privacy: 'pages/Privacy.jsx',
   terms: 'pages/Terms.jsx',
 };

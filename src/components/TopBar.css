@@ -32,6 +32,15 @@
   font-weight: 600;
 }
 
+.topbar-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar-item a:hover {
+  text-decoration: underline;
+}
+
 .topbar-contacts {
   display: flex;
   align-items: center;

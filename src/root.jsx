@@ -20,12 +20,13 @@ import GAnalytics from './components/GAnalytics';
 import { getI18n } from './i18n/i18n';
 import { langFromPath } from './i18n/routes';
 
-// Dados estruturados da empresa, comuns a todas as páginas.
-const organizationSchema = {
+// Dados estruturados da empresa, comuns a todas as páginas (a descrição
+// segue o idioma da página).
+const organizationSchema = (lang) => ({
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Kindness & Care",
-  "description": "Serviço de Apoio Domiciliário com profissionais de saúde especializados. Spin-off da Universidade do Minho.",
+  "description": getI18n(lang).t('footer.description'),
   "url": "https://www.kindnesscare.pt",
   "telephone": "+351968844420",
   "email": "geral@kindnesscare.pt",
@@ -55,14 +56,14 @@ const organizationSchema = {
     "@type": "CollegeOrUniversity",
     "name": "Universidade do Minho"
   }
-};
+});
 
 /** Documento HTML base (substitui o antigo public/index.html). */
 export function Layout({ children }) {
-  const { pathname } = useLocation();
+  const lang = langFromPath(useLocation().pathname);
 
   return (
-    <html lang={langFromPath(pathname)}>
+    <html lang={lang}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,13 +71,13 @@ export function Layout({ children }) {
         <meta name="author" content="Kindness & Care" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/logo.jpg" />
-        <link rel="apple-touch-icon" href="/logo.jpg" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <Meta />
         <Links />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema(lang)) }}
         />
       </head>
       <body>

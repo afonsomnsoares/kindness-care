@@ -13,6 +13,7 @@ function NavigationBar() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef(null);
+  const desktopMenuRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
@@ -59,6 +60,7 @@ function NavigationBar() {
   ];
 
   const isActive = (path) => {
+    if (!path) return false;
     if (path === '/' || path === '/en') {
       return location.pathname === path;
     }
@@ -78,6 +80,32 @@ function NavigationBar() {
     setActiveDropdown(null);
     setMobileMenuOpen(false);
   };
+
+  // Menu de desktop: fecha o submenu aberto ao clicar fora ou com Escape.
+  useEffect(() => {
+    if (!activeDropdown || mobileMenuOpen) return undefined;
+
+    const handlePointerDown = (e) => {
+      if (desktopMenuRef.current && !desktopMenuRef.current.contains(e.target)) {
+        setActiveDropdown(null);
+      }
+    };
+    const handleKeyDown = (e) => {
+      if (e.key !== 'Escape') return;
+      const toggle = desktopMenuRef.current?.querySelector(
+        `[aria-controls="dropdown-${activeDropdown}"]`
+      );
+      setActiveDropdown(null);
+      toggle?.focus();
+    };
+
+    document.addEventListener('mousedown', handlePointerDown);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handlePointerDown);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [activeDropdown, mobileMenuOpen]);
 
   useEffect(() => {
     if (!mobileMenuOpen) return undefined;
@@ -146,7 +174,7 @@ function NavigationBar() {
           </Link>
         </div>
 
-        <div className="menu-container">
+        <div className="menu-container" ref={desktopMenuRef}>
           <ul className="nav-menu">
             {menuItems.map((item) => (
               <li key={item.id} className={`nav-item ${isActive(item.path) ? 'active' : ''} ${item.dropdown ? 'has-dropdown' : ''}`}>

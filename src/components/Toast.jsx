@@ -1,8 +1,10 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaCheckCircle, FaExclamationCircle, FaTimes } from 'react-icons/fa';
 import './Toast.css';
 
 const ToastContext = createContext();
+let nextToastId = 0;
 
 export function useToast() {
   return useContext(ToastContext);
@@ -10,9 +12,10 @@ export function useToast() {
 
 export function ToastProvider({ children }) {
   const [toasts, setToasts] = useState([]);
+  const { t } = useTranslation();
 
   const addToast = useCallback((message, type = 'success', duration = 5000) => {
-    const id = Date.now();
+    const id = ++nextToastId;
     setToasts(prev => [...prev, { id, message, type }]);
     setTimeout(() => {
       setToasts(prev => prev.filter(t => t.id !== id));
@@ -33,7 +36,7 @@ export function ToastProvider({ children }) {
               {toast.type === 'success' ? <FaCheckCircle /> : <FaExclamationCircle />}
             </span>
             <span className="toast-message">{toast.message}</span>
-            <button className="toast-close" onClick={() => removeToast(toast.id)} aria-label="Fechar">
+            <button className="toast-close" onClick={() => removeToast(toast.id)} aria-label={t('common.close')}>
               <FaTimes />
             </button>
           </div>

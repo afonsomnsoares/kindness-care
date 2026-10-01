@@ -1,23 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router';
+import { useTranslation } from 'react-i18next';
 import './CookieConsent.css';
 import {
   CONSENT_ACCEPTED,
+  CONSENT_OPEN_EVENT,
   CONSENT_REJECTED,
+  getConsent,
   saveConsent,
 } from '../lib/consent';
 
 function CookieConsent() {
   const [visible, setVisible] = useState(false);
-  const location = useLocation();
-  const isEnglish = location.pathname.startsWith('/en');
+  const { t } = useTranslation();
 
   useEffect(() => {
-    const consent = localStorage.getItem('cookieConsent');
-    if (!consent) {
-      const timer = setTimeout(() => setVisible(true), 1000);
-      return () => clearTimeout(timer);
+    const open = () => setVisible(true);
+    window.addEventListener(CONSENT_OPEN_EVENT, open);
+
+    let timer;
+    if (!getConsent()) {
+      timer = setTimeout(open, 1000);
     }
+
+    return () => {
+      window.removeEventListener(CONSENT_OPEN_EVENT, open);
+      clearTimeout(timer);
+    };
   }, []);
 
   const accept = () => {
@@ -33,19 +41,15 @@ function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <div className="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <div className="cookie-banner" role="dialog" aria-label={t('cookies.label')}>
       <div className="cookie-banner-content">
-        <p>
-          {isEnglish
-            ? 'We use cookies to improve your experience. By continuing, you agree to our use of cookies.'
-            : 'Utilizamos cookies para melhorar a sua experiência. Ao continuar, concorda com o uso de cookies.'}
-        </p>
+        <p>{t('cookies.message')}</p>
         <div className="cookie-banner-actions">
           <button className="cookie-btn cookie-btn-accept" onClick={accept}>
-            {isEnglish ? 'Accept' : 'Aceitar'}
+            {t('cookies.accept')}
           </button>
           <button className="cookie-btn cookie-btn-reject" onClick={reject}>
-            {isEnglish ? 'Decline' : 'Recusar'}
+            {t('cookies.decline')}
           </button>
         </div>
       </div>

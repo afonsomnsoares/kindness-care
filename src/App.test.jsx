@@ -1,7 +1,10 @@
+import { readdirSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 import { act } from 'react';
 import { renderToString } from 'react-dom/server';
 import { hydrateRoot } from 'react-dom/client';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { createMemoryRouter, RouterProvider } from 'react-router';
 import paths from './i18n/routes';
 import App from './root';
@@ -98,3 +101,78 @@ test.each(Object.values(paths).flatMap((langRoutes) => Object.values(langRoutes)
     container.remove();
   }
 );
+
+function routerAt(path) {
+  const children = routeConfig.map(({ id, path: routePath, file }) => ({
+    id,
+    path: routePath,
+    Component: modules[`./${file}`].default,
+  }));
+  return createMemoryRouter([{ path: '/', Component: App, children }], {
+    initialEntries: [path],
+  });
+}
+
+test('mudar de idioma abre a mesma página no outro idioma', async () => {
+  const router = routerAt('/historia');
+  render(<RouterProvider router={router} />);
+
+  await userEvent.click(await screen.findByRole('button', { name: 'IDIOMA' }));
+  await userEvent.click(screen.getByRole('button', { name: 'Inglês' }));
+
+  expect(router.state.location.pathname).toBe('/en/history');
+  expect(await screen.findByRole('link', { name: 'Contacts' })).toBeInTheDocument();
+});
+
+describe('aviso de cookies', () => {
+  beforeEach(() => localStorage.clear());
+
+  test('guarda a escolha e pode ser reaberto no rodapé', async () => {
+    renderAt('/');
+
+    const banner = await screen.findByRole('dialog', { name: 'Consentimento de cookies' }, { timeout: 2000 });
+    await userEvent.click(within(banner).getByRole('button', { name: 'Recusar' }));
+
+    expect(localStorage.getItem('cookieConsent')).toBe('rejected');
+    expect(screen.queryByRole('dialog', { name: 'Consentimento de cookies' })).not.toBeInTheDocument();
+
+    await userEvent.click(screen.getByRole('button', { name: 'Definições de cookies' }));
+    expect(screen.getByRole('dialog', { name: 'Consentimento de cookies' })).toBeInTheDocument();
+  });
+
+  test('não volta a aparecer depois de o visitante escolher', async () => {
+    localStorage.setItem('cookieConsent', 'accepted');
+    renderAt('/');
+
+    await screen.findAllByText('+351 968 844 420');
+    await new Promise((resolve) => setTimeout(resolve, 1100));
+    expect(screen.queryByRole('dialog', { name: 'Consentimento de cookies' })).not.toBeInTheDocument();
+  });
+});
+
+// O CSS de cada página só é carregado quando a página é visitada. Se duas
+// folhas de estilo definirem a mesma classe, o aspeto passa a depender da
+// ordem em que o visitante abriu as páginas. As classes partilhadas ficam em
+// App.css (ver README, "Estilos").
+test('nenhuma classe CSS é definida em mais do que um ficheiro', () => {
+  // Lidos do disco: o Vitest não processa CSS, e os imports devolvem "".
+  const srcDir = path.resolve('src');
+  const stylesheets = readdirSync(srcDir, { recursive: true }).filter((f) =>
+    f.endsWith('.css')
+  );
+  expect(stylesheets.length).toBeGreaterThan(10);
+
+  const definedIn = {};
+  for (const file of stylesheets) {
+    const css = readFileSync(path.join(srcDir, file), 'utf8');
+    const withoutComments = css.replace(/\/\*[\s\S]*?\*\//g, '');
+    for (const [, cls] of withoutComments.matchAll(/^\s*\.([\w-]+)/gm)) {
+      (definedIn[cls] ??= new Set()).add(file);
+    }
+  }
+
+  const duplicated = Object.entries(definedIn)
+    .filter(([, files]) => files.size > 1)
+    .map(([cls, files]) => `.${cls}: ${[...files].join(', ')}`);
+  expect(duplicated).toEqual([]);
+});

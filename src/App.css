@@ -9,6 +9,40 @@
   width: 100%;
 }
 
+/* Classes de layout usadas em várias páginas. Têm de estar aqui (CSS global)
+   e não no CSS de uma página: o CSS de cada página só é carregado quando a
+   página é visitada, e o aspeto dependeria da página por onde se entrou. */
+.container-xxl {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 480px) {
+  .container-xxl {
+    padding: 0 15px;
+  }
+}
+
 /* Estilos gerais para as páginas */
 .page-section {
   background: white;

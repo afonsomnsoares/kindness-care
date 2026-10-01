@@ -21,15 +21,15 @@ function TopBar() {
 
         <div className="topbar-contacts">
           <div className="topbar-item">
-            <FaPhone className="topbar-icon" />
-            <span><strong>+351 968 844 420</strong></span>
+            <FaPhone className="topbar-icon" aria-hidden="true" />
+            <a href="tel:+351968844420"><strong>+351 968 844 420</strong></a>
           </div>
           
           <div className="topbar-separator"></div>
           
           <div className="topbar-item">
-            <FaPhone className="topbar-icon" />
-            <span><strong>+351 933 929 761</strong></span>
+            <FaPhone className="topbar-icon" aria-hidden="true" />
+            <a href="tel:+351933929761"><strong>+351 933 929 761</strong></a>
           </div>
         </div>
       </div>

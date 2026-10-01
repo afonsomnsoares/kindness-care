@@ -50,7 +50,8 @@
     "hours": "Disponível 24h • todos os dias do ano",
     "rights": "Todos os direitos reservados.",
     "privacy": "Política de Privacidade",
-    "terms": "Termos e Condições"
+    "terms": "Termos e Condições",
+    "cookieSettings": "Definições de cookies"
   },
   "home": {
     "hero": {
@@ -252,10 +253,32 @@
     "hero": { "title": "Contactos", "subtitle": "Estamos aqui para ajudar. Entre em contacto connosco." },
     "info": {
       "title": "Entre em Contacto",
-      "description": "Tem alguma questão ou precisa dos nossos serviços? Não hesite em contactar-nos através dos meios abaixo ou preencha o formulário."
+      "description": "Tem alguma questão ou precisa dos nossos serviços? Não hesite em contactar-nos através dos meios abaixo ou preencha o formulário.",
+      "phone": "Telefone",
+      "email": "Email",
+      "location": "Localização"
     },
     "form": {
       "title": "Envie-nos uma Mensagem",
+      "name": "Nome Completo",
+      "namePlaceholder": "O seu nome completo",
+      "email": "Email",
+      "emailPlaceholder": "seu@email.com",
+      "phone": "Telefone",
+      "phonePlaceholder": "+351 XXX XXX XXX",
+      "subject": "Assunto",
+      "subjectPlaceholder": "Selecione um assunto",
+      "subjects": {
+        "homeCare": "Apoio Domiciliário",
+        "nursing": "Enfermagem e Reabilitação",
+        "medical": "Assistência Médica",
+        "caregiver": "Apoio ao Cuidador",
+        "postpartum": "Apoio Pós-Parto",
+        "pousadas": "Pousadas de Portugal",
+        "other": "Outro"
+      },
+      "message": "Mensagem",
+      "messagePlaceholder": "Descreva como podemos ajudá-lo...",
       "submitButton": "Enviar Mensagem",
       "submittingButton": "A enviar...",
       "successToast": "Mensagem enviada com sucesso! Entraremos em contacto brevemente.",
@@ -267,6 +290,21 @@
     "form": {
       "title": "Pedido de Serviço",
       "subtitle": "Preencha o formulário abaixo para solicitar os nossos serviços durante a sua estadia numa das Pousadas de Portugal.",
+      "name": "Nome",
+      "namePlaceholder": "Digite o seu nome completo",
+      "address": "Morada",
+      "addressPlaceholder": "Digite a sua morada completa",
+      "phone": "Contacto Telefónico",
+      "phonePlaceholder": "XXX XXX XXX",
+      "country": "País do indicativo telefónico",
+      "email": "Email",
+      "emailPlaceholder": "seu@email.com",
+      "pousada": "Pousada onde ficará hospedado",
+      "pousadaPlaceholder": "Selecione uma pousada",
+      "checkIn": "Data de Check-in",
+      "checkOut": "Data de Check-out",
+      "service": "Serviço solicitado",
+      "servicePlaceholder": "Descreva o serviço que necessita",
       "submitButton": "Enviar Pedido",
       "submittingButton": "A enviar...",
       "successToast": "Pedido enviado com sucesso! Entraremos em contacto em breve.",
@@ -286,7 +324,7 @@
       { "heading": "7. Prazo de Conservação", "paragraphs": ["Conservamos os seus dados pessoais pelo período necessário para cumprir as finalidades para as quais foram recolhidos, incluindo o cumprimento de obrigações legais (nomeadamente fiscais, pelo período de 10 anos) e a defesa de direitos em caso de litígio."] },
       { "heading": "8. Os Seus Direitos", "paragraphs": ["Ao abrigo do RGPD, tem os seguintes direitos:"], "list": ["Direito de acesso: saber que dados tratamos e como;", "Direito de retificação: solicitar a correção de dados inexatos;", "Direito ao apagamento: solicitar a eliminação dos seus dados (exceto quando a lei obrigue à sua conservação);", "Direito à limitação: solicitar a limitação do tratamento;", "Direito de oposição: opor-se ao tratamento para certas finalidades;", "Direito à portabilidade: receber os dados num formato estruturado;", "Direito a retirar consentimento: a qualquer momento, sem comprometer a licitude do tratamento efetuado até essa data."] },
       { "heading": "9. Segurança", "paragraphs": ["Implementamos medidas técnicas e organizativas adequadas para proteger os seus dados pessoais contra acesso não autorizado, perda, destruição ou divulgação. O nosso site utiliza HTTPS para garantir a segurança da transmissão de dados."] },
-      { "heading": "10. Cookies", "paragraphs": ["O nosso site utiliza cookies essenciais para o seu funcionamento. Pode configurar o seu browser para bloquear ou alertar sobre cookies, mas algumas funcionalidades do site podem ficar indisponíveis."] },
+      { "heading": "10. Cookies", "paragraphs": ["O nosso site guarda no seu browser a sua escolha sobre cookies, para não lhe voltar a perguntar.", "Se aceitar, utilizamos também cookies de análise do Google Analytics, que recolhem dados estatísticos sobre a utilização do site (páginas visitadas, duração da visita, tipo de dispositivo). Se recusar, estes cookies não são ativados.", "Pode alterar a sua escolha a qualquer momento através da ligação «Definições de cookies» no rodapé do site, ou configurar o seu browser para bloquear cookies."] },
       { "heading": "11. Alterações a esta Política", "paragraphs": ["Reservamo-nos o direito de atualizar esta Política de Privacidade em qualquer momento. As alterações serão publicadas nesta página com a data de atualização correspondente. Recomendamos a consulta periódica desta página."] },
       { "heading": "12. Contacto e Autoridade de Controlo", "paragraphs": ["Se tiver dúvidas sobre esta Política de Privacidade ou sobre o tratamento dos seus dados, contacte-nos através do email geral@kindnesscare.pt.", "Caso considere que os seus direitos não foram respeitados, tem o direito de apresentar reclamação à Comissão Nacional de Proteção de Dados (CNPD) — www.cnpd.pt."] }
     ]
@@ -313,6 +351,19 @@
     "button": "Voltar ao Início"
   },
   "loading": "A carregar...",
+  "common": {
+    "close": "Fechar",
+    "backToTop": "Voltar ao topo"
+  },
+  "forms": {
+    "consent": "Li e aceito a <privacyLink>Política de Privacidade</privacyLink> e autorizo o tratamento dos dados que forneço, incluindo informação de saúde, para responder a este pedido. *"
+  },
+  "cookies": {
+    "label": "Consentimento de cookies",
+    "message": "Utilizamos cookies de análise (Google Analytics) para perceber como o site é utilizado. Só são ativados se aceitar. Pode alterar a sua escolha a qualquer momento em «Definições de cookies», no rodapé.",
+    "accept": "Aceitar",
+    "decline": "Recusar"
+  },
   "meta": {
     "default": { "title": "Kindness & Care — Serviço de Apoio Domiciliário | Braga, Guimarães, Viana do Castelo" },
     "home": { "title": "Serviço de Apoio Domiciliário | Enfermagem 24h", "description": "Kindness & Care oferece cuidados de enfermagem, reabilitação, assistência médica e turismo de saúde em Braga, Guimarães e Viana do Castelo. Profissionais especializados disponíveis 24h." },

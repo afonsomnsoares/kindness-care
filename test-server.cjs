@@ -3,60 +3,62 @@
 // o build só inclui public/ e o código importado a partir de src/, por isso nunca é
 // publicado em produção nem incluído no bundle do browser.
 //
-// Em produção os formulários usam FormSubmit (ver handleSubmit em:
-//   src/pages/Contacts.jsx e src/pages/Health-Tourism.jsx,
-//   com anti-spam honeypot + time-trap em src/hooks/useAntiSpam.js).
+// Em produção os formulários usam FormSubmit (ver src/hooks/useContactForm.js,
+// com anti-spam honeypot + time-trap em src/hooks/useAntiSpam.js).
 //
-// Este servidor serve apenas para testar os formulários localmente:
-//   node test-server.cjs
+// Para testar os formulários localmente sem enviar emails reais:
+//   1. Crie um ficheiro .env.local com:
+//        VITE_FORM_ENDPOINT=http://localhost:4000/send-email
+//   2. Num terminal: npm run test-server
+//   3. Noutro terminal: npm run dev
 // Usa Ethereal (https://ethereal.email), serviço de email fake do nodemailer.
 // Os emails nunca chegam a lado nenhum - abre o "Preview URL" na consola.
 
 const express = require('express');
 const nodemailer = require('nodemailer');
 const app = express();
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-async function createTransport() {
-  const testAccount = await nodemailer.createTestAccount();
-  return nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false,
-    auth: {
-      user: testAccount.user,
-      pass: testAccount.pass,
-    },
-  });
+// O site corre noutra porta (npm run dev), por isso o browser precisa de CORS.
+app.use((req, res, next) => {
+  res.set('Access-Control-Allow-Origin', '*');
+  res.set('Access-Control-Allow-Headers', 'Content-Type, Accept');
+  if (req.method === 'OPTIONS') return res.sendStatus(204);
+  next();
+});
+
+let transporterPromise;
+function getTransport() {
+  transporterPromise ??= nodemailer.createTestAccount().then((testAccount) =>
+    nodemailer.createTransport({
+      host: 'smtp.ethereal.email',
+      port: 587,
+      secure: false,
+      auth: {
+        user: testAccount.user,
+        pass: testAccount.pass,
+      },
+    })
+  );
+  return transporterPromise;
 }
 
 app.post('/send-email', async (req, res) => {
   try {
-    const transporter = await createTransport();
+    const transporter = await getTransport();
     const body = req.body;
-    const type = body._type || 'contacto';
-    const replyto = body._replyto || '';
 
-    let subject, text;
-    if (type === 'pousadas') {
-      subject = 'Pedido Pousadas de Portugal - ' + (body.Nome || '');
-      text = 'Pedido Pousadas de Portugal\n\n';
-      for (const [k, v] of Object.entries(body)) {
-        if (k !== '_type' && k !== '_replyto') text += `${k}: ${v}\n`;
-      }
-    } else {
-      subject = 'Novo Contacto Website - ' + (body.Nome || '');
-      text = 'Contacto do Website\n\n';
-      for (const [k, v] of Object.entries(body)) {
-        if (k !== '_type' && k !== '_replyto') text += `${k}: ${v}\n`;
-      }
-    }
+    // Os campos começados por "_" são opções do FormSubmit, não dados.
+    const subject = body._subject || 'Contacto do Website';
+    const text = Object.entries(body)
+      .filter(([k]) => !k.startsWith('_'))
+      .map(([k, v]) => `${k}: ${v}`)
+      .join('\n');
 
     const info = await transporter.sendMail({
       from: '"Kindness & Care" <noreply@kindnesscare.pt>',
-      to: body._test_email || 'geral@kindnesscare.pt',
-      replyTo: replyto,
+      to: 'geral@kindnesscare.pt',
+      replyTo: body.email || undefined,
       subject,
       text,
     });
@@ -76,5 +78,5 @@ app.post('/send-email', async (req, res) => {
 const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`\n🚀 Servidor de teste: http://localhost:${PORT}`);
-  console.log(`📝 Os formulários do React devem apontar para http://localhost:${PORT}/send-email\n`);
+  console.log(`📝 Defina VITE_FORM_ENDPOINT=http://localhost:${PORT}/send-email em .env.local\n`);
 });

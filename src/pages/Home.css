@@ -89,6 +89,8 @@
   transition: all 0.3s ease;
   text-transform: none;
   letter-spacing: 0.5px;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .hero-contact-button:hover {
@@ -103,23 +105,6 @@
 }
 
 /* Seção Sobre Nós */
-.container-xxl {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.py-5 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 .sobre-nos-container {
   display: flex;
   align-items: center;
@@ -390,6 +375,8 @@
   font-size: 14px;
   width: fit-content;
   align-self: center;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .service-read-more:hover {
@@ -397,14 +384,6 @@
   color: var(--color-secondary);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(9, 67, 82, 0.3);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.mb-5 {
-  margin-bottom: 3rem;
 }
 
 /* ===== SEÇÃO PARCEIROS ===== */
@@ -581,28 +560,7 @@
   transform: scaleX(1);
 }
 
-.contact-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1.5rem;
-  background: var(--color-primary);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: all 0.4s ease;
-}
 
-.contact-card:hover .contact-icon {
-  transform: scale(1.1);
-  background: var(--color-primary-dark);
-}
-
-.contact-icon svg {
-  font-size: 2rem;
-  color: var(--color-secondary);
-}
 
 .contact-card-title {
   color: var(--color-primary);
@@ -612,7 +570,7 @@
   position: relative;
 }
 
-.contact-info {
+.contact-card-info {
   color: var(--color-primary);
   font-size: 1.2rem;
   font-weight: 600;
@@ -646,6 +604,8 @@
   align-self: center;
   text-transform: none;
   letter-spacing: 0.5px;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .contact-button:hover {
@@ -966,14 +926,7 @@
     font-size: 1.3rem;
   }
 
-  .contact-icon {
-    width: 70px;
-    height: 70px;
-  }
   
-  .contact-icon svg {
-    font-size: 1.8rem;
-  }
 
   .contact-button {
     padding: 8px 20px;
@@ -1009,9 +962,6 @@
     padding: 0 15px;
   }
 
-  .container-xxl {
-    padding: 0 15px;
-  }
 
   .sobre-nos-titulo {
     font-size: 1.8rem;
@@ -1102,16 +1052,8 @@
     font-size: 2rem;
   }
 
-  .contact-icon {
-    width: 60px;
-    height: 60px;
-  }
   
-  .contact-icon svg {
-    font-size: 1.6rem;
-  }
-  
-  .contact-info {
+  .contact-card-info {
     font-size: 1.1rem;
   }
   
