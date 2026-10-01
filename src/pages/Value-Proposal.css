@@ -146,7 +146,7 @@
   background: var(--color-primary-dark);
 }
 
-.value-card-icon i {
+.value-card-icon svg {
   font-size: 2rem;
   color: #ffffff;
 }
@@ -237,7 +237,7 @@
     height: 70px;
   }
   
-  .value-card-icon i {
+  .value-card-icon svg {
     font-size: 1.8rem;
   }
   
@@ -264,7 +264,7 @@
     height: 60px;
   }
   
-  .value-card-icon i {
+  .value-card-icon svg {
     font-size: 1.5rem;
   }
   

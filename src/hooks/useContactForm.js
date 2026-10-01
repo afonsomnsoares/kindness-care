@@ -6,7 +6,7 @@ import useAntiSpam from './useAntiSpam';
 const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/geral@kindnesscare.pt';
 
 /**
- * Lógica partilhada pelos formulários de Contacts.js e Health-Tourism.js:
+ * Lógica partilhada pelos formulários de Contacts.jsx e Health-Tourism.jsx:
  * estado dos campos, anti-spam (honeypot + time-trap) e envio para o
  * FormSubmit, com toasts de sucesso/erro e reset do formulário.
  *

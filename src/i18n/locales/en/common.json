@@ -161,14 +161,14 @@
   },
   "privacy": {
     "hero": { "title": "Privacy Policy", "subtitle": "How we handle and protect your data" },
-    "updated": "Last updated: June 2026",
+    "updated": "Last updated: October 2026",
     "sections": [
       { "heading": "1. Introduction", "paragraphs": ["Kindness & Care (hereinafter \"we\", \"our\" or \"the company\") is committed to protecting the privacy of its clients, partners, and website visitors. This Privacy Policy explains how we collect, use, share, and protect your personal data, in compliance with the General Data Protection Regulation (GDPR) and applicable Portuguese law."] },
       { "heading": "2. Data Controller", "paragraphs": ["Kindness & Care", "Email: geral@kindnesscare.pt", "Phone: +351 968 844 420"] },
       { "heading": "3. Data We Collect", "paragraphs": ["We may collect the following personal data:"], "list": ["Identification data: full name, date of birth, tax identification number (when required);", "Contact data: address, phone number, email address;", "Health data: relevant clinical information for service provision (only with explicit consent);", "Browsing data: IP address, browser type, visited pages, visit duration (via cookies);", "Billing data: information required for invoicing and payment processing."] },
       { "heading": "4. Purposes of Processing", "paragraphs": ["We use your data for the following purposes:"], "list": ["Provision of home care and healthcare services;", "Management of information requests and quotes;", "Communication regarding appointments, service changes, and relevant information;", "Compliance with legal and tax obligations;", "Improvement of our services and website user experience;", "Sending informational communications (only with consent)."] },
       { "heading": "5. Legal Basis for Processing", "paragraphs": ["Your personal data is processed based on the following legal bases:"], "list": ["Consent: for health data and marketing communications;", "Contract execution: for the provision of contracted services;", "Legal obligation: for invoicing and tax obligations;", "Legitimate interest: for improving our services and website security."] },
-      { "heading": "6. Data Sharing", "paragraphs": ["We do not share your personal data with third parties, except when necessary for service provision (such as partner healthcare entities), to comply with legal obligations, or with your explicit consent."] },
+      { "heading": "6. Data Sharing", "paragraphs": ["We do not share your personal data with third parties, except when necessary for service provision (such as partner healthcare entities), to comply with legal obligations, or with your explicit consent.", "We use the following service providers, which process data on our behalf:"], "list": ["FormSubmit (formsubmit.co): forwards to our email the messages sent through the contact and Pousadas de Portugal request forms, including your name, contact details and the content of your message;", "Google Analytics (Google Ireland Limited): website usage statistics, enabled only if you accept cookies."] },
       { "heading": "7. Retention Period", "paragraphs": ["We retain your personal data for as long as necessary to fulfill the purposes for which it was collected, including compliance with legal obligations (notably tax obligations, for a period of 10 years) and the defense of rights in legal disputes."] },
       { "heading": "8. Your Rights", "paragraphs": ["Under the GDPR, you have the following rights:"], "list": ["Right of access: to know what data we process and how;", "Right to rectification: to request correction of inaccurate data;", "Right to erasure: to request deletion of your data (except where law requires retention);", "Right to restriction: to request limitation of processing;", "Right to object: to object to processing for certain purposes;", "Right to data portability: to receive data in a structured format;", "Right to withdraw consent: at any time, without affecting the lawfulness of processing carried out prior to withdrawal."] },
       { "heading": "9. Security", "paragraphs": ["We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, loss, destruction, or disclosure. Our website uses HTTPS to ensure secure data transmission."] },
@@ -197,5 +197,23 @@
     "heading": "Page Not Found",
     "message": "The page you are looking for does not exist or has been moved.",
     "button": "Back to Home"
+  },
+  "loading": "Loading...",
+  "meta": {
+    "default": { "title": "Kindness & Care — Home Care Services | Braga, Guimarães, Viana do Castelo" },
+    "home": { "title": "Home Care Services | 24h Nursing", "description": "Kindness & Care provides nursing, rehabilitation, medical assistance and health tourism in Braga, Guimarães and Viana do Castelo. Specialised professionals available 24 hours a day." },
+    "history": { "title": "Our Story | From Frustration to Transformation", "description": "Discover the journey of Kindness & Care: how a personal loss became a mission to provide home care that combines technical excellence with humanity." },
+    "valueProposal": { "title": "Value Proposition | What Sets Us Apart", "description": "Discover the 6 pillars of the Kindness & Care value proposition: personalised service, qualified professionals, transparency, continuous training and guaranteed satisfaction." },
+    "mission": { "title": "Mission, Objectives and Values | Excellence and Humanity", "description": "Discover the mission, objectives and 6 core values of Kindness & Care: Excellence, Humanisation, Innovation, Commitment, Consistency and Community." },
+    "homeCare": { "title": "Professional Home Care | Care at Home", "description": "Specialised home care services in Braga, Guimarães and Viana do Castelo. Personal care, meal assistance and professional companionship 24 hours a day." },
+    "nursing": { "title": "Nursing and Rehabilitation | Functional Recovery", "description": "Specialised nursing and rehabilitation at home. Motor and respiratory rehabilitation care in Braga, Guimarães and Viana do Castelo." },
+    "medical": { "title": "Home Medical Assistance | Doctor Visits at Home", "description": "Specialised medical consultations in the comfort of your home. Professional medical assistance in Braga, Guimarães and Viana do Castelo." },
+    "caregiver": { "title": "Caregiver and Family Support | Expert Guidance", "description": "Specialised support for family caregivers, with training, guidance and emotional support in Braga, Guimarães and Viana do Castelo." },
+    "postpartum": { "title": "Specialised Postpartum Support | Care for Mother and Baby", "description": "Specialised care for mother and newborn after birth. Professional support and guidance at home during the postpartum period." },
+    "contacts": { "title": "Contacts | Get in Touch", "description": "Get in touch with Kindness & Care. Available 24 hours a day in Braga, Guimarães and Viana do Castelo. Phone, email and contact form." },
+    "healthTourism": { "title": "Health and Wellness Tourism | Pousadas de Portugal", "description": "Personalised healthcare during your stay at Pousadas de Portugal. A Kindness & Care partnership: nursing, rehabilitation, medical assistance and wellness." },
+    "pousadas": { "title": "Pousadas de Portugal - Health Services | Request Now", "description": "Request healthcare services during your stay at Pousadas de Portugal. Professional nursing, rehabilitation and medical assistance." },
+    "privacy": { "title": "Privacy Policy", "description": "How Kindness & Care collects, uses and protects your personal data, in accordance with the GDPR." },
+    "terms": { "title": "Terms and Conditions", "description": "Terms and conditions for using the Kindness & Care website and services." }
   }
 }

@@ -321,7 +321,7 @@
   transition: all 0.4s ease;
 }
 
-.service-icon i {
+.service-icon svg {
   font-size: 2rem;
   color: white;
   transition: all 0.4s ease;
@@ -332,7 +332,7 @@
   background: var(--color-primary-dark);
 }
 
-.service-card:hover .service-icon i {
+.service-card:hover .service-icon svg {
   transform: scale(1.1);
 }
 
@@ -599,7 +599,7 @@
   background: var(--color-primary-dark);
 }
 
-.contact-icon i {
+.contact-icon svg {
   font-size: 2rem;
   color: var(--color-secondary);
 }
@@ -899,7 +899,7 @@
     height: 70px;
   }
 
-  .service-icon i {
+  .service-icon svg {
     font-size: 1.8rem;
   }
 
@@ -971,7 +971,7 @@
     height: 70px;
   }
   
-  .contact-icon i {
+  .contact-icon svg {
     font-size: 1.8rem;
   }
 
@@ -1038,7 +1038,7 @@
     height: 60px;
   }
 
-  .service-icon i {
+  .service-icon svg {
     font-size: 1.6rem;
   }
 
@@ -1107,7 +1107,7 @@
     height: 60px;
   }
   
-  .contact-icon i {
+  .contact-icon svg {
     font-size: 1.6rem;
   }
   

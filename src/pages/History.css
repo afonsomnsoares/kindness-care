@@ -164,7 +164,7 @@
   background: var(--color-primary-dark);
 }
 
-.commitment-icon i {
+.commitment-icon svg {
   font-size: 2rem;
   color: #ffffff;
 }
@@ -256,7 +256,7 @@
     height: 70px;
   }
   
-  .commitment-icon i {
+  .commitment-icon svg {
     font-size: 1.8rem;
   }
   
@@ -295,7 +295,7 @@
     height: 60px;
   }
   
-  .commitment-icon i {
+  .commitment-icon svg {
     font-size: 1.5rem;
   }
   

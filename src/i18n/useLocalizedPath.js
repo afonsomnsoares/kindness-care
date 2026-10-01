@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import routes from './routes';
+import routes, { routeKeyForPath } from './routes';
 
 export function useLocalizedPath(key) {
   const { i18n } = useTranslation();
@@ -9,10 +9,7 @@ export function useLocalizedPath(key) {
 
 export function localizePath(pathname, targetLang) {
   const target = targetLang?.startsWith('en') ? 'en' : 'pt';
-  const clean = pathname.replace(/\/+$/, '') || '/';
-  const key = Object.keys(routes.pt).find(
-    (k) => routes.pt[k] === clean || routes.en[k] === clean
-  );
+  const key = routeKeyForPath(pathname);
   return key ? routes[target][key] : routes[target].home;
 }
 

@@ -168,7 +168,7 @@
   background: var(--color-primary-dark);
 }
 
-.mission-icon i {
+.mission-icon svg {
   font-size: 2rem;
   color: #ffffff;
 }
@@ -368,7 +368,7 @@
   background: var(--color-primary-dark);
 }
 
-.value-icon i {
+.value-icon svg {
   font-size: 2rem;
   color: #ffffff;
 }
@@ -476,8 +476,8 @@
     height: 70px;
   }
   
-  .mission-icon i,
-  .value-icon i {
+  .mission-icon svg,
+  .value-icon svg {
     font-size: 1.8rem;
   }
   
@@ -507,8 +507,8 @@
     height: 60px;
   }
   
-  .mission-icon i,
-  .value-icon i {
+  .mission-icon svg,
+  .value-icon svg {
     font-size: 1.5rem;
   }
   

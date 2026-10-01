@@ -33,4 +33,17 @@ const routes = {
   },
 };
 
+/** Idioma de um caminho: tudo o que está debaixo de /en é inglês. */
+export function langFromPath(pathname) {
+  return pathname === '/en' || pathname.startsWith('/en/') ? 'en' : 'pt';
+}
+
+/** Chave da rota (ex.: 'contacts') para um caminho PT ou EN, ou undefined. */
+export function routeKeyForPath(pathname) {
+  const clean = pathname.replace(/\/+$/, '') || '/';
+  return Object.keys(routes.pt).find(
+    (k) => routes.pt[k] === clean || routes.en[k] === clean
+  );
+}
+
 export default routes;

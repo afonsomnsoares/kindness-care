@@ -31,3 +31,6 @@ yarn-error.log*
 
 # coverage
 coverage/
+
+# React Router (tipos gerados)
+.react-router/
