@@ -6,7 +6,9 @@
   background: var(--color-primary);
   color: rgba(255, 255, 255, 0.9);
   padding: 1rem 20px;
-  z-index: 9999;
+  /* Acima do botão flutuante do WhatsApp (z-index 10000), que tapava o botão
+     "Recusar" na página inicial. */
+  z-index: 10001;
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
   animation: slideUp 0.4s ease;
 }

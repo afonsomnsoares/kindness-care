@@ -1,0 +1,37 @@
+/* Página 404. (Estilos em classes, e não no atributo style, por causa da
+   Content Security Policy: ver astro.config.mjs.) */
+.not-found-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.not-found-code {
+  font-size: 6rem;
+  color: #094352;
+  margin: 0;
+}
+
+.not-found-heading {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.not-found-message {
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.not-found-button {
+  background: #094352;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+}

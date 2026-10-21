@@ -1,0 +1,196 @@
+---
+import './NavigationBar.css';
+import { Image } from 'astro:assets';
+import { FaChevronDown, FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../images/logo.webp';
+import flagPT from '../images/flag-1.webp';
+import flagUK from '../images/flag-2.webp';
+import routes, { localizePath } from '../i18n/routes';
+import { getT } from '../i18n/i18n';
+
+const { lang } = Astro.props;
+const t = getT(lang);
+const r = routes[lang];
+const pathname = Astro.url.pathname.replace(/\/+$/, '') || '/';
+
+const menuItems = [
+  { id: 'home', label: t('nav.home'), path: r.home },
+  { id: 'history', label: t('nav.history'), path: r.history },
+  {
+    id: 'kindness-care',
+    label: t('nav.kindnessCare'),
+    dropdown: [
+      { id: 'value-proposal', label: t('nav.valueProposal'), path: r.valueProposal },
+      { id: 'mission-objectives-values', label: t('nav.missionObjectivesValues'), path: r.mission },
+    ]
+  },
+  {
+    id: 'services',
+    label: t('nav.services'),
+    dropdown: [
+      { id: 'home-care', label: t('nav.homeCare'), path: r.homeCare },
+      { id: 'nursing-rehabilitation', label: t('nav.nursingRehabilitation'), path: r.nursing },
+      { id: 'medical-assistance', label: t('nav.medicalAssistance'), path: r.medical },
+      { id: 'caregiver-support', label: t('nav.caregiverSupport'), path: r.caregiver },
+      { id: 'postpartum-support', label: t('nav.postpartumSupport'), path: r.postpartum },
+      { id: 'health-tourism-services', label: t('nav.healthTourism'), path: r.healthTourism },
+    ]
+  },
+  {
+    id: 'language',
+    label: t('nav.language'),
+    dropdown: [
+      // A mesma página no outro idioma.
+      { id: 'portuguese', label: t('nav.portuguese'), path: localizePath(pathname, 'pt'), icon: flagPT, lang: 'pt' },
+      { id: 'english', label: t('nav.english'), path: localizePath(pathname, 'en'), icon: flagUK, lang: 'en' },
+    ]
+  },
+  {
+    id: 'contact',
+    label: t('nav.contact'),
+    path: r.contacts,
+    isButton: true
+  }
+];
+
+// Página atual; um submenu fica ativo se tiver a página atual (exceto o de
+// idioma, que aponta sempre para a página atual).
+const isActive = (item) =>
+  item.dropdown
+    ? item.dropdown.some((subItem) => !subItem.lang && subItem.path === pathname)
+    : item.path === pathname;
+const current = (path) => (path === pathname ? 'page' : undefined);
+---
+
+<nav class="navbar" data-nav>
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href={r.home} class="logo-link">
+        <Image src={logo} width={162} alt="Kindness & Care" class="logo-image" loading="eager" />
+        <div class="logo-text">
+          <span class="logo-main">Kindness & Care</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="menu-container" data-desktop-menu>
+      <ul class="nav-menu">
+        {menuItems.map((item) => (
+          <li class:list={['nav-item', { active: isActive(item), 'has-dropdown': item.dropdown }]}>
+            <div class="nav-link-container">
+              {item.dropdown ? (
+                <>
+                  <button
+                    class="nav-link"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls={`dropdown-${item.id}`}
+                    data-dropdown-toggle
+                  >
+                    <span class="nav-label">{item.label}</span>
+                    <span class="dropdown-arrow"><FaChevronDown /></span>
+                  </button>
+                  <div class="dropdown-menu" id={`dropdown-${item.id}`} hidden>
+                    {item.dropdown.map((subItem) => (
+                      subItem.lang ? (
+                        <a href={subItem.path} hreflang={subItem.lang} lang={subItem.lang} class="dropdown-item-btn">
+                          <Image src={subItem.icon} width={36} alt="" class="dropdown-flag" />
+                          {subItem.label}
+                        </a>
+                      ) : (
+                        <a href={subItem.path} class:list={['dropdown-item', { active: isActive(subItem) }]} aria-current={current(subItem.path)}>
+                          {subItem.label}
+                        </a>
+                      )
+                    ))}
+                  </div>
+                </>
+              ) : item.isButton ? (
+                <a href={item.path} class="nav-link nav-button" aria-current={current(item.path)}>
+                  {item.label}
+                </a>
+              ) : (
+                <a href={item.path} class="nav-link" aria-current={current(item.path)}>
+                  <span class="nav-label">{item.label}</span>
+                </a>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <button
+      class="mobile-menu-btn"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label={t('nav.openMenu')}
+      data-mobile-toggle
+      data-label-open={t('nav.openMenu')}
+      data-label-close={t('nav.closeMenu')}
+    >
+      <FaBars data-icon="open" />
+      <FaTimes data-icon="close" hidden />
+    </button>
+  </div>
+
+  <div class="mobile-overlay" data-mobile-overlay hidden>
+    <div
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label={t('nav.mainMenu')}
+      class="mobile-menu"
+    >
+      <div class="mobile-logo">
+        <Image src={logo} width={162} alt="Kindness & Care" class="mobile-logo-image" />
+        <span class="mobile-logo-text">Kindness & Care</span>
+      </div>
+
+      {menuItems.map((item) => (
+        <div class="mobile-menu-item">
+          {item.dropdown ? (
+            <>
+              <button
+                class:list={['mobile-nav-link', { active: isActive(item) }]}
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls={`mobile-dropdown-${item.id}`}
+                data-dropdown-toggle
+              >
+                {item.label}
+                <span class="mobile-dropdown-arrow">
+                  <FaChevronDown />
+                </span>
+              </button>
+              <div class="mobile-dropdown" id={`mobile-dropdown-${item.id}`} hidden>
+                {item.dropdown.map((subItem) => (
+                  subItem.lang ? (
+                    <a href={subItem.path} hreflang={subItem.lang} lang={subItem.lang} class="mobile-dropdown-item-btn">
+                      <Image src={subItem.icon} width={36} alt="" class="dropdown-flag" />
+                      {subItem.label}
+                    </a>
+                  ) : (
+                    <a href={subItem.path} class:list={['mobile-dropdown-item', { active: isActive(subItem) }]} aria-current={current(subItem.path)}>
+                      {subItem.label}
+                    </a>
+                  )
+                ))}
+              </div>
+            </>
+          ) : item.isButton ? (
+            <a href={item.path} class="mobile-nav-link mobile-button" aria-current={current(item.path)}>{item.label}</a>
+          ) : (
+            <a href={item.path} class:list={['mobile-nav-link', { active: isActive(item) }]} aria-current={current(item.path)}>{item.label}</a>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  import { initNavigation } from '../scripts/navigation';
+
+  initNavigation();
+</script>

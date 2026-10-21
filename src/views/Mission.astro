@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import './Mission-Objectives-Values.css';
+import { FaMedal, FaHeart, FaLightbulb, FaHandshake, FaChartLine, FaUsers, FaStar, FaBullseye } from 'react-icons/fa';
+import { getT } from '../i18n/i18n';
+
+const { lang } = Astro.props;
+const t = getT(lang);
+const missionCards = t('missionValues.mission.cards', { returnObjects: true });
+const objectives = t('missionValues.objectives.cards', { returnObjects: true });
+const values = t('missionValues.values.items', { returnObjects: true });
+
+const missionSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Kindness & Care",
+  "url": "https://www.kindnesscare.pt",
+  "mission": "Fornecer cuidados domiciliários de excelência com abordagem humanizada e baseada em conhecimento académico.",
+  "description": "Missão, Objetivos e Valores: Excelência, Humanização, Inovação, Compromisso, Consistência e Comunidade"
+};
+
+const valueIcons = [
+  FaMedal, FaHeart, FaLightbulb,
+  FaHandshake, FaChartLine, FaUsers
+];
+---
+
+<Layout lang={lang} page="mission" schema={missionSchema}>
+  <div class="mission-values-page">
+    {/* Hero Section */}
+    <section class="mission-hero-section">
+      <div class="mission-hero-background">
+        <div class="mission-hero-overlay"></div>
+      </div>
+
+      <div class="mission-hero-content">
+        <div class="mission-hero-text">
+          <h1 class="mission-hero-title">{t('missionValues.hero.title')}</h1>
+          <p class="mission-hero-subtitle">{t('missionValues.hero.subtitle')}</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Missão Section */}
+    <section class="mission-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="mission-content">
+            <div class="section-header">
+              <h2 class="section-title">{t('missionValues.mission.title')}</h2>
+              <div class="section-divider"></div>
+            </div>
+
+            <div class="mission-grid">
+              {missionCards.map((card, idx) => (
+                <div class="mission-card">
+                  <div class="mission-icon">
+                    {idx === 0 ? <FaStar /> : <FaBullseye />}
+                  </div>
+                  <p>{card}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Objetivos Section */}
+    <section class="objectives-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="objectives-content">
+            <div class="section-header">
+              <h2 class="section-title">{t('missionValues.objectives.title')}</h2>
+              <div class="section-divider"></div>
+            </div>
+
+            <div class="objectives-grid">
+              {objectives.map((obj) => (
+                <div class="objective-card">
+                  <div class="objective-number">{obj.number}</div>
+                  <h3 class="objective-title">{obj.title}</h3>
+                  <p class="objective-description">{obj.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Valores Section */}
+    <section class="values-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="values-content">
+            <div class="section-header">
+              <h2 class="section-title">{t('missionValues.values.title')}</h2>
+              <div class="section-divider"></div>
+            </div>
+
+            <div class="values-grid">
+              {values.map((item, idx) => {
+                const Icon = valueIcons[idx];
+                return (
+                  <div class="value-item">
+                    <div class="value-icon">
+                      <Icon />
+                    </div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

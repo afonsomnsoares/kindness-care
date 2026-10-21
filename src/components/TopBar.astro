@@ -1,0 +1,35 @@
+---
+import './TopBar.css';
+import { FaPhone, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
+import { getT } from '../i18n/i18n';
+
+const t = getT(Astro.props.lang);
+---
+
+<div class="topbar">
+  <div class="topbar-container">
+    <div class="topbar-item">
+      <FaMapMarkerAlt className="topbar-icon" />
+      <span>{t('topbar.locations')} <strong>{t('topbar.cities')}</strong></span>
+    </div>
+
+    <div class="topbar-item">
+      <FaCalendarAlt className="topbar-icon" />
+      <span>{t('topbar.availability')} <strong> {t('topbar.allDays')}</strong></span>
+    </div>
+
+    <div class="topbar-contacts">
+      <div class="topbar-item">
+        <FaPhone className="topbar-icon" aria-hidden="true" />
+        <a href="tel:+351968844420"><strong>+351 968 844 420</strong></a>
+      </div>
+
+      <div class="topbar-separator"></div>
+
+      <div class="topbar-item">
+        <FaPhone className="topbar-icon" aria-hidden="true" />
+        <a href="tel:+351933929761"><strong>+351 933 929 761</strong></a>
+      </div>
+    </div>
+  </div>
+</div>

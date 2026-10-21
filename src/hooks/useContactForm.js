@@ -1,17 +1,16 @@
 import { useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useToast } from '../components/Toast';
+import { useToast } from '../components/forms/Toast';
 import useAntiSpam from './useAntiSpam';
 
 // Endereço para onde os formulários são enviados. Por omissão é o FormSubmit;
-// VITE_FORM_ENDPOINT permite usar o alias aleatório do FormSubmit (para não
+// PUBLIC_FORM_ENDPOINT permite usar o alias aleatório do FormSubmit (para não
 // expor o email no código) ou o servidor de teste local (ver .env.example).
 export const FORM_ENDPOINT =
-  import.meta.env.VITE_FORM_ENDPOINT ||
+  import.meta.env.PUBLIC_FORM_ENDPOINT ||
   'https://formsubmit.co/ajax/geral@kindnesscare.pt';
 
 /**
- * Lógica partilhada pelos formulários de Contacts.jsx e Pousadas.jsx:
+ * Lógica partilhada pelos formulários de contacto (ContactForm.jsx e PousadasForm.jsx):
  * estado dos campos, anti-spam (honeypot + time-trap) e envio para o
  * FormSubmit, com toasts de sucesso/erro e reset do formulário.
  *
@@ -21,9 +20,9 @@ export const FORM_ENDPOINT =
  *   corpo a enviar ao FormSubmit a partir do formData atual.
  * @param {string} params.successKey - chave i18n do toast de sucesso.
  * @param {string} params.errorKey - chave i18n do toast de erro.
+ * @param {(key: string) => string} params.t - função de tradução (createT).
  */
-function useContactForm({ initialData, buildPayload, successKey, errorKey }) {
-  const { t } = useTranslation();
+function useContactForm({ initialData, buildPayload, successKey, errorKey, t }) {
   const addToast = useToast();
   const initialDataRef = useRef(initialData);
 
@@ -64,7 +63,9 @@ function useContactForm({ initialData, buildPayload, successKey, errorKey }) {
 
       const result = await response.json();
 
-      if (result.success) {
+      // O FormSubmit responde com texto ("true"/"false"), e "false" seria
+      // verdadeiro num if: compara-se o texto.
+      if (response.ok && String(result.success) === 'true') {
         addToast(t(successKey), 'success');
         setFormData(initialDataRef.current);
       } else {

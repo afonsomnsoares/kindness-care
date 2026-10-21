@@ -1,0 +1,89 @@
+---
+/**
+ * As cinco páginas de serviço com o mesmo layout (apoio domiciliário,
+ * enfermagem, assistência médica, apoio ao cuidador, pós-parto). `page` é a
+ * chave da rota em src/i18n/routes.js; o texto vem das traduções.
+ */
+import Layout from '../layouts/Layout.astro';
+import './ServicePage.css';
+import { Image } from 'astro:assets';
+import homeCareImage from '../images/image-5.webp';
+import nursingImage from '../images/image-6.webp';
+import medicalImage from '../images/image-7.webp';
+import caregiverImage from '../images/image-8.webp';
+import postpartumImage from '../images/image-9.webp';
+import { getT } from '../i18n/i18n';
+
+// `i18nKey` é a secção correspondente em common.json.
+const SERVICES = {
+  homeCare: { i18nKey: 'homeCare', image: homeCareImage },
+  nursing: { i18nKey: 'nursingRehabilitation', image: nursingImage },
+  medical: { i18nKey: 'medicalAssistance', image: medicalImage },
+  caregiver: { i18nKey: 'caregiverSupport', image: caregiverImage },
+  postpartum: { i18nKey: 'postpartumSupport', image: postpartumImage },
+};
+
+const { lang, page } = Astro.props;
+const t = getT(lang);
+const { i18nKey, image } = SERVICES[page];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": t(`${i18nKey}.hero.title`),
+  "description": t(`meta.${page}.description`),
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Kindness & Care"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Braga"},
+    {"@type": "City", "name": "Guimarães"},
+    {"@type": "City", "name": "Viana do Castelo"}
+  ],
+  "serviceType": "Healthcare"
+};
+---
+
+<Layout lang={lang} page={page} schema={schema}>
+  <div class="service-detail-page">
+    {/* Hero Section */}
+    <section class="service-detail-hero-section">
+      <div class="service-detail-hero-background">
+        <div class="service-detail-hero-overlay"></div>
+      </div>
+
+      <div class="service-detail-hero-content">
+        <div class="service-detail-hero-text">
+          <h1 class="service-detail-hero-title">{t(`${i18nKey}.hero.title`)}</h1>
+          <p class="service-detail-hero-subtitle">{t(`${i18nKey}.hero.subtitle`)}</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Conteúdo Principal */}
+    <section class="service-detail-content-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="service-detail-content">
+            <div class="service-detail-grid">
+              {/* Texto */}
+              <div class="service-detail-text">
+                <h2 class="service-detail-title">{t(`${i18nKey}.content.title`)}</h2>
+                <p class="service-detail-description">{t(`${i18nKey}.content.description`)}</p>
+              </div>
+
+              {/* Imagem */}
+              <div class="service-detail-image">
+                <Image src={image} width={Math.min(image.width, 1000)}
+                  alt={t(`${i18nKey}.content.alt`)}
+                  class="service-detail-photo"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

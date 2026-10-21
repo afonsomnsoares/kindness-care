@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import './Health-Tourism-Service.css';
+import { Image } from 'astro:assets';
+import caregiverImage from '../images/image-10.webp';
+import routes from '../i18n/routes';
+import { getT } from '../i18n/i18n';
+
+const { lang } = Astro.props;
+const t = getT(lang);
+const features = t('healthTourismService.content.features', { returnObjects: true });
+
+const healthTourismSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": t('meta.healthTourism.title'),
+  "description": t('meta.healthTourism.description'),
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Kindness & Care"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Viana do Castelo"},
+    {"@type": "City", "name": "Guimarães"},
+    {"@type": "City", "name": "Amares"}
+  ],
+  "serviceType": "Healthcare"
+};
+---
+
+<Layout lang={lang} page="healthTourism" schema={healthTourismSchema}>
+  <div class="caregiver-support-page">
+    {/* Hero Section */}
+    <section class="caregiver-hero-section">
+      <div class="caregiver-hero-background">
+        <div class="caregiver-hero-overlay"></div>
+      </div>
+
+      <div class="caregiver-hero-content">
+        <div class="caregiver-hero-text">
+          <h1 class="caregiver-hero-title">{t('healthTourismService.hero.title')}</h1>
+          <p class="caregiver-hero-subtitle">{t('healthTourismService.hero.subtitle')}</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Conteúdo Principal */}
+    <section class="caregiver-content-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="caregiver-content">
+            <div class="caregiver-grid">
+              {/* Texto */}
+              <div class="caregiver-text">
+                <h2 class="caregiver-title">{t('healthTourismService.content.title')}</h2>
+                <p class="caregiver-description">{t('healthTourismService.content.description')}</p>
+
+                <p class="caregiver-description">{t('healthTourismService.content.intro')}</p>
+
+                <ul class="caregiver-features">
+                  {features.map((feature) => <li>{feature}</li>)}
+                </ul>
+              </div>
+
+              {/* Imagem */}
+              <div class="caregiver-image">
+                <Image src={caregiverImage}
+                  alt={t('healthTourismService.content.alt')}
+                  class="support-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Botão CTA */}
+    <div class="tourism-cta-section">
+      <div class="tourism-cta-content">
+        <h3 class="tourism-cta-title">{t('healthTourismService.cta.title')}</h3>
+        <p class="tourism-cta-text">{t('healthTourismService.cta.text')}</p>
+        <a href={routes[lang].pousadas} class="tourism-cta-button">
+          {t('healthTourismService.cta.button')}
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import './Value-Proposal.css';
+import { FaUserCog, FaGraduationCap, FaChartLine, FaBookOpen, FaComments, FaStar } from 'react-icons/fa';
+import { getT } from '../i18n/i18n';
+
+const { lang } = Astro.props;
+const t = getT(lang);
+const cards = t('valueProposal.cards', { returnObjects: true });
+const icons = [
+  FaUserCog, FaGraduationCap, FaChartLine,
+  FaBookOpen, FaComments, FaStar
+];
+
+const valueSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Kindness & Care",
+  "url": "https://www.kindnesscare.pt",
+  "description": "Proposta de valor: Serviço personalizado, profissionais qualificados, transparência, treinamento contínuo, serviço aberto e avaliação de satisfação."
+};
+---
+
+<Layout lang={lang} page="valueProposal" schema={valueSchema}>
+  <div class="value-proposal-page">
+    {/* Hero Section */}
+    <section class="value-hero-section">
+      <div class="value-hero-background">
+        <div class="value-hero-overlay"></div>
+      </div>
+
+      <div class="value-hero-content">
+        <div class="value-hero-text">
+          <h1 class="value-hero-title">{t('valueProposal.hero.title')}</h1>
+          <p class="value-hero-subtitle">{t('valueProposal.hero.subtitle')}</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Cards Section */}
+    <section class="value-cards-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="value-cards-grid">
+            {cards.map((card, idx) => {
+              const Icon = icons[idx];
+              return (
+                <div class="value-card">
+                  <div class="value-card-icon">
+                    <Icon />
+                  </div>
+                  <h3 class="value-card-title">{card.title}</h3>
+                  <p class="value-card-description">{card.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

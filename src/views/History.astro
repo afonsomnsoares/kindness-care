@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import './History.css';
+import { FaStethoscope, FaHeart, FaUserFriends } from 'react-icons/fa';
+import routes from '../i18n/routes';
+import { getT } from '../i18n/i18n';
+
+const { lang } = Astro.props;
+const t = getT(lang);
+const sections = t('history.sections', { returnObjects: true });
+const commitmentIcons = [FaStethoscope, FaHeart, FaUserFriends];
+
+const historySchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Kindness & Care",
+  "url": "https://www.kindnesscare.pt",
+  "foundingDate": "2025",
+  "description": "A história de Kindness & Care: da frustração à transformação, criando um serviço que combina excelência técnica com humanidade genuína.",
+  "parentOrganization": {
+    "@type": "EducationalOrganization",
+    "name": "Universidade do Minho"
+  }
+};
+---
+
+<Layout lang={lang} page="history" schema={historySchema}>
+  <div class="history-page">
+    {/* Hero Section da História */}
+    <section class="history-hero-section">
+      <div class="history-hero-background">
+        <div class="history-hero-overlay"></div>
+      </div>
+
+      <div class="history-hero-content">
+        <div class="history-hero-text">
+          <h1 class="history-hero-title">{t('history.hero.title')}</h1>
+          <p class="history-hero-subtitle">{t('history.hero.subtitle')}</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Conteúdo Principal da História */}
+    <section class="history-content-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="history-content">
+            {sections.map((section) => (
+              <div class="history-section">
+                <h2 class="history-section-title">{section.title}</h2>
+                {section.paragraphs && (
+                  <div class="history-section-content">
+                    {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+                  </div>
+                )}
+                {section.commitments && (
+                  <div class="commitment-grid">
+                    {section.commitments.map((commitment, cIdx) => {
+                      const Icon = commitmentIcons[cIdx] ?? FaUserFriends;
+                      return (
+                        <div class="commitment-item">
+                          <div class="commitment-icon">
+                            <Icon />
+                          </div>
+                          <h3>{commitment.title}</h3>
+                          <p>{commitment.description}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Chamada para Ação */}
+            <div class="history-cta-section">
+              <h2 class="history-cta-title">{t('history.cta.title')}</h2>
+              <p class="history-cta-text">{t('history.cta.text')}</p>
+              <a href={routes[lang].contacts} class="history-cta-button">
+                {t('history.cta.button')}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

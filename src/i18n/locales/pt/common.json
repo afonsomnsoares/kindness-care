@@ -110,7 +110,7 @@
         {
           "title": "Turismo de Saúde e Bem-Estar",
           "description": "Serviços personalizados de cuidados pessoais e de saúde aos hóspedes das Pousadas de Viana do Castelo, Guimarães, Santa Maria do Bouro.",
-          "features": ["Apoio no autocuidado", "Reabilitação (motora e respiratória)", "Tratamento de feridas", "Administração de injetaveis", "Apoio na toma de medicação", "Apoio a famílias com membros com necessidades especiais"],
+          "features": ["Apoio no autocuidado", "Reabilitação (motora e respiratória)", "Tratamento de feridas", "Administração de injetáveis", "Apoio na toma de medicação", "Apoio a famílias com membros com necessidades especiais"],
           "button": "Ler Mais"
         }
       ]
@@ -297,6 +297,7 @@
       "phone": "Contacto Telefónico",
       "phonePlaceholder": "XXX XXX XXX",
       "country": "País do indicativo telefónico",
+      "phoneInvalid": "Indique o seu número de telefone.",
       "email": "Email",
       "emailPlaceholder": "seu@email.com",
       "pousada": "Pousada onde ficará hospedado",

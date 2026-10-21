@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+import './Home.css';
+import { Image } from 'astro:assets';
+import { FaHome, FaUserNurse, FaUserMd, FaHandsHelping, FaBaby, FaHotel, FaWhatsapp } from 'react-icons/fa';
+import heroImage from '../images/image-1.webp';
+import sobreNos1 from '../images/image-3.webp';
+import sobreNos2 from '../images/image-2.webp';
+import parceiro1 from '../images/partner-1.webp';
+import parceiro2 from '../images/partner-2.webp';
+import parceiro3 from '../images/partner-3.webp';
+import parceiro4 from '../images/image-11.webp';
+import routes from '../i18n/routes';
+import { getT } from '../i18n/i18n';
+
+const { lang } = Astro.props;
+const t = getT(lang);
+const r = routes[lang];
+const whatsappUrl = `https://wa.me/351968844420?text=${encodeURIComponent(t('home.whatsappMessage'))}`;
+
+const parceiros = [parceiro1, parceiro2, parceiro3, parceiro4].map((imagem, i) => ({
+  nome: t(`home.partners.names.${i}`),
+  imagem,
+}));
+
+// Cartões de serviço: o texto vem de home.services.cards.<n> nas traduções.
+const services = [
+  { icon: FaHome, features: 4, path: r.homeCare },
+  { icon: FaUserNurse, features: 4, path: r.nursing },
+  { icon: FaUserMd, features: 4, path: r.medical },
+  { icon: FaHandsHelping, features: 4, path: r.caregiver },
+  { icon: FaBaby, features: 4, path: r.postpartum },
+  { icon: FaHotel, features: 6, path: r.pousadas },
+];
+---
+
+<Layout lang={lang} page="home">
+  <div class="home-page">
+    {/* Os dados estruturados da empresa estão em src/layouts/Layout.astro (todas as páginas). */}
+    {/* Hero Section */}
+    <section class="hero-section">
+      <div class="hero-background">
+        <Image src={heroImage} alt={t('home.hero.title')} class="hero-image" loading="eager" fetchpriority="high" />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-main-title">{t('home.hero.title')}</h1>
+          <h2 class="hero-subtitle">{t('home.hero.subtitle')}</h2>
+
+          <p class="hero-description">{t('home.hero.description')}</p>
+
+          <a href={r.contacts} class="hero-contact-button">{t('home.hero.button')}</a>
+        </div>
+      </div>
+    </section>
+
+    {/* Secção Sobre Nós */}
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="sobre-nos-container">
+          <div class="sobre-nos-imagens">
+            <div class="imagem-principal">
+              <Image src={sobreNos1} alt={t('home.about.alt1')} />
+            </div>
+            <div class="imagem-secundaria">
+              <Image src={sobreNos2} alt={t('home.about.alt2')} />
+            </div>
+          </div>
+
+          <div class="sobre-nos-texto">
+            <h2 class="sobre-nos-titulo">{t('home.about.title')}</h2>
+            {[0, 1, 2, 3, 4, 5].map((i) => (
+              <p class="sobre-nos-paragrafo">{t(`home.about.paragraphs.${i}`)}</p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* SECÇÃO SERVIÇOS */}
+    <section class="services-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="services-title">{t('home.services.title')}</h2>
+            <p class="services-subtitle">{t('home.services.subtitle')}</p>
+          </div>
+
+          <div class="services-grid">
+            {services.map(({ icon: Icon, features, path }, idx) => (
+              <div class="service-card">
+                <div class="service-icon">
+                  <Icon />
+                </div>
+                <h3>{t(`home.services.cards.${idx}.title`)}</h3>
+                <p>{t(`home.services.cards.${idx}.description`)}</p>
+                <ul class="service-features">
+                  {Array.from({ length: features }, (_, fi) => (
+                    <li>{t(`home.services.cards.${idx}.features.${fi}`)}</li>
+                  ))}
+                </ul>
+                <a href={path} class="service-read-more">{t(`home.services.cards.${idx}.button`)}</a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECÇÃO PARCEIROS */}
+    <section class="partners-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="partners-title">{t('home.partners.title')}</h2>
+            <p class="partners-subtitle">{t('home.partners.subtitle')}</p>
+          </div>
+
+          <div class="partners-grid">
+            {parceiros.map((parceiro) => (
+              <div class="partner-item">
+                <Image src={parceiro.imagem} height={Math.min(parceiro.imagem.height, 240)} alt={parceiro.nome} class="partner-image" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECÇÃO CONTACTO */}
+    <section class="contact-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="contact-title">{t('home.contactSection.title')}</h2>
+            <p class="contact-subtitle">{t('home.contactSection.subtitle')}</p>
+          </div>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <h3 class="contact-card-title">{t('home.contactSection.phone.title')}</h3>
+              <p class="contact-card-info">{t('home.contactSection.phone.info')}</p>
+              <p class="contact-description">{t('home.contactSection.phone.description')}</p>
+              <a href="tel:+351968844420" class="contact-button">{t('home.contactSection.phone.button')}</a>
+            </div>
+
+            <div class="contact-card">
+              <h3 class="contact-card-title">{t('home.contactSection.email.title')}</h3>
+              <p class="contact-card-info">{t('home.contactSection.email.info')}</p>
+              <p class="contact-description">{t('home.contactSection.email.description')}</p>
+              <a href="mailto:geral@kindnesscare.pt" class="contact-button">{t('home.contactSection.email.button')}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* ÍCONE DO WHATSAPP FLUTUANTE */}
+    <a
+      class="whatsapp-float"
+      href={whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={t('home.whatsappTooltip')}
+    >
+      <span class="whatsapp-tooltip" aria-hidden="true">{t('home.whatsappTooltip')}</span>
+      <FaWhatsapp className="whatsapp-icon" aria-hidden="true" />
+    </a>
+  </div>
+</Layout>

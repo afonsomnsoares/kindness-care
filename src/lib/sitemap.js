@@ -4,7 +4,7 @@ import { absoluteUrl } from './site.js';
 /**
  * sitemap.xml com todas as páginas de src/i18n/routes.js, nos dois idiomas,
  * cada uma com as ligações para a versão no outro idioma. É gerado no build
- * (ver react-router.config.js), por isso nunca fica desatualizado.
+ * (ver src/pages/sitemap.xml.js), por isso nunca fica desatualizado.
  */
 export function buildSitemap() {
   const entries = Object.keys(routes.pt).flatMap((key) => {

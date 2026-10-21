@@ -159,11 +159,24 @@
   gap: 10px;
 }
 
+/* Escolha de idioma: são links, com o aspeto dos antigos botões. */
+a.dropdown-item-btn,
+a.mobile-dropdown-item-btn {
+  text-decoration: none;
+  line-height: normal;
+}
+
 .dropdown-item:hover,
 .dropdown-item-btn:hover {
   background: rgba(9, 67, 82, 0.08);
   color: var(--color-primary-hover);
   padding-left: 25px;
+}
+
+/* Página atual, dentro do submenu. */
+.dropdown-item.active {
+  color: var(--color-primary-light);
+  font-weight: 800;
 }
 
 .dropdown-arrow {
@@ -239,6 +252,7 @@
 
 .mobile-logo-image {
   height: 40px;
+  width: auto;
   filter: none;
 }
 
@@ -321,6 +335,11 @@
 .mobile-dropdown-item-btn:hover {
   background: rgba(9, 67, 82, 0.08);
   color: var(--color-primary-hover);
+}
+
+.mobile-dropdown-item.active {
+  color: var(--color-primary-light);
+  font-weight: 800;
 }
 
 .mobile-dropdown-arrow {

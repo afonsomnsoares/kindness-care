@@ -1,0 +1,67 @@
+---
+// Google Analytics: só é carregado depois de o visitante aceitar os cookies
+// (ver CookieConsent.astro). Cada página é um carregamento completo, por isso
+// o GA regista a visita sozinho; não é preciso seguir a navegação.
+---
+
+<script>
+  import { CONSENT_ACCEPTED, CONSENT_EVENT, getConsent } from '../lib/consent';
+
+  const GA_MEASUREMENT_ID =
+    import.meta.env.PUBLIC_GA_MEASUREMENT_ID || 'G-XVYPEPGDFX';
+  const disableKey = `ga-disable-${GA_MEASUREMENT_ID}`;
+
+  function loadGa() {
+    if (document.getElementById('ga-script-src')) return;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function gtag() {
+      window.dataLayer.push(arguments);
+    };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_MEASUREMENT_ID);
+
+    const script = document.createElement('script');
+    script.id = 'ga-script-src';
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    script.async = true;
+    document.head.appendChild(script);
+  }
+
+  // Apaga os cookies do Google Analytics (_ga, _ga_XXXX) quando o visitante
+  // recusa ou retira o consentimento. O GA cria-os no domínio principal
+  // (.kindnesscare.pt), por isso tentamos cada nível do domínio atual.
+  function clearGaCookies() {
+    const names = document.cookie
+      .split(';')
+      .map((c) => c.split('=')[0].trim())
+      .filter((name) => name === '_ga' || name.startsWith('_ga_'));
+    if (names.length === 0) return;
+
+    const parts = window.location.hostname.split('.');
+    const domains = [''];
+    for (let i = 0; i < parts.length - 1; i++) {
+      const domain = parts.slice(i).join('.');
+      domains.push(`; domain=${domain}`, `; domain=.${domain}`);
+    }
+
+    for (const name of names) {
+      for (const domain of domains) {
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${domain}`;
+      }
+    }
+  }
+
+  function applyConsent() {
+    if (getConsent() === CONSENT_ACCEPTED) {
+      window[disableKey] = false;
+      loadGa();
+    } else {
+      window[disableKey] = true;
+      clearGaCookies();
+    }
+  }
+
+  applyConsent();
+  window.addEventListener(CONSENT_EVENT, applyConsent);
+</script>

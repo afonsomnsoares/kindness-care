@@ -1,0 +1,22 @@
+---
+/**
+ * Página 404, em PT (/404.html) e em EN (/en/404). O .htaccess escolhe uma ou
+ * outra conforme o caminho pedido.
+ */
+import Layout from '../layouts/Layout.astro';
+import './NotFound.css';
+import routes from '../i18n/routes';
+import { getT } from '../i18n/i18n';
+
+const { lang } = Astro.props;
+const t = getT(lang);
+---
+
+<Layout lang={lang} title={`${t('notFound.heading')} | Kindness & Care`} noindex>
+  <div class="not-found-page">
+    <h1 class="not-found-code">404</h1>
+    <h2 class="not-found-heading">{t('notFound.heading')}</h2>
+    <p class="not-found-message">{t('notFound.message')}</p>
+    <a href={routes[lang].home} class="not-found-button">{t('notFound.button')}</a>
+  </div>
+</Layout>

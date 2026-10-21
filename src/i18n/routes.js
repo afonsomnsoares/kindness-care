@@ -46,4 +46,10 @@ export function routeKeyForPath(pathname) {
   );
 }
 
+/** O mesmo caminho noutro idioma (ou a página inicial desse idioma). */
+export function localizePath(pathname, targetLang) {
+  const key = routeKeyForPath(pathname);
+  return key ? routes[targetLang][key] : routes[targetLang].home;
+}
+
 export default routes;

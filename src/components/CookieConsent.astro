@@ -1,0 +1,26 @@
+---
+import './CookieConsent.css';
+import { getT } from '../i18n/i18n';
+
+const t = getT(Astro.props.lang);
+---
+
+<div class="cookie-banner" role="dialog" aria-label={t('cookies.label')} data-cookie-banner hidden>
+  <div class="cookie-banner-content">
+    <p>{t('cookies.message')}</p>
+    <div class="cookie-banner-actions">
+      <button class="cookie-btn cookie-btn-accept" data-cookie-accept>
+        {t('cookies.accept')}
+      </button>
+      <button class="cookie-btn cookie-btn-reject" data-cookie-reject>
+        {t('cookies.decline')}
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { initCookieConsent } from '../scripts/cookie-consent';
+
+  initCookieConsent();
+</script>

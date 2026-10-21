@@ -1,0 +1,23 @@
+---
+import './BackToTop.css';
+import { FaArrowUp } from 'react-icons/fa';
+import { getT } from '../i18n/i18n';
+
+const t = getT(Astro.props.lang);
+---
+
+<button class="back-to-top" aria-label={t('common.backToTop')} data-back-to-top>
+  <FaArrowUp />
+</button>
+
+<script>
+  const button = document.querySelector('[data-back-to-top]');
+
+  const update = () => button.classList.toggle('visible', window.scrollY > 400);
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+
+  button.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>

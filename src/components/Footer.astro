@@ -1,0 +1,81 @@
+---
+import './Footer.css';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import routes from '../i18n/routes';
+import { getT } from '../i18n/i18n';
+
+const { lang } = Astro.props;
+const t = getT(lang);
+const r = routes[lang];
+const year = new Date().getFullYear();
+---
+
+<footer class="footer" role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-grid">
+      <div class="footer-section footer-brand">
+        <h3 class="footer-logo">Kindness & Care</h3>
+        <p class="footer-description">{t('footer.description')}</p>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-heading">{t('footer.quickLinks')}</h4>
+        <ul class="footer-links">
+          <li><a href={r.home}>{t('footer.home')}</a></li>
+          <li><a href={r.history}>{t('footer.history')}</a></li>
+          <li><a href={r.valueProposal}>{t('footer.valueProposal')}</a></li>
+          <li><a href={r.mission}>{t('footer.mission')}</a></li>
+          <li><a href={r.contacts}>{t('footer.contacts')}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-heading">{t('footer.services')}</h4>
+        <ul class="footer-links">
+          <li><a href={r.homeCare}>{t('footer.homeCare')}</a></li>
+          <li><a href={r.nursing}>{t('footer.nursing')}</a></li>
+          <li><a href={r.medical}>{t('footer.medical')}</a></li>
+          <li><a href={r.caregiver}>{t('footer.caregiver')}</a></li>
+          <li><a href={r.postpartum}>{t('footer.postpartum')}</a></li>
+          <li><a href={r.healthTourism}>{t('footer.healthTourism')}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-heading">{t('footer.contactTitle')}</h4>
+        <ul class="footer-contact">
+          <li><FaPhone className="footer-contact-icon" aria-hidden="true" /><a href="tel:+351968844420">{t('footer.phone1')}</a></li>
+          <li><FaPhone className="footer-contact-icon" aria-hidden="true" /><a href="tel:+351933929761">{t('footer.phone2')}</a></li>
+          <li><FaEnvelope className="footer-contact-icon" aria-hidden="true" /><a href="mailto:geral@kindnesscare.pt">{t('footer.email')}</a></li>
+          <li><FaMapMarkerAlt className="footer-contact-icon" aria-hidden="true" /><span>{t('footer.location')}</span></li>
+          <li><FaClock className="footer-contact-icon" aria-hidden="true" /><span>{t('footer.hours')}</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-content">
+      {/* O ano é o do build: o site é publicado com frequência suficiente. */}
+      <p>&copy; {year} Kindness & Care — {t('footer.rights')}</p>
+      <div class="footer-bottom-links">
+        <a href={r.privacy}>{t('footer.privacy')}</a>
+        <a href={r.terms}>{t('footer.terms')}</a>
+        <button type="button" data-cookie-settings>{t('footer.cookieSettings')}</button>
+      </div>
+      <div class="footer-social">
+        <a href="https://facebook.com/kindnesscare" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
+        <a href="https://instagram.com/kindnesscare" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+        <a href="https://linkedin.com/company/kindnesscare" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  import { openConsentSettings } from '../lib/consent';
+
+  document
+    .querySelector('[data-cookie-settings]')
+    ?.addEventListener('click', openConsentSettings);
+</script>

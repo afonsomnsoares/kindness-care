@@ -1,0 +1,42 @@
+---
+/** Política de Privacidade e Termos e Condições (`page`: 'privacy' ou 'terms'). */
+import Layout from '../layouts/Layout.astro';
+import './Legal.css';
+import { getT } from '../i18n/i18n';
+
+const { lang, page } = Astro.props;
+const t = getT(lang);
+const sections = t(`${page}.sections`, { returnObjects: true });
+---
+
+<Layout lang={lang} page={page}>
+  <div class="legal-page">
+    <section class="legal-hero-section">
+      <div class="legal-hero-background">
+        <div class="legal-hero-overlay"></div>
+      </div>
+      <div class="legal-hero-content">
+        <h1 class="legal-hero-title">{t(`${page}.hero.title`)}</h1>
+        <p class="legal-hero-subtitle">{t(`${page}.hero.subtitle`)}</p>
+      </div>
+    </section>
+
+    <section class="legal-content-section">
+      <div class="legal-container">
+        <p class="legal-updated">{t(`${page}.updated`)}</p>
+
+        {sections.map((section) => (
+          <>
+            <h2>{section.heading}</h2>
+            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            {section.list && (
+              <ul>
+                {section.list.map((item) => <li>{item}</li>)}
+              </ul>
+            )}
+          </>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>

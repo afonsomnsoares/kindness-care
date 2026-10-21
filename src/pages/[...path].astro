@@ -1,0 +1,50 @@
+---
+/**
+ * Todas as páginas do site, nos dois idiomas, geradas a partir de
+ * src/i18n/routes.js (caminhos PT e EN). Para acrescentar uma página, ver o
+ * README ("Adicionar ou alterar uma página").
+ */
+import routes from '../i18n/routes';
+import Home from '../views/Home.astro';
+import History from '../views/History.astro';
+import ValueProposal from '../views/ValueProposal.astro';
+import Mission from '../views/Mission.astro';
+import ServicePage from '../views/ServicePage.astro';
+import Contacts from '../views/Contacts.astro';
+import HealthTourismService from '../views/HealthTourismService.astro';
+import Pousadas from '../views/Pousadas.astro';
+import Legal from '../views/Legal.astro';
+
+export function getStaticPaths() {
+  return Object.entries(routes).flatMap(([lang, langRoutes]) =>
+    Object.entries(langRoutes).map(([page, path]) => ({
+      // '/' -> undefined (página inicial); '/en/history' -> 'en/history'
+      params: { path: path === '/' ? undefined : path.slice(1) },
+      props: { lang, page },
+    }))
+  );
+}
+
+// Componente de cada página; a chave é a mesma de src/i18n/routes.js.
+const views = {
+  home: Home,
+  history: History,
+  valueProposal: ValueProposal,
+  mission: Mission,
+  homeCare: ServicePage,
+  nursing: ServicePage,
+  medical: ServicePage,
+  caregiver: ServicePage,
+  postpartum: ServicePage,
+  contacts: Contacts,
+  healthTourism: HealthTourismService,
+  pousadas: Pousadas,
+  privacy: Legal,
+  terms: Legal,
+};
+
+const { lang, page } = Astro.props;
+const View = views[page];
+---
+
+<View lang={lang} page={page} />

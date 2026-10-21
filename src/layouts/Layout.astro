@@ -1,0 +1,149 @@
+---
+/**
+ * Documento HTML base de todas as páginas: <head> com as meta tags e os dados
+ * estruturados, e a estrutura comum (cabeçalho, conteúdo e rodapé).
+ *
+ * `page` é a chave da rota em src/i18n/routes.js: o título e a descrição vêm
+ * de `meta.<page>` nas traduções, no idioma da página.
+ */
+import '../styles/index.css';
+import '../styles/App.css';
+import TopBar from '../components/TopBar.astro';
+import NavigationBar from '../components/NavigationBar.astro';
+import Footer from '../components/Footer.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+import BackToTop from '../components/BackToTop.astro';
+import Analytics from '../components/Analytics.astro';
+import routes from '../i18n/routes';
+import { getT } from '../i18n/i18n';
+import { BASE_URL, absoluteUrl } from '../lib/site';
+
+const {
+  lang,
+  page,
+  schema = null,
+  title = undefined,
+  noindex = false,
+  image = `${BASE_URL}/og-image.jpg`,
+  type = 'website',
+} = Astro.props;
+
+const t = getT(lang);
+
+// Dados estruturados para um <script type="application/ld+json">. O "<" é
+// escapado para um texto (ex.: das traduções) nunca poder fechar o <script>.
+const jsonLd = (data) => JSON.stringify(data).replace(/</g, '\\u003c');
+
+const fullUrl = absoluteUrl(routes[lang][page] || '/');
+const fullTitle = title ?? (page
+  ? `${t(`meta.${page}.title`)} | Kindness & Care`
+  : t('meta.default.title'));
+const description = page ? t(`meta.${page}.description`) : undefined;
+const locale = lang === 'en' ? 'en_GB' : 'pt_PT';
+const alternateLocale = lang === 'en' ? 'pt_PT' : 'en_GB';
+
+// Dados estruturados da empresa, comuns a todas as páginas (a descrição
+// segue o idioma da página).
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kindness & Care",
+  "description": t('footer.description'),
+  "url": "https://www.kindnesscare.pt",
+  "telephone": "+351968844420",
+  "email": "geral@kindnesscare.pt",
+  "logo": "https://www.kindnesscare.pt/logo.jpg",
+  "image": "https://www.kindnesscare.pt/og-image.jpg",
+  "foundingDate": "2025",
+  "areaServed": ["Braga", "Guimarães", "Viana do Castelo"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Braga",
+    "addressCountry": "PT"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "sameAs": [
+    "https://facebook.com/kindnesscare",
+    "https://instagram.com/kindnesscare",
+    "https://linkedin.com/company/kindnesscare"
+  ],
+  "parentOrganization": {
+    "@type": "CollegeOrUniversity",
+    "name": "Universidade do Minho"
+  }
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#094352" />
+    <meta name="author" content="Kindness & Care" />
+    <meta name="robots" content={noindex ? 'noindex' : 'index, follow'} />
+    <link rel="icon" href="/logo.jpg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>{fullTitle}</title>
+    {description && <meta name="description" content={description} />}
+
+    {!noindex && (
+      <>
+        <link rel="canonical" href={fullUrl} />
+
+        {/* Versões noutros idiomas */}
+        {page && (
+          <>
+            <link rel="alternate" hreflang="pt" href={absoluteUrl(routes.pt[page])} />
+            <link rel="alternate" hreflang="en" href={absoluteUrl(routes.en[page])} />
+            <link rel="alternate" hreflang="x-default" href={absoluteUrl(routes.pt[page])} />
+          </>
+        )}
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={fullUrl} />
+        <meta property="og:title" content={fullTitle} />
+        {description && <meta property="og:description" content={description} />}
+        <meta property="og:image" content={image} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content={locale} />
+        <meta property="og:locale:alternate" content={alternateLocale} />
+        <meta property="og:site_name" content="Kindness & Care" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={fullUrl} />
+        <meta name="twitter:title" content={fullTitle} />
+        {description && <meta name="twitter:description" content={description} />}
+        <meta name="twitter:image" content={image} />
+      </>
+    )}
+
+    <script type="application/ld+json" set:html={jsonLd(organizationSchema)} />
+    {schema && <script type="application/ld+json" set:html={jsonLd(schema)} />}
+  </head>
+  <body>
+    <div class="App">
+      <TopBar lang={lang} />
+      <NavigationBar lang={lang} />
+      <main class="main-content">
+        <slot />
+      </main>
+      <CookieConsent lang={lang} />
+      <BackToTop lang={lang} />
+      <Footer lang={lang} />
+    </div>
+    <Analytics />
+  </body>
+</html>

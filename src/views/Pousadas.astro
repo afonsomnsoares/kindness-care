@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import './Pousadas.css';
+import PousadasForm from '../components/forms/PousadasForm.jsx';
+import routes from '../i18n/routes';
+import { getT, pickMessages } from '../i18n/i18n';
+
+const { lang } = Astro.props;
+const t = getT(lang);
+
+const pousadasSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": t('meta.pousadas.title'),
+  "description": t('meta.pousadas.description'),
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Kindness & Care"
+  },
+  "serviceType": "Healthcare",
+  "areaServed": [
+    {"@type": "City", "name": "Viana do Castelo"},
+    {"@type": "City", "name": "Guimarães"},
+    {"@type": "City", "name": "Amares"}
+  ]
+};
+---
+
+<Layout lang={lang} page="pousadas" schema={pousadasSchema}>
+  <div class="pousadas-form-page">
+    {/* Hero Section */}
+    <section class="pousadas-hero-section">
+      <div class="pousadas-hero-background">
+        <div class="pousadas-hero-overlay"></div>
+      </div>
+
+      <div class="pousadas-hero-content">
+        <div class="pousadas-hero-text">
+          <h1 class="pousadas-hero-title">{t('healthTourism.hero.title')}</h1>
+          <p class="pousadas-hero-subtitle">{t('healthTourism.hero.subtitle')}</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Form Section */}
+    <section class="pousadas-form-section">
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="form-container">
+            <h2 class="pousadas-form-title">{t('healthTourism.form.title')}</h2>
+            <p class="form-subtitle">{t('healthTourism.form.subtitle')}</p>
+
+            {/* Formulário (componente interativo) */}
+            <PousadasForm
+              client:load
+              lang={lang}
+              messages={pickMessages(lang, ['healthTourism.form', 'forms', 'common'])}
+              privacyPath={routes[lang].privacy}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

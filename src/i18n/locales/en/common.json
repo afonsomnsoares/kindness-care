@@ -69,7 +69,8 @@
         "We are a Spin-off of the University of Minho (UM), and our goal is to transfer the knowledge generated within the university, putting that knowledge at the service of the community.",
         "With a team of qualified and experienced professionals, Kindness & Care provides home support services 24 hours a day, 7 days a week.",
         "Although Kindness & Care was originally created as a project focused on home support, the company\u2019s strategy is based on the continuous pursuit of new market segments. We have identified health and wellness tourism as an opportunity for sustainable growth, allowing us to leverage our know-how, experience, and the high quality of our professionals to meet the care needs of tourists seeking comfort, safety, and quality of life during their stay.",
-        "In October 2025, Kindness & Care established a strategic partnership with Pousadas de Portugal, an iconic brand in Portuguese hospitality. This collaboration stems from the mutual recognition of shared values \u2014 genuine quality, care, and attention to the well-being of each person."
+        "In October 2025, Kindness & Care established a strategic partnership with Pousadas de Portugal, an iconic brand in Portuguese hospitality. This collaboration stems from the mutual recognition of shared values \u2014 genuine quality, care, and attention to the well-being of each person.",
+        "This partnership covers the Pousadas of Viana do Castelo, Guimarães and Santa Maria do Bouro."
       ]
     },
     "services": {
@@ -81,7 +82,7 @@
         { "title": "Medical Assistance", "description": "Professional clinical care, providing accurate diagnoses, medical follow-up, and personalized treatment.", "features": ["Home medical consultations", "Diagnosis and treatment", "Specialized follow-up", "Coordination with hospitals"], "button": "Read More" },
         { "title": "Caregiver and Family Support", "description": "Guidance, listening, and emotional support for families and caregivers, promoting balance, knowledge, and quality in daily care.", "features": ["Guidance and emotional support", "Active listening and follow-up", "Training for family caregivers", "Promotion of family balance"], "button": "Read More" },
         { "title": "Postpartum Support", "description": "Specialized care for mothers and newborns, promoting physical recovery, emotional well-being, and assistance with baby routines — all in the comfort of home.", "features": ["Care for mother and newborn", "Support for postpartum recovery", "Guidance on breastfeeding", "Assistance with baby routines"], "button": "Read More" },
-        { "title": "Health and Wellness Tourism", "description": "Through the partnership with Pousadas de Portugal, Kindness & Care now offers personalized personal care and health services to guests during their stay at the Pousadas of Viana do Castelo | Guimarães | Santa Maria do Bouro, reinforcing the commitment to providing unique, safe, and human-centered experiences where the comfort of body and soul come together.", "features": [], "button": "Read More" }
+        { "title": "Health and Wellness Tourism", "description": "Through the partnership with Pousadas de Portugal, Kindness & Care now offers personalized personal care and health services to guests during their stay at the Pousadas of Viana do Castelo | Guimarães | Santa Maria do Bouro, reinforcing the commitment to providing unique, safe, and human-centered experiences where the comfort of body and soul come together.", "features": ["Self-care assistance", "Rehabilitation (motor and respiratory)", "Wound care", "Administration of injections", "Medication support", "Support for families with members with special needs"], "button": "Read More" }
       ]
     },
     "partners": {
@@ -186,6 +187,7 @@
       "phone": "Phone Number",
       "phonePlaceholder": "XXX XXX XXX",
       "country": "Country calling code",
+      "phoneInvalid": "Please enter your phone number.",
       "email": "Email",
       "emailPlaceholder": "your@email.com",
       "pousada": "Pousada where you will be staying",
