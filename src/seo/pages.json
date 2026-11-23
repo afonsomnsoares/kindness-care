@@ -1,0 +1,159 @@
+{
+  "baseUrl": "https://www.kindnesscare.pt",
+  "defaultImage": "https://www.kindnesscare.pt/og-image.jpg",
+  "siteName": "Kindness & Care",
+  "pages": [
+    {
+      "key": "home",
+      "i18nKey": "home",
+      "pt": "/",
+      "en": "/en",
+      "changefreq": "weekly",
+      "priority": "1.0"
+    },
+    {
+      "key": "history",
+      "i18nKey": "history",
+      "pt": "/historia",
+      "en": "/en/history",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "key": "valueProposal",
+      "i18nKey": "valueProposal",
+      "pt": "/proposta-de-valor",
+      "en": "/en/value-proposal",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "key": "mission",
+      "i18nKey": "missionValues",
+      "pt": "/missao-objetivos-valores",
+      "en": "/en/mission-objectives-values",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "key": "care",
+      "pillar": "care",
+      "pt": "/kindness-care",
+      "en": "/en/kindness-care",
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "key": "longevity",
+      "pillar": "longevity",
+      "pt": "/kindness-longevity",
+      "en": "/en/kindness-longevity",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "key": "academy",
+      "pillar": "academy",
+      "pt": "/kindness-academy",
+      "en": "/en/kindness-academy",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "key": "experiences",
+      "pillar": "experiences",
+      "pt": "/kindness-experiences",
+      "en": "/en/kindness-experiences",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "key": "homeCare",
+      "i18nKey": "homeCare",
+      "pt": "/apoio-domiciliario",
+      "en": "/en/home-care",
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "key": "nursing",
+      "i18nKey": "nursingRehabilitation",
+      "pt": "/enfermagem-reabilitacao",
+      "en": "/en/nursing-rehabilitation",
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "key": "medical",
+      "i18nKey": "medicalAssistance",
+      "pt": "/assistencia-medica",
+      "en": "/en/medical-assistance",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "key": "caregiver",
+      "i18nKey": "caregiverSupport",
+      "pt": "/apoio-cuidador-familia",
+      "en": "/en/caregiver-support",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "key": "postpartum",
+      "i18nKey": "postpartumSupport",
+      "pt": "/apoio-pos-parto",
+      "en": "/en/postpartum-support",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "key": "healthTourism",
+      "i18nKey": "healthTourismService",
+      "pt": "/turismo-saude-bem-estar",
+      "en": "/en/health-tourism",
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "key": "pousadas",
+      "i18nKey": "healthTourism",
+      "pt": "/pousadas-portugal",
+      "en": "/en/pousadas-portugal",
+      "changefreq": "monthly",
+      "priority": "0.9"
+    },
+    {
+      "key": "contacts",
+      "i18nKey": "contacts",
+      "pt": "/contactos",
+      "en": "/en/contacts",
+      "changefreq": "monthly",
+      "priority": "0.8"
+    },
+    {
+      "key": "testimonials",
+      "i18nKey": "testimonials",
+      "pt": "/testemunhos",
+      "en": "/en/testimonials",
+      "changefreq": "monthly",
+      "priority": "0.7"
+    },
+    {
+      "key": "privacy",
+      "i18nKey": "privacy",
+      "pt": "/privacidade",
+      "en": "/en/privacy",
+      "changefreq": "yearly",
+      "priority": "0.3"
+    },
+    {
+      "key": "terms",
+      "i18nKey": "terms",
+      "pt": "/termos",
+      "en": "/en/terms",
+      "changefreq": "yearly",
+      "priority": "0.3"
+    }
+  ]
+}

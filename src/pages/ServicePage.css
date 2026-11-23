@@ -1,0 +1,7 @@
+.service-page {
+  background: #ffffff;
+}
+
+.service-page .page-split-media img {
+  aspect-ratio: 4 / 5;
+}

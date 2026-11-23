@@ -1,0 +1,138 @@
+.pousadas-form-page .page-hero {
+  height: 240px;
+}
+
+.pousadas-section {
+  padding-top: clamp(2rem, 4vw, 3.25rem);
+}
+
+.pousadas-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  align-items: start;
+}
+
+.pousadas-aside h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--color-heading);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.85rem;
+}
+
+.pousadas-aside p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.pousadas-story {
+  margin-top: 1rem !important;
+}
+
+.pousadas-aside-media {
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.pousadas-aside-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.pousadas-places-label {
+  margin: 1.5rem 0 0.65rem !important;
+  font-weight: 600;
+  color: var(--color-heading);
+  font-size: 0.92rem;
+}
+
+.pousadas-places {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.pousadas-places li {
+  color: var(--color-heading);
+  font-weight: 500;
+  line-height: 1.45;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--color-primary);
+}
+
+.pousadas-direct {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.pousadas-direct-label {
+  margin: 0 0 0.85rem !important;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+.pousadas-direct-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pousadas-direct-actions .btn-primary,
+.pousadas-direct-actions .btn-secondary {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pousadas-whatsapp-btn {
+  border-color: var(--color-whatsapp-dark);
+  color: var(--color-whatsapp-dark);
+}
+
+.pousadas-whatsapp-btn:hover {
+  background: rgba(7, 94, 84, 0.08);
+  border-color: var(--color-whatsapp-dark);
+  color: var(--color-whatsapp-dark);
+}
+
+.form-container {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  box-shadow: var(--shadow-card);
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.pousadas-form .honeypot-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+.pousadas-form textarea {
+  min-height: 5.5rem;
+}
+
+.pousadas-form .page-form-actions .btn-primary {
+  width: 100%;
+}
+
+@media (max-width: 860px) {
+  .pousadas-layout {
+    grid-template-columns: 1fr;
+  }
+}

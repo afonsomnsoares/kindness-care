@@ -5,24 +5,27 @@
     <link rel="icon" href="%PUBLIC_URL%/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#094352" />
-    <meta name="description" content="Kindness & Care - Serviço de Apoio Domiciliário em Braga, Guimarães e Viana do Castelo. Cuidados de enfermagem, reabilitação, assistência médica e turismo de saúde 24h por dia." />
-    <meta name="keywords" content="apoio domiciliário, cuidados de saúde, enfermagem, reabilitação, Braga, Guimarães, Viana do Castelo, Kindness Care, cuidadores, assistência médica" />
+    <meta name="description" content="Kindness & Care — cuidados em casa, longevidade e formação em Braga, Porto e Viana do Castelo. Linha telefónica 24 horas. Visitas mediante marcação." />
     <meta name="author" content="Kindness & Care" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Kindness & Care - Serviço de Apoio Domiciliário em Braga, Guimarães e Viana do Castelo" />
-    <meta property="og:description" content="Cuidados de enfermagem, reabilitação, assistência médica e turismo de saúde em Braga, Guimarães e Viana do Castelo. Spin-off da Universidade do Minho. Disponível 24h." />
+    <meta property="og:title" content="Kindness & Care - Serviço de Apoio Domiciliário em Braga, Porto e Viana do Castelo" />
+    <meta property="og:description" content="Cuidados em casa, longevidade e formação em Braga, Porto e Viana do Castelo. Spin-off da Universidade do Minho. Linha telefónica 24 horas. Visitas mediante marcação." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.kindnesscare.pt" />
-    <meta property="og:image" content="%PUBLIC_URL%/logo.jpg" />
+    <meta property="og:image" content="https://www.kindnesscare.pt/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="pt_PT" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:site_name" content="Kindness & Care" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Kindness & Care - Serviço de Apoio Domiciliário" />
-    <meta name="twitter:description" content="Cuidados de enfermagem, reabilitação e assistência médica ao domicílio em Braga, Guimarães e Viana do Castelo." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/logo.jpg" />
+    <meta name="twitter:description" content="Cuidados de enfermagem, reabilitação e assistência médica ao domicílio em Braga, Porto e Viana do Castelo." />
+    <meta name="twitter:image" content="https://www.kindnesscare.pt/og-image.jpg" />
 
     <!-- Hreflang -->
     <link rel="alternate" href="https://www.kindnesscare.pt" hreflang="pt" />
@@ -32,25 +35,38 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://www.kindnesscare.pt" />
 
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.jpg" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- JSON-LD Structured Data: Organization + LocalBusiness -->
-    <script type="application/ld+json">
+    <!-- JSON-LD Structured Data: LocalBusiness + MedicalBusiness -->
+    <script type="application/ld+json" data-prerender-seo="true">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "MedicalBusiness"],
+      "@id": "https://www.kindnesscare.pt/#organization",
       "name": "Kindness & Care",
       "description": "Serviço de Apoio Domiciliário com profissionais de saúde especializados. Spin-off da Universidade do Minho.",
       "url": "https://www.kindnesscare.pt",
       "telephone": "+351968844420",
+      "contactPoint": [
+        {"@type": "ContactPoint", "telephone": "+351968844420", "contactType": "customer service", "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"}, "description": "Linha telefónica e WhatsApp"},
+        {"@type": "ContactPoint", "telephone": "+351933929761", "contactType": "customer service"}
+      ],
       "email": "geral@kindnesscare.pt",
       "logo": "https://www.kindnesscare.pt/logo.jpg",
-      "image": "https://www.kindnesscare.pt/logo.jpg",
+      "image": "https://www.kindnesscare.pt/og-image.jpg",
       "foundingDate": "2025",
-      "areaServed": ["Braga", "Guimarães", "Viana do Castelo"],
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "areaServed": [
+        {"@type": "City", "name": "Braga"},
+        {"@type": "City", "name": "Porto"},
+        {"@type": "City", "name": "Viana do Castelo"}
+      ],
       "address": {
         "@type": "PostalAddress",
+        "addressLocality": "Braga",
         "addressRegion": "Braga",
         "addressCountry": "PT"
       },
@@ -63,18 +79,12 @@
         }
       ],
       "sameAs": [
-        "https://facebook.com/kindnesscare",
-        "https://instagram.com/kindnesscare",
-        "https://linkedin.com/company/kindnesscare"
-      ],
-      "parentOrganization": {
-        "@type": "CollegeOrUniversity",
-        "name": "Universidade do Minho"
-      }
+        "https://www.instagram.com/kindnesscare.pt"
+      ]
     }
     </script>
 
-    <title>Kindness & Care — Serviço de Apoio Domiciliário | Braga, Guimarães, Viana do Castelo</title>
+    <title>Kindness & Care — Serviço de Apoio Domiciliário | Braga, Porto, Viana do Castelo</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

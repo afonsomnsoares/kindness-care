@@ -1,0 +1,246 @@
+{
+  "pillars": {
+    "section": {
+      "title": "Four Pillars. One mission",
+      "subtitle": "One brand. Four dimensions of Care",
+      "explore": "Explore",
+      "closing": "Kindness Care cares. Kindness Longevity prevents. Kindness Academy trains, and Kindness Experiences takes care into new experiences. The four pillars have distinct roles, and they all fulfil the same mission: bringing more humanity to the way we live and care."
+    },
+    "items": {
+      "care": {
+        "title": "Kindness & Care",
+        "text": "Specialised home care with competence, closeness and humanity."
+      },
+      "longevity": {
+        "title": "Kindness Longevity",
+        "text": "Healthy, active ageing — live longer, live better, live with autonomy."
+      },
+      "academy": {
+        "title": "Kindness Academy",
+        "text": "Training that empowers professionals, families and carers to care better."
+      },
+      "experiences": {
+        "title": "Kindness Experiences",
+        "text": "Travel and enjoy with peace of mind, with health support when needed."
+      }
+    },
+    "care": {
+      "seoTitle": "Home care services",
+      "seoDescription": "Personalised home care in Braga, Porto and Viana do Castelo. Home support, nursing, medical assistance and family support.",
+      "hero": {
+        "title": "Kindness Care",
+        "subtitle": "We care for people. We promote autonomy. We value life."
+      },
+      "intro": [
+        "At Kindness & Care we believe every person deserves specialised care, delivered with competence, closeness and humanity.",
+        "We support people who, due to age, illness, disability or temporary situations of greater vulnerability, need help with daily activities or specialised health accompaniment.",
+        "We provide personalised care in the comfort of home, through a team of qualified professionals, mostly nurses, with technical and human training and continuous updating. Our intervention is coordinated by a case manager, who ensures the articulation of professionals, continuity of care and a response suited to each person's needs.",
+        "More than delivering care, we seek to preserve autonomy, promote quality of life and also support those who care."
+      ],
+      "areasTitle": "Our areas of intervention include:",
+      "areas": [
+        {
+          "title": "Home Care",
+          "description": "Personalised accompaniment in activities of daily living, promoting comfort, safety, hygiene and well-being in the family environment.",
+          "features": [
+            "Hygiene and personal care",
+            "Meal support",
+            "Companionship and supervision",
+            "Support with daily activities and light household tasks"
+          ],
+          "pathKey": "homeCare"
+        },
+        {
+          "title": "Nursing and Rehabilitation",
+          "description": "Nursing care and specialised accompaniment, oriented towards recovery, maintaining functional capacity and promoting autonomy.",
+          "features": [
+            "Home nursing care",
+            "Rehabilitation exercises and programmes",
+            "Medication management and support",
+            "Ongoing assessment and follow-up"
+          ],
+          "pathKey": "nursing"
+        },
+        {
+          "title": "Medical Assistance",
+          "description": "Access to personalised medical care, facilitating clinical follow-up and articulation with other health professionals and institutions.",
+          "features": [
+            "Home medical consultations",
+            "Medication support",
+            "Specialised clinical follow-up",
+            "Articulation with hospitals and other health services"
+          ],
+          "pathKey": "medical"
+        },
+        {
+          "title": "Family and Caregiver Support",
+          "description": "We recognise that caring for someone is also a challenge for those who take on that responsibility. We accompany families and caregivers, providing guidance, listening and tools for more informed, balanced and sustainable care.",
+          "features": [
+            "Guidance and accompaniment",
+            "Emotional support and active listening",
+            "Training for family caregivers",
+            "Promotion of family balance"
+          ],
+          "pathKey": "caregiver"
+        },
+        {
+          "title": "Postpartum and Newborn Support",
+          "description": "Specialised accompaniment for mother and baby, helping the family live this stage with greater confidence, calm and safety.",
+          "features": [
+            "Care for mother and newborn",
+            "Postpartum recovery support",
+            "Breastfeeding guidance",
+            "Support with baby routines and care"
+          ],
+          "pathKey": "postpartum"
+        }
+      ],
+      "commitment": {
+        "title": "Our commitment",
+        "intro": "We believe the quality of care begins long before it is delivered. It begins with assessing each person, understanding their reality and building a truly individualised response.",
+        "methodIntro": "That is why we work with an integrated methodology that involves:",
+        "steps": [
+          "Assess — know the person, their clinical, functional, family and social condition.",
+          "Plan — define an individual care plan, adjusted to their needs and goals.",
+          "Coordinate — ensure follow-up through a case manager.",
+          "Care — deliver specialised care, with technical quality and human sensitivity.",
+          "Follow up — monitor progress and adapt the intervention whenever needed.",
+          "Empower — involve and prepare the family to take an active part in the care process."
+        ]
+      },
+      "closing": [
+        "Scientific knowledge. Clinical competence. Humanisation.",
+        "Kindness & Care is a spin-off of the University of Minho, created to transfer scientific and technical knowledge to the community, placing it at the service of people and families.",
+        "The phone line is available 24 hours a day, 7 days a week, all year round, in Braga, Porto and Viana do Castelo. Visits are arranged with you.",
+        "Kindness Care. Because caring is much more than providing assistance. It is recognising the person, respecting their individuality and helping them live with dignity, comfort and autonomy."
+      ],
+      "imageAlt": "Kindness & Care professional providing care at home",
+      "cta": "Get in touch"
+    },
+    "longevity": {
+      "seoTitle": "Active ageing and autonomy",
+      "seoDescription": "Longevity programmes: movement, nutrition, active mind and learning to live longer and better with autonomy.",
+      "hero": {
+        "title": "Kindness Longevity",
+        "subtitle": "Live Longer. Live Better. Live with Autonomy"
+      },
+      "intro": [
+        "We believe ageing should mean continuing to discover, learn, take part and enjoy life.",
+        "Kindness Longevity promotes healthy, active ageing through learning experiences, physical activity and cognitive stimulation that help preserve health, autonomy and quality of life.",
+        "We develop programmes and activities oriented towards different dimensions of well-being:"
+      ],
+      "areas": [
+        {
+          "title": "Movement and Vitality",
+          "description": "Adapted physical activity classes, oriented towards improving mobility, strength, balance and coordination, helping preserve functional capacity and independence in daily life."
+        },
+        {
+          "title": "Learning to Age",
+          "description": "Learning and sharing sessions about the ageing process, with tools and knowledge to live this stage of life more consciously, actively and positively."
+        },
+        {
+          "title": "Nutrition and Well-being",
+          "description": "Food education classes and sessions, with specialised guidance, promoting healthy nutritional habits suited to each stage of life."
+        },
+        {
+          "title": "Active Mind",
+          "description": "Cognitive stimulation activities designed to exercise memory, attention, reasoning and other mental abilities, encouraging continuous learning."
+        },
+        {
+          "title": "Conferences and Gatherings",
+          "description": "Moments of reflection, knowledge sharing and debate, with invited specialists, on health, longevity, ageing and quality of life."
+        }
+      ],
+      "closing": [
+        "At Kindness Longevity, we do not only want to add years to life. We want to add life to the years."
+      ],
+      "imageAlt": "Couple walking, an image of active ageing",
+      "cta": "Ask about upcoming sessions",
+      "areasTitle": "What longevity includes",
+      "audience": "For people and families who want to age with autonomy. There is no public calendar yet. This contact asks when the next conversation is."
+    },
+    "academy": {
+      "seoTitle": "Care training",
+      "seoDescription": "Training for professionals, families and informal caregivers. Knowledge that empowers and transforms care.",
+      "hero": {
+        "title": "Kindness Academy",
+        "subtitle": "Knowledge that empowers. Training that transforms care."
+      },
+      "intro": [
+        "We believe that caring well requires knowledge, preparation and human sensitivity.",
+        "Kindness Academy was born from the desire to share knowledge and develop skills in care and health, contributing to more qualified, safe and humanised care delivery.",
+        "We promote training for Kindness collaborators, families and informal caregivers as well as professionals, adapted to the needs and challenges of each context.",
+        "Our training actions are developed and led by qualified professionals with experience in their fields, ensuring a technical, practical approach oriented to the reality of those who care.",
+        "Our training areas include:"
+      ],
+      "areas": [
+        {
+          "title": "Professional Training",
+          "description": "Development and updating of technical and human skills of our collaborators and other professionals, promoting excellence, safety and quality of care."
+        },
+        {
+          "title": "Family and Informal Caregiver Training",
+          "description": "Practical training for families and people who care for someone close, providing knowledge and tools so they can care with greater confidence, safety and calm."
+        },
+        {
+          "title": "Workshops and Specialised Training",
+          "description": "Thematic sessions and training programmes on health, ageing, dependency, mobility, risk prevention, personal care and well-being."
+        },
+        {
+          "title": "Knowledge Sharing",
+          "description": "Initiatives that bring professionals, families and the community together, valuing continuous learning and the dissemination of good practices in care."
+        }
+      ],
+      "closing": [
+        "At Kindness Academy, we believe that the better prepared those who care are, the better cared for those who need it will be."
+      ],
+      "imageAlt": "Care training in a classroom",
+      "cta": "Ask about training",
+      "areasTitle": "What the training includes",
+      "audience": "For professionals, families and caregivers who want home-care training. Dates are confirmed in conversation, because there is no public calendar yet."
+    },
+    "experiences": {
+      "seoTitle": "Care during stays and pousadas",
+      "seoDescription": "Specialised support during stays and travel. Partnership with Pousadas de Portugal for safer, calmer experiences.",
+      "hero": {
+        "title": "Kindness Experiences",
+        "subtitle": "Travel, enjoy and live experiences with greater peace of mind."
+      },
+      "intro": [
+        "We believe that health or mobility limitations should not prevent people from travelling, resting and enjoying new experiences.",
+        "Kindness Experiences brings healthcare and well-being closer to tourism and hospitality, providing specialised support to those who need additional care during stays and trips.",
+        "We work with hotels and tourism partners to develop accompaniment and assistance solutions adapted to each person's needs, so guests and their families can enjoy the experience with greater safety, comfort and calm.",
+        "Our solutions include:"
+      ],
+      "areas": [
+        {
+          "title": "Personalised Support and Accompaniment",
+          "description": "Individual accompaniment for guests who need additional support during their stay, respecting their needs and preferences."
+        },
+        {
+          "title": "Nursing Care",
+          "description": "Nursing care at the place of accommodation, provided by qualified professionals whenever the guest's needs justify it."
+        },
+        {
+          "title": "Mobility and Autonomy Support",
+          "description": "Assistance with daily activities, contributing to a more comfortable, safe and independent stay."
+        },
+        {
+          "title": "Hospitality and Tourism Solutions",
+          "description": "Partnerships with hotels, tourism units and other operators, creating specialised responses for guests with specific health and well-being needs."
+        },
+        {
+          "title": "Partnerships that Create Value",
+          "description": "Kindness & Care established a partnership with Pousadas de Portugal, bringing specialised care closer to hospitality and contributing to a more inclusive, comfortable and calm tourism experience.",
+          "pathKey": "pousadas"
+        }
+      ],
+      "closing": [
+        "At Kindness Experiences, we believe everyone should be able to keep discovering the world. We care so that nothing stops them from doing so."
+      ],
+      "imageAlt": "A stay with care support",
+      "cta": "Request support at a Pousada",
+      "areasTitle": "What a stay with care includes"
+    }
+  }
+}

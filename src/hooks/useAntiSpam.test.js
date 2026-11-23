@@ -2,7 +2,7 @@ import { renderHook, act } from '@testing-library/react';
 import useAntiSpam from './useAntiSpam';
 
 // Testes de fumo (smoke tests) para a lógica anti-spam usada nos
-// formulários de Contacts.js e Health-Tourism.js: honeypot + time-trap.
+// formulários de Contacts.js e PousadasForm.js: honeypot + time-trap.
 // Ver src/hooks/useAntiSpam.js
 
 describe('useAntiSpam', () => {

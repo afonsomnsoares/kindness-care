@@ -2,40 +2,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useLocalizedPath } from '../i18n/useLocalizedPath';
+import { MetaTags } from '../components/MetaTags';
+import './NotFound.css';
 
 function NotFound() {
   const { t } = useTranslation();
+  const homePath = useLocalizedPath('home');
 
   return (
-    <div style={{
-      minHeight: '60vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      textAlign: 'center',
-      padding: '40px 20px'
-    }}>
-      <h1 style={{ fontSize: '6rem', color: '#094352', margin: 0 }}>404</h1>
-      <h2 style={{ color: '#2c3e50', marginBottom: '1rem' }}>
-        {t('notFound.heading')}
-      </h2>
-      <p style={{ color: '#7f8c8d', marginBottom: '2rem', maxWidth: '500px' }}>
-        {t('notFound.message')}
-      </p>
-      <Link
-        to={useLocalizedPath('home')}
-        style={{
-          background: '#094352',
-          color: 'white',
-          padding: '12px 35px',
-          borderRadius: '25px',
-          textDecoration: 'none',
-          fontWeight: 600
-        }}
-      >
-        {t('notFound.button')}
-      </Link>
+    <div className="not-found-page">
+      <MetaTags
+        title={t('notFound.seoTitle')}
+        description={t('notFound.seoDescription')}
+        url="/404"
+        noindex
+      />
+      <div className="page-shell-narrow not-found-inner">
+        <p className="not-found-code">404</p>
+        <h1>{t('notFound.heading')}</h1>
+        <p>{t('notFound.message')}</p>
+        <Link className="btn-primary" to={homePath}>
+          {t('notFound.button')}
+        </Link>
+      </div>
     </div>
   );
 }

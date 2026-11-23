@@ -1,0 +1,62 @@
+.testimonials-page {
+  background: #ffffff;
+}
+
+.testimonials-list {
+  display: grid;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.testimonial-entry {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.testimonial-eyebrow {
+  margin: 0 0 0.65rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+.testimonial-quote {
+  margin: 1.25rem 0 1.5rem;
+  padding: 0 0 0 1.15rem;
+  border-left: 3px solid var(--color-primary);
+}
+
+.testimonial-quote p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  line-height: 1.35;
+  color: var(--color-heading);
+}
+
+.testimonial-text {
+  margin: 0 0 1.5rem;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+.testimonial-meta {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.testimonial-author,
+.testimonial-date {
+  margin: 0;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: var(--color-heading);
+}
+
+.testimonial-date {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}

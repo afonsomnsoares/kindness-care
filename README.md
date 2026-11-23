@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Kindness & Care
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website for **Kindness & Care** — home care, longevity, training and support during stays in Braga, Porto and Viana do Castelo. Portuguese and English. University of Minho spin-off.
 
-## Available Scripts
+Stack: React (Create React App) + Resend via Vercel serverless (`api/send-email.js`).
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## How contact works
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+There are **two forms**, with different jobs. Both send email through the same endpoint (`POST /api/send-email`).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Contactos (`/contactos` · `/en/contacts`)
 
-### `npm test`
+**For:** general enquiries and home-care leads.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Need | What happens |
+|------|----------------|
+| Support **today** | Phone and WhatsApp are primary. Choosing “preciso de apoio hoje” shows call/WhatsApp CTAs. |
+| Information / quote | Fill the form (name, email, phone, subject, message). Reply target: within 24h on business days. |
+| **Pousadas** stay | Do **not** use this form. Choosing “Pousadas de Portugal” as subject steers the user to the dedicated Pousadas page. |
 
-### `npm run build`
+Also reachable from the home CTA, footer, and service pages (sometimes with `?assunto=...` prefilled).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. Pousadas de Portugal (`/pousadas-portugal` · `/en/pousadas-portugal`)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**For:** guests who need care **during a stay** at a partner pousada.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Collects: name, phone (with country code), email, which pousada, check-in / check-out, and a free-text description of the service. Call/WhatsApp remain available as a fallback.
 
-### `npm run eject`
+Tourism overview page (`Turismo de Saúde`) explains the offer and links here to request the service.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Shared backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| `_type` | Page | Email subject style |
+|---------|------|---------------------|
+| `contacto` | Contactos | Novo Contacto Website |
+| `pousadas` | Pousadas form | Pedido Pousadas de Portugal |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Anti-spam: honeypot + minimum time before submit. Privacy consent required.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Local development
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cp .env.example .env   # then fill RESEND_API_KEY (for vercel / reference)
+npm install
+npm start              # React on :3000
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To test forms end-to-end locally (API + frontend), use `vercel dev` with the Resend env vars set.
 
-### Code Splitting
+### Useful scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Command | Purpose |
+|---------|---------|
+| `npm start` | Frontend only |
+| `npm test` | Jest tests |
+| `npm run build` | Production build + SEO prerender |
+| `npm run convert-images` | Image conversion helper |
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Environment
 
-### Making a Progressive Web App
+Copy `.env.example` → `.env`. Never commit `.env`. On Vercel, set the same keys in Project → Settings → Environment Variables.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Variable | Required | Notes |
+|----------|----------|--------|
+| `RESEND_API_KEY` | Yes | From [resend.com](https://resend.com) → API Keys |
+| `RESEND_FROM_EMAIL` | Yes (prod) | After domain verify: `Kindness & Care <geral@kindnesscare.pt>`. Until then: `Kindness & Care <onboarding@resend.dev>` |
+| `ADMIN_EMAIL` | No | Defaults to `geral@kindnesscare.pt` |
+| `CORS_ORIGIN` | Yes (prod) | e.g. `https://www.kindnesscare.pt` |
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Deploy (Vercel)
 
-### Deployment
+1. Import the repo in Vercel (uses `vercel.json`: build → `build/`, API in `api/`).
+2. Set env vars: `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, `ADMIN_EMAIL`, `CORS_ORIGIN`.
+3. Deploy. Forms post to `/api/send-email` on the same domain.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Validate after deploy: `/`, `/contactos`, `/en`, `/pousadas-portugal`, `/og-image.jpg`.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project map
+
+```
+src/pages/          Page screens (Home, Contacts, Pousadas, services, legal…)
+src/components/     Shared UI (nav, footer, forms helpers, SEO…)
+src/hooks/          useContactForm, useAntiSpam
+src/i18n/           PT/EN copy and routes
+src/images/         Photos and partner logos
+api/send-email.js   Vercel serverless form handler
+lib/sendFormEmail.js Shared validation + Resend send
+scripts/            prerender-seo, convert-images
+public/             Static assets copied into build
+```
+
+Forms: `useContactForm` → `POST /api/send-email` → Resend → `ADMIN_EMAIL`, plus auto-reply to the visitor.

@@ -1,0 +1,41 @@
+# Prefer prerendered route HTML. Unknown paths return a real HTTP 404.
+# DirectorySlash Off stops Apache from adding the slash back after the
+# canonical no-slash redirect (that pair is a redirect loop on prerender folders).
+<IfModule mod_dir.c>
+  DirectorySlash Off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteRule ^perguntas-frequentes/?$ / [R=301,L]
+  RewriteRule ^en/faq/?$ /en [R=301,L]
+  RewriteRule ^testumunhos/?$ /testemunhos [R=301,L]
+  RewriteRule ^en/testumunhos/?$ /en/testimonials [R=301,L]
+
+  # Canonical URLs have no trailing slash
+  RewriteCond %{REQUEST_URI} !^/$
+  RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+  # Existing files (assets, 404.html) are served as-is
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # Pretty URL -> prerendered folder index.html
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+)/?$ $1/index.html [L]
+
+  # Unknown routes: real 404 (avoids soft-404 SPA responses)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ - [R=404,L]
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+# Security / SEO helpers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

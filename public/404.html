@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Página não encontrada | Kindness &amp; Care</title>
+    <meta name="description" content="A página que procura não existe ou foi movida. Volte à página inicial da Kindness &amp; Care." />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Georgia, 'Times New Roman', serif;
+        background: linear-gradient(160deg, #f7fafb 0%, #e7eef0 100%);
+        color: #094352;
+        text-align: center;
+        padding: 2rem;
+      }
+      h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 0.75rem; }
+      p { font-family: system-ui, sans-serif; color: #3a4f56; margin: 0 0 1.5rem; }
+      a {
+        font-family: system-ui, sans-serif;
+        display: inline-block;
+        background: #094352;
+        color: #fff;
+        text-decoration: none;
+        padding: 0.85rem 1.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p style="letter-spacing:0.08em;text-transform:uppercase;font-size:0.85rem;">404</p>
+      <h1 id="title">Página não encontrada</h1>
+      <p id="text">A página que procura não existe ou foi movida.</p>
+      <a id="home" href="/">Voltar ao início</a>
+    </main>
+    <script>
+      (function () {
+        var path = location.pathname || '/';
+        var isEn = path === '/en' || path.indexOf('/en/') === 0;
+        if (!isEn) return;
+        document.documentElement.lang = 'en';
+        document.title = 'Page not found | Kindness & Care';
+        var desc = document.querySelector('meta[name="description"]');
+        if (desc) {
+          desc.setAttribute('content', 'The page you are looking for does not exist or has been moved. Return to the Kindness & Care homepage.');
+        }
+        document.getElementById('title').textContent = 'Page not found';
+        document.getElementById('text').textContent = 'The page you are looking for does not exist or has been moved.';
+        var home = document.getElementById('home');
+        home.textContent = 'Back to home';
+        home.setAttribute('href', '/en');
+      })();
+    </script>
+  </body>
+</html>

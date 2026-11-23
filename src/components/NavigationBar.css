@@ -43,10 +43,11 @@
 }
 
 .logo-main {
+  font-family: var(--font-display);
   font-size: 22px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--color-primary);
-  letter-spacing: 0.5px;
+  letter-spacing: -0.02em;
   white-space: nowrap;
 }
 
@@ -192,6 +193,90 @@
 .nav-button:hover {
   background: linear-gradient(90deg, var(--color-primary-light), var(--color-primary));
   transform: translateY(-2px);
+}
+
+/* LANGUAGE SWITCHER */
+.nav-item-lang {
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  opacity: 0.65;
+}
+
+.lang-btn:hover {
+  opacity: 1;
+  background: rgba(9, 67, 82, 0.06);
+}
+
+.lang-btn.active {
+  opacity: 1;
+  border-color: var(--color-primary);
+  background: rgba(9, 67, 82, 0.06);
+}
+
+.lang-flag {
+  height: 18px;
+  width: 18px;
+  border-radius: 3px;
+  display: block;
+  object-fit: cover;
+}
+
+.mobile-lang-switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 12px 16px;
+}
+
+.mobile-lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: var(--color-primary);
+  padding: 12px 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.mobile-lang-btn:hover {
+  background: rgba(9, 67, 82, 0.08);
+}
+
+.mobile-lang-btn.active {
+  background: rgba(9, 67, 82, 0.08);
+  color: var(--color-primary-light);
+}
+
+.mobile-menu-item-lang {
+  border-bottom: 1px solid rgba(9, 67, 82, 0.1);
 }
 
 /* MOBILE */
@@ -406,4 +491,23 @@
   .logo-image {
     height: 45px;
   }
+}
+.lang-btn, .mobile-lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.lang-code {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.footer-cookie-button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
 }

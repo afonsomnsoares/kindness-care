@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { languageFromPathname } from '../i18n/language';
 import { FaArrowUp } from 'react-icons/fa';
 import './BackToTop.css';
 
 function BackToTop() {
   const [visible, setVisible] = useState(false);
+  const location = useLocation();
+  const isEnglish = languageFromPathname(location.pathname) === 'en';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,16 +18,19 @@ function BackToTop() {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
   };
 
   return (
     <button
+      type="button"
       className={`back-to-top ${visible ? 'visible' : ''}`}
       onClick={scrollToTop}
-      aria-label="Voltar ao topo"
+      tabIndex={visible ? 0 : -1}
+      aria-label={isEnglish ? 'Back to top' : 'Voltar ao topo'}
     >
-      <FaArrowUp />
+      <FaArrowUp aria-hidden="true" />
     </button>
   );
 }

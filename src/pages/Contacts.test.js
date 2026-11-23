@@ -11,8 +11,7 @@ i18n.changeLanguage('pt');
 
 // Testes de fumo (smoke tests) para o formulário de contacto:
 // - validação HTML5 dos campos obrigatórios bloqueia o envio;
-// - um envio válido chama o FormSubmit com os dados certos.
-// Não testa a integração real com formsubmit.co, só o comportamento do form.
+// - um envio válido chama o backend /api/send-email com os dados certos.
 
 function renderContacts() {
   return render(
@@ -44,7 +43,7 @@ test('não envia o formulário se os campos obrigatórios estiverem vazios', asy
   expect(global.fetch).not.toHaveBeenCalled();
 });
 
-test('envia o formulário para o FormSubmit quando os campos obrigatórios estão preenchidos', async () => {
+test('envia o formulário para /api/send-email quando os campos obrigatórios estão preenchidos', async () => {
   // O anti-spam time-trap exige >= 3000ms entre a montagem e o envio
   // (ver src/hooks/useAntiSpam.js). Controlamos o tempo via Date.now
   // em vez de esperar 3s reais ou usar fake timers (que colidem com
@@ -56,8 +55,10 @@ test('envia o formulário para o FormSubmit quando os campos obrigatórios estã
 
   await userEvent.type(screen.getByLabelText(/nome completo/i), 'Maria Silva');
   await userEvent.type(screen.getByLabelText(/^email/i), 'maria@example.com');
+  await userEvent.type(screen.getByLabelText(/^telefone/i), '+351 912 345 678');
   await userEvent.selectOptions(screen.getByLabelText(/assunto/i), 'enfermagem');
   await userEvent.type(screen.getByLabelText(/mensagem/i), 'Gostaria de mais informações.');
+  await userEvent.click(screen.getByRole('checkbox'));
 
   now += 3100;
   fireEvent.click(screen.getByRole('button', { name: /enviar mensagem/i }));
@@ -65,13 +66,15 @@ test('envia o formulário para o FormSubmit quando os campos obrigatórios estã
   await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(1));
 
   const [url, options] = global.fetch.mock.calls[0];
-  expect(url).toBe('https://formsubmit.co/ajax/geral@kindnesscare.pt');
+  expect(url).toBe('/api/send-email');
   const body = JSON.parse(options.body);
   expect(body).toMatchObject({
     nome: 'Maria Silva',
     email: 'maria@example.com',
+    telefone: '+351 912 345 678',
     assunto: 'enfermagem',
     mensagem: 'Gostaria de mais informações.',
+    privacy: true,
   });
 });
 
@@ -83,6 +86,7 @@ test('não envia o formulário se o campo honeypot estiver preenchido (bot)', as
 
   await userEvent.type(screen.getByLabelText(/nome completo/i), 'Bot Falso');
   await userEvent.type(screen.getByLabelText(/^email/i), 'bot@example.com');
+  await userEvent.type(screen.getByLabelText(/^telefone/i), '+351 912 345 678');
   await userEvent.selectOptions(screen.getByLabelText(/assunto/i), 'outro');
   await userEvent.type(screen.getByLabelText(/mensagem/i), 'mensagem automática');
 

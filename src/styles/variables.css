@@ -4,30 +4,37 @@
   --color-primary-light: #0a5a6d;
   --color-primary-hover: #063240;
   --color-secondary: #7eb4c5;
-  --color-accent: #3498db;
-  --color-accent-dark: #2980b9;
-  --color-heading: #2c3e50;
-  --color-text: #4a5568;
-  --color-text-muted: #34495e;
-  --color-text-light: #7f8c8d;
-  --color-border: #ecf0f1;
-  --color-bg-section: #f9f9f9;
+  --color-secondary-soft: #d7ebf1;
+  --color-accent: #1f7a8c;
+  --color-accent-dark: #155e6c;
+  --color-heading: #0f2f38;
+  --color-text: #3d4f56;
+  --color-text-muted: #51656d;
+  --color-text-light: #4d6169;
+  --color-border: #d9e5ea;
+  --color-control-border: #5d727a;
   --color-white: #ffffff;
-  --color-bg-light: #f8fafc;
-  --color-bg-lighter: #e2e8f0;
-  --color-bg-section: #f9f9f9;
+  --color-bg-light: #f3f7f9;
+  --color-bg-lighter: #e7eef2;
+  --color-bg-section: #f7fafb;
   --color-hero-gradient-start: #0a5263;
   --color-hero-gradient-end: #0d5c6f;
   --color-whatsapp: #25d366;
   --color-whatsapp-dark: #075e54;
 
-  --radius-card: 16px;
-  --radius-button: 25px;
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "DM Sans", "Segoe UI", sans-serif;
+
+  --radius-card: 4px;
+  --radius-button: 999px;
   --radius-small: 8px;
 
-  --shadow-card: 0 8px 25px rgba(126, 180, 197, 0.2), 0 4px 12px rgba(9, 67, 82, 0.1);
-  --shadow-card-hover: 0 20px 40px rgba(126, 180, 197, 0.3), 0 8px 25px rgba(9, 67, 82, 0.15);
+  --shadow-card: 0 12px 32px rgba(9, 67, 82, 0.08);
+  --shadow-card-hover: 0 18px 40px rgba(9, 67, 82, 0.14);
 
   --transition-default: all 0.3s ease;
-  --transition-card: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --transition-card: transform 0.35s ease, box-shadow 0.35s ease;
+
+  --space-section: clamp(4rem, 8vw, 6.5rem);
+  --content-width: 1120px;
 }

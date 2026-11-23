@@ -3,20 +3,34 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import translationPT from './locales/pt/common.json';
 import translationEN from './locales/en/common.json';
+import pillarsPT from './locales/pt/pillars.json';
+import pillarsEN from './locales/en/pillars.json';
+import { languageFromPathname } from './language';
+
+const languageDetector = new LanguageDetector();
+languageDetector.addDetector({
+  name: 'kcPath',
+  lookup() {
+    return languageFromPathname();
+  },
+});
+
+const initialLanguage = languageFromPathname();
 
 i18n
-  .use(LanguageDetector)
+  .use(languageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      pt: { translation: translationPT },
-      en: { translation: translationEN },
+      pt: { translation: { ...translationPT, ...pillarsPT } },
+      en: { translation: { ...translationEN, ...pillarsEN } },
     },
+    lng: initialLanguage,
     fallbackLng: 'pt',
     supportedLngs: ['pt', 'en'],
     detection: {
-      order: ['path', 'localStorage', 'navigator'],
-      lookupFromPathIndex: 0,
+      order: ['kcPath'],
+      caches: [],
     },
     interpolation: {
       escapeValue: false,

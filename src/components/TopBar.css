@@ -32,6 +32,20 @@
   font-weight: 600;
 }
 
+.topbar-item a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.topbar a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.topbar-item a:hover strong {
+  text-decoration: underline;
+}
+
 .topbar-contacts {
   display: flex;
   align-items: center;
@@ -42,6 +56,22 @@
   width: 1px;
   height: 16px;
   background: #4a7058;
+}
+
+.topbar-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.topbar-social:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
 }
 
 /* Responsive */

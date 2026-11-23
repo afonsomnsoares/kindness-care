@@ -34,6 +34,25 @@
   min-width: 250px;
 }
 
+.cookie-banner-content a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.cookie-banner :focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+html.cookie-open .whatsapp-float {
+  bottom: 7.5rem;
+}
+
+html.cookie-open .main-content {
+  padding-bottom: 6.5rem;
+}
+
 .cookie-banner-actions {
   display: flex;
   gap: 0.75rem;
@@ -62,13 +81,26 @@
 
 .cookie-btn-reject {
   background: transparent;
-  color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.75);
 }
 
 .cookie-btn-reject:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cookie-banner,
+  .cookie-btn {
+    animation: none;
+    transition: none;
+  }
+
+  .cookie-btn-accept:hover,
+  .cookie-btn-reject:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 600px) {

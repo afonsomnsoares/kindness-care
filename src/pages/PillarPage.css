@@ -1,0 +1,67 @@
+.pillar-page-split .page-split-media img {
+  aspect-ratio: 4 / 5;
+}
+
+.pillar-area-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pillar-area-card .text-link {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.pillar-area-features {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.65;
+}
+
+.pillar-area-features li + li {
+  margin-top: 0.3rem;
+}
+
+.pillar-steps {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.pillar-steps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: start;
+  color: var(--color-text);
+  line-height: 1.65;
+}
+
+.pillar-step-num {
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.pillar-closing p:first-child {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  color: var(--color-heading);
+  line-height: 1.3;
+}
+
+.pillar-closing .page-cta {
+  border-top: none;
+  padding-top: 0.5rem;
+}

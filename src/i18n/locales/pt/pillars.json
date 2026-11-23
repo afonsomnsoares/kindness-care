@@ -1,0 +1,246 @@
+{
+  "pillars": {
+    "section": {
+      "title": "Quatro Pilares. Uma só missão",
+      "subtitle": "Uma marca. Quatro dimensões de Cuidado",
+      "explore": "Explorar",
+      "closing": "A Kindness Care cuida. A Kindness Longevity previne. A Kindness Academy capacita e a Kindness Experiences leva o cuidado a novas experiências. Os quatro pilares têm funções distintas, mas todos concretizam a mesma missão: levar mais humanidade à forma como vivemos e cuidamos."
+    },
+    "items": {
+      "care": {
+        "title": "Kindness & Care",
+        "text": "Cuidados especializados no domicílio, com competência, proximidade e humanidade."
+      },
+      "longevity": {
+        "title": "Kindness Longevity",
+        "text": "Envelhecimento saudável e ativo — viver mais, viver melhor, viver com autonomia."
+      },
+      "academy": {
+        "title": "Kindness Academy",
+        "text": "Formação que capacita profissionais, famílias e cuidadores para cuidar melhor."
+      },
+      "experiences": {
+        "title": "Kindness Experiences",
+        "text": "Viajar e desfrutar com tranquilidade, com apoio de saúde quando é preciso."
+      }
+    },
+    "care": {
+      "seoTitle": "Serviços de apoio domiciliário",
+      "seoDescription": "Cuidados personalizados no domicílio em Braga, Porto e Viana do Castelo. Apoio domiciliário, enfermagem, assistência médica e apoio à família.",
+      "hero": {
+        "title": "Kindness Care",
+        "subtitle": "Cuidamos de pessoas. Promovemos autonomia. Valorizamos a vida."
+      },
+      "intro": [
+        "Na Kindness & Care acreditamos que cada pessoa merece cuidados especializados, prestados com competência, proximidade e humanidade.",
+        "Apoiamos pessoas que, em consequência da idade, doença, incapacidade ou de situações temporárias de maior vulnerabilidade, necessitam de ajuda nas atividades do dia a dia ou de acompanhamento especializado na área da saúde.",
+        "Prestamos cuidados personalizados no conforto do domicílio, através de uma equipa de profissionais qualificados, maioritariamente enfermeiros, com formação técnica e humana e em permanente atualização. A nossa intervenção é coordenada por um gestor de caso, que assegura a articulação dos profissionais, a continuidade dos cuidados e a adequação da resposta às necessidades de cada pessoa.",
+        "Mais do que prestar cuidados, procuramos preservar a autonomia, promover a qualidade de vida e apoiar também quem cuida."
+      ],
+      "areasTitle": "As nossas áreas de intervenção incluem:",
+      "areas": [
+        {
+          "title": "Apoio Domiciliário",
+          "description": "Acompanhamento personalizado nas atividades da vida diária, promovendo conforto, segurança, higiene e bem-estar no ambiente familiar.",
+          "features": [
+            "Higiene e cuidados pessoais",
+            "Apoio na alimentação",
+            "Companhia e supervisão",
+            "Apoio nas atividades quotidianas e tarefas domésticas ligeiras"
+          ],
+          "pathKey": "homeCare"
+        },
+        {
+          "title": "Enfermagem e Reabilitação",
+          "description": "Cuidados de enfermagem e acompanhamento especializado, orientados para a recuperação, manutenção da capacidade funcional e promoção da autonomia.",
+          "features": [
+            "Cuidados de enfermagem no domicílio",
+            "Exercícios e programas de reabilitação",
+            "Gestão e apoio na toma de medicação",
+            "Avaliação e acompanhamento contínuo"
+          ],
+          "pathKey": "nursing"
+        },
+        {
+          "title": "Assistência Médica",
+          "description": "Acesso a cuidados médicos personalizados, facilitando o acompanhamento clínico e a articulação com outros profissionais e instituições de saúde.",
+          "features": [
+            "Consultas médicas no domicílio",
+            "Apoio na medicação",
+            "Acompanhamento clínico especializado",
+            "Articulação com hospitais e outros serviços de saúde"
+          ],
+          "pathKey": "medical"
+        },
+        {
+          "title": "Apoio à Família e ao Cuidador",
+          "description": "Reconhecemos que cuidar de alguém é também um desafio para quem assume essa responsabilidade. Acompanhamos familiares e cuidadores, proporcionando orientação, escuta e ferramentas para um cuidado mais informado, equilibrado e sustentável.",
+          "features": [
+            "Orientação e acompanhamento",
+            "Apoio emocional e escuta ativa",
+            "Capacitação de cuidadores familiares",
+            "Promoção do equilíbrio familiar"
+          ],
+          "pathKey": "caregiver"
+        },
+        {
+          "title": "Apoio no Pós-Parto e ao Recém-Nascido",
+          "description": "Acompanhamento especializado à mãe e ao bebé, ajudando a família a viver esta fase com maior confiança, tranquilidade e segurança.",
+          "features": [
+            "Cuidados à mãe e ao recém-nascido",
+            "Apoio na recuperação pós-parto",
+            "Orientação na amamentação",
+            "Apoio nas rotinas e cuidados ao bebé"
+          ],
+          "pathKey": "postpartum"
+        }
+      ],
+      "commitment": {
+        "title": "O nosso compromisso",
+        "intro": "Acreditamos que a qualidade dos cuidados começa muito antes da sua prestação. Começa na avaliação de cada pessoa, na compreensão da sua realidade e na construção de uma resposta verdadeiramente individualizada.",
+        "methodIntro": "Por isso, trabalhamos segundo uma metodologia integrada, que envolve:",
+        "steps": [
+          "Avaliar — conhecer a pessoa, a sua condição clínica, funcional, familiar e social.",
+          "Planear — definir um plano individual de cuidados, ajustado às suas necessidades e objetivos.",
+          "Coordenar — assegurar o acompanhamento através de um gestor de caso.",
+          "Cuidar — prestar cuidados especializados, com qualidade técnica e sensibilidade humana.",
+          "Acompanhar — monitorizar a evolução e adaptar a intervenção sempre que necessário.",
+          "Capacitar — envolver e preparar a família para participar ativamente no processo de cuidado."
+        ]
+      },
+      "closing": [
+        "Conhecimento científico. Competência clínica. Humanização.",
+        "A Kindness & Care é uma spin-off da Universidade do Minho, criada com o propósito de transferir conhecimento científico e técnico para a comunidade, colocando-o ao serviço das pessoas e das famílias.",
+        "A linha telefónica está disponível 24 horas por dia, 7 dias por semana, ao longo de todo o ano, nas regiões de Braga, Porto e Viana do Castelo. As visitas são marcadas consigo.",
+        "Kindness Care. Porque cuidar é muito mais do que prestar assistência. É reconhecer a pessoa, respeitar a sua individualidade e contribuir para que viva com dignidade, conforto e autonomia."
+      ],
+      "imageAlt": "Colaboradora Kindness & Care a prestar cuidados no domicílio",
+      "cta": "Pedir contacto"
+    },
+    "longevity": {
+      "seoTitle": "Envelhecimento ativo e autonomia",
+      "seoDescription": "Programas de longevidade: movimento, nutrição, mente ativa e aprendizagem para viver mais e melhor com autonomia.",
+      "hero": {
+        "title": "Kindness Longevity",
+        "subtitle": "Viver Mais. Viver Melhor. Viver com Autonomia"
+      },
+      "intro": [
+        "Acreditamos que envelhecer deve ser sinónimo de continuar a descobrir, aprender, participar e desfrutar da vida.",
+        "A Kindness Longevity promove um envelhecimento saudável e ativo, através de experiências de aprendizagem, atividade física e estimulação cognitiva que contribuem para preservar a saúde, a autonomia e a qualidade de vida.",
+        "Desenvolvemos programas e atividades orientados para as diferentes dimensões do bem-estar:"
+      ],
+      "areas": [
+        {
+          "title": "Movimento e Vitalidade",
+          "description": "Aulas de atividade física adaptada, orientadas para melhorar a mobilidade, a força, o equilíbrio e a coordenação, ajudando a preservar a capacidade funcional e a independência no dia a dia."
+        },
+        {
+          "title": "Saber Envelhecer",
+          "description": "Sessões de aprendizagem e partilha sobre o processo de envelhecimento, com ferramentas e conhecimentos para viver esta etapa da vida de forma mais consciente, ativa e positiva."
+        },
+        {
+          "title": "Nutrição e Bem-Estar",
+          "description": "Aulas e sessões de educação alimentar, com orientação especializada, promovendo hábitos nutricionais saudáveis e adequados às necessidades de cada fase da vida."
+        },
+        {
+          "title": "Mente Ativa",
+          "description": "Atividades de estimulação cognitiva destinadas a exercitar a memória, a atenção, o raciocínio e outras capacidades mentais, incentivando a aprendizagem contínua."
+        },
+        {
+          "title": "Conferências e Encontros",
+          "description": "Momentos de reflexão, partilha de conhecimento e debate, com especialistas convidados, sobre saúde, longevidade, envelhecimento e qualidade de vida."
+        }
+      ],
+      "closing": [
+        "Na Kindness Longevity, não queremos apenas acrescentar anos de vida. Queremos acrescentar vida aos anos."
+      ],
+      "imageAlt": "Casal em caminhada, imagem de envelhecimento ativo",
+      "cta": "Saber as próximas sessões",
+      "areasTitle": "O que a longevidade inclui",
+      "audience": "Para pessoas e famílias que querem envelhecer com autonomia e ainda não têm um calendário público de sessões. O contacto serve para saber quando há uma próxima conversa."
+    },
+    "academy": {
+      "seoTitle": "Formação em cuidados",
+      "seoDescription": "Formação para profissionais, familiares e cuidadores informais. Conhecimento que capacita e transforma o cuidado.",
+      "hero": {
+        "title": "Kindness Academy",
+        "subtitle": "Conhecimento que capacita. Formação que transforma o cuidado."
+      },
+      "intro": [
+        "Acreditamos que cuidar bem exige conhecimento, preparação e sensibilidade humana.",
+        "A Kindness Academy nasce da vontade de partilhar conhecimento e desenvolver competências na área dos cuidados e da saúde, contribuindo para uma prestação de cuidados mais qualificada, segura e humanizada.",
+        "Promovemos formação dirigida aos colaboradores da Kindness, familiares e cuidadores informais bem como a profissionais, adaptada às necessidades e aos desafios de cada contexto.",
+        "As nossas ações de formação são desenvolvidas e dinamizadas por profissionais habilitados e com experiência nas respetivas áreas, assegurando uma abordagem técnica, prática e orientada para a realidade de quem cuida.",
+        "As nossas áreas de formação incluem:"
+      ],
+      "areas": [
+        {
+          "title": "Formação de Profissionais",
+          "description": "Desenvolvimento e atualização de competências técnicas e humanas dos nossos colaboradores e outros profissionais, promovendo a excelência, a segurança e a qualidade dos cuidados prestados."
+        },
+        {
+          "title": "Capacitação de Familiares e Cuidadores Informais",
+          "description": "Formação prática para familiares e pessoas que assumem o cuidado de alguém próximo, proporcionando conhecimentos e ferramentas que lhes permitam cuidar com maior confiança, segurança e tranquilidade."
+        },
+        {
+          "title": "Workshops e Formação Especializada",
+          "description": "Sessões temáticas e programas de formação sobre saúde, envelhecimento, dependência, mobilidade, prevenção de riscos, cuidados pessoais e bem-estar."
+        },
+        {
+          "title": "Partilha de Conhecimento",
+          "description": "Promoção de iniciativas que aproximam profissionais, famílias e comunidade, valorizando a aprendizagem contínua e a disseminação de boas práticas na área dos cuidados."
+        }
+      ],
+      "closing": [
+        "Na Kindness Academy, acreditamos que quanto mais preparado está quem cuida, melhor é cuidado quem precisa."
+      ],
+      "imageAlt": "Formação em cuidados numa sala de aula",
+      "cta": "Pedir informação sobre formação",
+      "areasTitle": "O que a formação inclui",
+      "audience": "Para profissionais, famílias e cuidadores que querem formação em apoio domiciliário. As datas são confirmadas em conversa, porque ainda não há um calendário público."
+    },
+    "experiences": {
+      "seoTitle": "Apoio em estadias e pousadas",
+      "seoDescription": "Apoio especializado em estadias e viagens. Parceria com Pousadas de Portugal para experiências com segurança e tranquilidade.",
+      "hero": {
+        "title": "Kindness Experiences",
+        "subtitle": "Viajar, desfrutar e viver experiências com mais tranquilidade."
+      },
+      "intro": [
+        "Acreditamos que as limitações de saúde ou mobilidade não devem ser um impedimento para viajar, descansar e desfrutar de novas experiências.",
+        "A Kindness Experiences aproxima os cuidados de saúde e o bem-estar dos setores do turismo e da hotelaria, proporcionando apoio especializado a quem necessita de cuidados adicionais durante as suas estadias e viagens.",
+        "Trabalhamos com unidades hoteleiras e parceiros turísticos para desenvolver soluções de acompanhamento e assistência, adaptadas às necessidades de cada pessoa, permitindo que os hóspedes e as suas famílias desfrutem da experiência com maior segurança, conforto e tranquilidade.",
+        "As nossas soluções incluem:"
+      ],
+      "areas": [
+        {
+          "title": "Apoio e Acompanhamento Personalizado",
+          "description": "Acompanhamento individualizado a hóspedes que necessitem de apoio adicional durante a sua estadia, respeitando as suas necessidades e preferências."
+        },
+        {
+          "title": "Cuidados de Enfermagem",
+          "description": "Prestação de cuidados de enfermagem no local de alojamento, assegurada por profissionais qualificados, sempre que as necessidades do hóspede o justifiquem."
+        },
+        {
+          "title": "Apoio à Mobilidade e Autonomia",
+          "description": "Assistência nas atividades do dia a dia, contribuindo para uma estadia mais confortável, segura e independente."
+        },
+        {
+          "title": "Soluções para Hotelaria e Turismo",
+          "description": "Desenvolvimento de parcerias com hotéis, unidades de turismo e outros operadores, criando respostas especializadas para hóspedes com necessidades específicas de saúde e bem-estar."
+        },
+        {
+          "title": "Parcerias que Criam Valor",
+          "description": "A Kindness & Care estabeleceu uma parceria com as Pousadas de Portugal, aproximando os cuidados especializados do setor hoteleiro e contribuindo para uma experiência turística mais inclusiva, confortável e tranquila.",
+          "pathKey": "pousadas"
+        }
+      ],
+      "closing": [
+        "Na Kindness Experiences, acreditamos que todos devem poder continuar a descobrir o mundo. Cuidamos para que nada os impeça de o fazer."
+      ],
+      "imageAlt": "Estadia com acompanhamento de cuidados",
+      "cta": "Pedir apoio numa Pousada",
+      "areasTitle": "O que a estadia com cuidados inclui"
+    }
+  }
+}

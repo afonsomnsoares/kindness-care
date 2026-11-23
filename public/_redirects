@@ -1,0 +1,9 @@
+# Netlify: known routes are prerendered as folders.
+# Unknown paths should return a real 404 (not a soft SPA 200).
+# Canonical URLs have no trailing slash (same rule as .htaccess).
+/perguntas-frequentes    /    301
+/en/faq    /en    301
+/testumunhos    /testemunhos    301
+/en/testumunhos    /en/testimonials    301
+/*/    /:splat    301!
+/*    /404.html   404

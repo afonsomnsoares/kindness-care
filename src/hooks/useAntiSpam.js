@@ -9,7 +9,7 @@ function useAntiSpam() {
   const isBot = () =>
     honeypot.trim() !== '' || Date.now() - mountedAt.current < MIN_FILL_TIME_MS;
 
-  return { honeypot, setHoneypot, isBot };
+  return { honeypot, setHoneypot, isBot, startedAt: mountedAt.current };
 }
 
 export default useAntiSpam;

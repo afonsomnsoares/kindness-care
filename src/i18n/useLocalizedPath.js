@@ -1,9 +1,10 @@
-import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import routes from './routes';
+import { languageFromPathname } from './language';
 
 export function useLocalizedPath(key) {
-  const { i18n } = useTranslation();
-  const lang = i18n.language?.startsWith('en') ? 'en' : 'pt';
+  const { pathname } = useLocation();
+  const lang = languageFromPathname(pathname);
   return routes[lang][key] || '/';
 }
 
