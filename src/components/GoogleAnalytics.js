@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { CONSENT_ACCEPTED, CONSENT_EVENT, getConsent } from '../lib/consent';
+import { CONSENT_ACCEPTED, CONSENT_EVENT, getConsent } from '../utils/consent';
 
 const GA_MEASUREMENT_ID =
   process.env.REACT_APP_GA_MEASUREMENT_ID || 'G-XVYPEPGDFX';
@@ -27,7 +27,7 @@ function loadGa() {
   document.head.appendChild(script2);
 }
 
-function GAnalytics() {
+function GoogleAnalytics() {
   const location = useLocation();
 
   useEffect(() => {
@@ -59,4 +59,4 @@ function GAnalytics() {
   return null;
 }
 
-export default GAnalytics;
+export default GoogleAnalytics;

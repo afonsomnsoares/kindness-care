@@ -4,6 +4,8 @@
       "title": "Quatro Pilares. Uma só missão",
       "subtitle": "Uma marca. Quatro dimensões de Cuidado",
       "explore": "Explorar",
+      "audienceEyebrow": "Para quem",
+      "audienceTitle": "Este pilar é para si se…",
       "closing": "A Kindness Care cuida. A Kindness Longevity previne. A Kindness Academy capacita e a Kindness Experiences leva o cuidado a novas experiências. Os quatro pilares têm funções distintas, mas todos concretizam a mesma missão: levar mais humanidade à forma como vivemos e cuidamos."
     },
     "items": {
@@ -37,7 +39,6 @@
         "Prestamos cuidados personalizados no conforto do domicílio, através de uma equipa de profissionais qualificados, maioritariamente enfermeiros, com formação técnica e humana e em permanente atualização. A nossa intervenção é coordenada por um gestor de caso, que assegura a articulação dos profissionais, a continuidade dos cuidados e a adequação da resposta às necessidades de cada pessoa.",
         "Mais do que prestar cuidados, procuramos preservar a autonomia, promover a qualidade de vida e apoiar também quem cuida."
       ],
-      "areasTitle": "As nossas áreas de intervenção incluem:",
       "areas": [
         {
           "title": "Apoio Domiciliário",
@@ -115,7 +116,9 @@
         "Kindness Care. Porque cuidar é muito mais do que prestar assistência. É reconhecer a pessoa, respeitar a sua individualidade e contribuir para que viva com dignidade, conforto e autonomia."
       ],
       "imageAlt": "Colaboradora Kindness & Care a prestar cuidados no domicílio",
-      "cta": "Pedir contacto"
+      "cta": "Pedir contacto",
+      "areasTitle": "As nossas áreas de intervenção",
+      "audience": "Para pessoas e famílias que precisam de cuidados no domicílio — por idade, doença, recuperação ou uma fase de maior vulnerabilidade — e querem permanecer em casa com dignidade, segurança e acompanhamento profissional."
     },
     "longevity": {
       "seoTitle": "Envelhecimento ativo e autonomia",
@@ -240,7 +243,8 @@
       ],
       "imageAlt": "Estadia com acompanhamento de cuidados",
       "cta": "Pedir apoio numa Pousada",
-      "areasTitle": "O que a estadia com cuidados inclui"
+      "areasTitle": "O que a estadia com cuidados inclui",
+      "audience": "Para hóspedes e famílias que precisam de apoio de saúde ou acompanhamento durante uma estadia — em especial nas Pousadas de Portugal — e querem viajar com mais segurança e tranquilidade."
     }
   }
 }

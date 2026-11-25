@@ -5,9 +5,16 @@ import { useTranslation } from 'react-i18next';
 import { useLocalizedPath } from '../i18n/useLocalizedPath';
 import { MetaTags } from '../components/MetaTags';
 import PageHero from '../components/PageHero';
+import founderArmandoManuel from '../images/founder-armando-manuel.webp';
+import founderClaudiaOliveira from '../images/founder-claudia-oliveira.webp';
 import './History.css';
 
 const commitmentIcons = [Stethoscope, Heart, Users];
+
+const founderPhotos = {
+  armandoManuel: founderArmandoManuel,
+  claudiaOliveira: founderClaudiaOliveira,
+};
 
 function History() {
   const { t } = useTranslation();
@@ -80,16 +87,29 @@ function History() {
               <h2 className="page-block-title">{t('history.founders.title')}</h2>
               <p>{t('history.founders.intro')}</p>
               <div className="founders-grid">
-                {foundersList.map((person) => (
-                  <article key={`${person.role}-${person.name}`} className="founder-slot">
-                    <div className="founder-photo" aria-hidden="true">
-                      <span>{t('history.founders.photoPlaceholder')}</span>
-                    </div>
-                    <h3>{person.name}</h3>
-                    <p className="founder-role">{person.role}</p>
-                    {person.bio ? <p className="founder-bio">{person.bio}</p> : null}
-                  </article>
-                ))}
+                {foundersList.map((person) => {
+                  const photo = person.photoKey ? founderPhotos[person.photoKey] : null;
+                  return (
+                    <article key={`${person.role}-${person.name}`} className="founder-slot">
+                      <div className={`founder-photo${photo ? ' has-image' : ''}${person.photoKey ? ` founder-photo-${person.photoKey}` : ''}`}>
+                        {photo ? (
+                          <img
+                            src={photo}
+                            alt={person.name}
+                            width="220"
+                            height="220"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <span aria-hidden="true">{t('history.founders.photoPlaceholder')}</span>
+                        )}
+                      </div>
+                      <h3>{person.name}</h3>
+                      <p className="founder-role">{person.role}</p>
+                      {person.bio ? <p className="founder-bio">{person.bio}</p> : null}
+                    </article>
+                  );
+                })}
               </div>
             </div>
           ) : null}

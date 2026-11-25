@@ -6,7 +6,7 @@ import {
   CONSENT_ACCEPTED,
   CONSENT_REJECTED,
   saveConsent,
-} from '../lib/consent';
+} from '../utils/consent';
 
 function CookieConsent() {
   const [visible, setVisible] = useState(false);

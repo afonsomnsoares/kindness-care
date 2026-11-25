@@ -7,7 +7,7 @@ import PageHero from '../components/PageHero';
 import './ServicePage.css';
 import tourismImage from '../images/health-tourism.webp';
 
-function HealthTourismService() {
+function HealthTourism() {
   const { t } = useTranslation();
   const pousadasPath = useLocalizedPath('pousadas');
   const healthTourismPath = useLocalizedPath('healthTourism');
@@ -81,4 +81,4 @@ function HealthTourismService() {
   );
 }
 
-export default HealthTourismService;
+export default HealthTourism;

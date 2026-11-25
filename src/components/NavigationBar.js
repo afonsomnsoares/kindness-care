@@ -5,7 +5,7 @@ import './NavigationBar.css';
 import { FaChevronDown, FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/logo.webp';
 import flagPT from '../images/flag-pt.webp';
-import flagUK from '../images/flag-uk.webp';
+import flagUK from '../images/flag-en.webp';
 import routes from '../i18n/routes';
 import { languageFromPathname } from '../i18n/language';
 import { localizePath } from '../i18n/useLocalizedPath';
@@ -35,14 +35,7 @@ function NavigationBar() {
     },
     { id: 'longevity', label: t('pillars.items.longevity.title'), path: r.longevity },
     { id: 'academy', label: t('pillars.items.academy.title'), path: r.academy },
-    {
-      id: 'experiences',
-      label: t('pillars.items.experiences.title'),
-      dropdown: [
-        { id: 'pillar-experiences', label: t('nav.overview'), path: r.experiences },
-        { id: 'pousadas-portugal', label: t('nav.pousadasPortugal'), path: r.pousadas },
-      ],
-    },
+    { id: 'experiences', label: t('pillars.items.experiences.title'), path: r.experiences },
     {
       id: 'brand',
       label: t('nav.brand'),
@@ -214,6 +207,7 @@ function NavigationBar() {
                   {item.dropdown ? (
                     <>
                       <button
+                        type="button"
                         onClick={() => handleDropdownToggle(item.id)}
                         className="nav-link"
                         aria-haspopup="true"
@@ -286,6 +280,7 @@ function NavigationBar() {
                 {item.dropdown ? (
                   <>
                     <button
+                      type="button"
                       onClick={() => handleDropdownToggle(item.id)}
                       className={`mobile-nav-link ${isItemActive(item) ? 'active' : ''}`}
                       aria-haspopup="true"

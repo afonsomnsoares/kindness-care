@@ -94,7 +94,7 @@ src/hooks/          useContactForm, useAntiSpam
 src/i18n/           PT/EN copy and routes
 src/images/         Photos and partner logos
 api/send-email.js   Vercel serverless form handler
-lib/sendFormEmail.js Shared validation + Resend send
+api/lib/sendFormEmail.js Shared validation + Resend send
 scripts/            prerender-seo, convert-images
 public/             Static assets copied into build
 ```

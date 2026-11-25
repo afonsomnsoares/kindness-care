@@ -1,6 +1,6 @@
 import React from 'react';
 import PillarPage from './PillarPage';
-import pillarImage from '../images/pillar-care.webp';
+import pillarImage from '../images/page-care.webp';
 
 function KindnessCare() {
   return (

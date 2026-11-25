@@ -32,6 +32,18 @@
     "overview": "Visão geral",
     "servicesCare": "Serviços de cuidado"
   },
+  "servicePage": {
+    "forWhomEyebrow": "Para quem",
+    "forWhomTitle": "Este serviço é para si se…",
+    "subNavLabel": "Serviços Kindness Care",
+    "cta": {
+      "title": "Quer falar sobre este serviço?",
+      "text": "A linha telefónica está disponível 24 horas. Diz-nos o que precisa e ajudamos a encontrar a resposta certa para si e para a sua família.",
+      "button": "Pedir contacto"
+    },
+    "backToCare": "Ver Kindness Care",
+    "relatedTitle": "Outros serviços Kindness Care"
+  },
   "footer": {
     "description": "Cuidados em casa, longevidade, formação e acompanhamento em estadias. Spin-off da Universidade do Minho, com linha telefónica 24 horas em Braga, Porto e Viana do Castelo.",
     "quickLinks": "Links Rápidos",
@@ -267,14 +279,16 @@
       "photoPlaceholder": "Fotografia em breve",
       "people": [
         {
-          "name": "Nome do fundador",
+          "name": "Armando Manuel",
           "role": "Co-fundador",
-          "bio": ""
+          "bio": "",
+          "photoKey": "armandoManuel"
         },
         {
-          "name": "Nome da fundadora",
+          "name": "Cláudia Oliveira",
           "role": "Co-fundadora",
-          "bio": ""
+          "bio": "",
+          "photoKey": "claudiaOliveira"
         }
       ]
     },
@@ -399,6 +413,13 @@
       "description": "Prestamos serviço de apoio domiciliário a pessoas que necessitem de ajuda para a companhia e estimulação cognitiva, acompanhamento a consultas, entre outros. O nosso objetivo é contribuir para que a pessoa continue a ter condições para permanecer em sua casa, junto da sua família, com dignidade.",
       "alt": "Apoio Domiciliário - Cuidados em casa"
     },
+    "includesTitle": "O que inclui",
+    "includes": [
+      "Higiene e cuidados pessoais",
+      "Apoio na alimentação",
+      "Companhia e supervisão",
+      "Apoio nas atividades quotidianas e tarefas domésticas ligeiras"
+    ],
     "forWhom": "Para pessoas idosas ou com perda de autonomia que querem permanecer em casa com segurança, higiene, companhia e apoio nas rotinas diárias.",
     "process": {
       "title": "O percurso deste serviço",
@@ -421,6 +442,13 @@
       "description": "Uma equipa de profissionais competentes assegura cuidados de enfermagem e de enfermagem de reabilitação (reabilitação motora, respiratória entre outras) no domicílio.",
       "alt": "Enfermagem e Reabilitação domiciliária"
     },
+    "includesTitle": "O que inclui",
+    "includes": [
+      "Cuidados de enfermagem no domicílio",
+      "Exercícios e programas de reabilitação",
+      "Gestão e apoio na toma de medicação",
+      "Avaliação e acompanhamento contínuo"
+    ],
     "forWhom": "Para quem precisa de cuidados de enfermagem, reabilitação motora ou respiratória, gestão de medicação ou recuperação funcional sem sair de casa.",
     "process": {
       "title": "O percurso deste serviço",
@@ -443,6 +471,13 @@
       "description": "Um médico de medicina interna assegura uma consulta médica no conforto do seu lar, evitando recurso a deslocação às Instituições de Saúde.",
       "alt": "Assistência Médica domiciliária"
     },
+    "includesTitle": "O que inclui",
+    "includes": [
+      "Consultas médicas no domicílio",
+      "Apoio na medicação",
+      "Acompanhamento clínico especializado",
+      "Articulação com hospitais e outros serviços de saúde"
+    ],
     "forWhom": "Para pessoas com mobilidade reduzida, doenças crónicas ou necessidade de consulta médica domiciliária sem deslocação a uma instituição de saúde.",
     "process": {
       "title": "O percurso deste serviço",
@@ -465,6 +500,13 @@
       "description": "Capacitamos o cuidador para que se sinta preparado para cuidar do seu familiar e com suporte para as suas dúvidas e necessidades.",
       "alt": "Apoio ao cuidador e família"
     },
+    "includesTitle": "O que inclui",
+    "includes": [
+      "Orientação e acompanhamento",
+      "Apoio emocional e escuta ativa",
+      "Capacitação de cuidadores familiares",
+      "Promoção do equilíbrio familiar"
+    ],
     "forWhom": "Para familiares e cuidadores que precisam de orientação, escuta e capacitação para cuidar de forma sustentável e com mais confiança.",
     "process": {
       "title": "O percurso deste serviço",
@@ -487,6 +529,13 @@
       "description": "Apoio à mãe e recém-nascido no período pós-parto, contribuindo para o equilíbrio familiar numa altura de transição desafiante para toda a família.",
       "alt": "Apoio no pós-parto para mãe e recém-nascido"
     },
+    "includesTitle": "O que inclui",
+    "includes": [
+      "Cuidados à mãe e ao recém-nascido",
+      "Apoio na recuperação pós-parto",
+      "Orientação na amamentação",
+      "Apoio nas rotinas e cuidados ao bebé"
+    ],
     "forWhom": "Para mães e famílias no período pós-parto que precisam de apoio na recuperação, amamentação e rotinas do bebé, em casa.",
     "process": {
       "title": "O percurso deste serviço",

@@ -32,6 +32,18 @@
     "overview": "Overview",
     "servicesCare": "Care services"
   },
+  "servicePage": {
+    "forWhomEyebrow": "Who it is for",
+    "forWhomTitle": "This service is for you if…",
+    "subNavLabel": "Kindness Care services",
+    "cta": {
+      "title": "Want to talk about this service?",
+      "text": "Our phone line is available 24 hours. Tell us what you need and we will help find the right response for you and your family.",
+      "button": "Get in touch"
+    },
+    "backToCare": "View Kindness Care",
+    "relatedTitle": "Other Kindness Care services"
+  },
   "footer": {
     "description": "Home care, longevity, training and support during stays. A University of Minho spin-off, with a 24-hour phone line in Braga, Porto and Viana do Castelo.",
     "quickLinks": "Quick Links",
@@ -267,14 +279,16 @@
       "photoPlaceholder": "Photo coming soon",
       "people": [
         {
-          "name": "Founder’s name",
+          "name": "Armando Manuel",
           "role": "Co-founder",
-          "bio": ""
+          "bio": "",
+          "photoKey": "armandoManuel"
         },
         {
-          "name": "Founder’s name",
+          "name": "Cláudia Oliveira",
           "role": "Co-founder",
-          "bio": ""
+          "bio": "",
+          "photoKey": "claudiaOliveira"
         }
       ]
     },
@@ -399,6 +413,13 @@
       "description": "We provide home support services to individuals who require assistance with companionship and cognitive stimulation, accompaniment to appointments, among other needs. Our goal is to help individuals maintain the conditions to remain in their own homes, with their families, with dignity.",
       "alt": "Home Care - Care at home"
     },
+    "includesTitle": "What’s included",
+    "includes": [
+      "Personal hygiene and care",
+      "Meal support",
+      "Companionship and supervision",
+      "Help with daily activities and light household tasks"
+    ],
     "forWhom": "For older adults or people with reduced autonomy who want to stay at home safely, with hygiene support, companionship and help with daily routines.",
     "process": {
       "title": "How this service works",
@@ -421,6 +442,13 @@
       "description": "A team of skilled professionals provides nursing and rehabilitation nursing care (including motor and respiratory rehabilitation, among others) at home.",
       "alt": "Home Nursing and Rehabilitation"
     },
+    "includesTitle": "What’s included",
+    "includes": [
+      "Nursing care at home",
+      "Exercise and rehabilitation programmes",
+      "Medication management and support",
+      "Ongoing assessment and follow-up"
+    ],
     "forWhom": "For anyone who needs nursing care, motor or respiratory rehabilitation, medication management or functional recovery without leaving home.",
     "process": {
       "title": "How this service works",
@@ -443,6 +471,13 @@
       "description": "An internal medicine physician provides medical consultations in the comfort of your home, eliminating the need for travel to healthcare facilities.",
       "alt": "Home Medical Assistance"
     },
+    "includesTitle": "What’s included",
+    "includes": [
+      "Medical consultations at home",
+      "Medication support",
+      "Specialised clinical follow-up",
+      "Coordination with hospitals and other health services"
+    ],
     "forWhom": "For people with reduced mobility, chronic conditions, or anyone who needs a home medical consultation without travelling to a healthcare facility.",
     "process": {
       "title": "How this service works",
@@ -465,6 +500,13 @@
       "description": "We empower caregivers to feel prepared in caring for their family members and provide support for their questions and needs.",
       "alt": "Caregiver and family support"
     },
+    "includesTitle": "What’s included",
+    "includes": [
+      "Guidance and follow-up",
+      "Emotional support and active listening",
+      "Training for family caregivers",
+      "Support for family balance"
+    ],
     "forWhom": "For family members and caregivers who need guidance, listening and practical training to care sustainably and with more confidence.",
     "process": {
       "title": "How this service works",
@@ -487,6 +529,13 @@
       "description": "Support for the mother and newborn during the postpartum period, helping to maintain family balance during a challenging time of transition for the entire family.",
       "alt": "Postpartum support for mother and newborn"
     },
+    "includesTitle": "What’s included",
+    "includes": [
+      "Care for mother and newborn",
+      "Support with postpartum recovery",
+      "Breastfeeding guidance",
+      "Help with baby routines and care"
+    ],
     "forWhom": "For mothers and families in the postpartum period who need support with recovery, breastfeeding and baby routines at home.",
     "process": {
       "title": "How this service works",

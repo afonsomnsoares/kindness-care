@@ -4,6 +4,8 @@
       "title": "Four Pillars. One mission",
       "subtitle": "One brand. Four dimensions of Care",
       "explore": "Explore",
+      "audienceEyebrow": "Who it is for",
+      "audienceTitle": "This pillar is for you if…",
       "closing": "Kindness Care cares. Kindness Longevity prevents. Kindness Academy trains, and Kindness Experiences takes care into new experiences. The four pillars have distinct roles, and they all fulfil the same mission: bringing more humanity to the way we live and care."
     },
     "items": {
@@ -37,7 +39,6 @@
         "We provide personalised care in the comfort of home, through a team of qualified professionals, mostly nurses, with technical and human training and continuous updating. Our intervention is coordinated by a case manager, who ensures the articulation of professionals, continuity of care and a response suited to each person's needs.",
         "More than delivering care, we seek to preserve autonomy, promote quality of life and also support those who care."
       ],
-      "areasTitle": "Our areas of intervention include:",
       "areas": [
         {
           "title": "Home Care",
@@ -115,7 +116,9 @@
         "Kindness Care. Because caring is much more than providing assistance. It is recognising the person, respecting their individuality and helping them live with dignity, comfort and autonomy."
       ],
       "imageAlt": "Kindness & Care professional providing care at home",
-      "cta": "Get in touch"
+      "cta": "Get in touch",
+      "areasTitle": "Our areas of intervention",
+      "audience": "For people and families who need care at home — because of age, illness, recovery or a period of greater vulnerability — and want to stay at home with dignity, safety and professional support."
     },
     "longevity": {
       "seoTitle": "Active ageing and autonomy",
@@ -240,7 +243,8 @@
       ],
       "imageAlt": "A stay with care support",
       "cta": "Request support at a Pousada",
-      "areasTitle": "What a stay with care includes"
+      "areasTitle": "What a stay with care includes",
+      "audience": "For guests and families who need health support or accompaniment during a stay — especially at Pousadas de Portugal — and want to travel with more safety and peace of mind."
     }
   }
 }

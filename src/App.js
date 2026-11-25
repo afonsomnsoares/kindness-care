@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
 import BackToTop from './components/BackToTop';
 import { ToastProvider } from './components/Toast';
-import GAnalytics from './components/GAnalytics';
+import GoogleAnalytics from './components/GoogleAnalytics';
 import SEO from './components/SEO';
 import Home from './pages/Home';
 const History = lazy(() => import('./pages/History'));
@@ -23,7 +23,7 @@ const MedicalAssistance = lazy(() => import('./pages/MedicalAssistance'));
 const CaregiverSupport = lazy(() => import('./pages/CaregiverSupport'));
 const PostpartumSupport = lazy(() => import('./pages/PostpartumSupport'));
 const Contacts = lazy(() => import('./pages/Contacts'));
-const HealthTourismService = lazy(() => import('./pages/HealthTourismService'));
+const HealthTourism = lazy(() => import('./pages/HealthTourism'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Testimonials = lazy(() => import('./pages/Testimonials'));
@@ -138,7 +138,7 @@ function App() {
       <Router>
         <ToastProvider>
           <div className="App">
-            <GAnalytics />
+            <GoogleAnalytics />
             <SEO />
             <SpaRecovery />
             <TrailingSlash />
@@ -179,8 +179,8 @@ function App() {
                 <Route path="/en/postpartum-support" element={<PostpartumSupport />} />
                 <Route path="/contactos" element={<Contacts />} />
                 <Route path="/en/contacts" element={<Contacts />} />
-                <Route path="/turismo-saude-bem-estar" element={<HealthTourismService />} />
-                <Route path="/en/health-tourism" element={<HealthTourismService />} />
+                <Route path="/turismo-saude-bem-estar" element={<HealthTourism />} />
+                <Route path="/en/health-tourism" element={<HealthTourism />} />
                 <Route path="/privacidade" element={<Privacy />} />
                 <Route path="/termos" element={<Terms />} />
                 <Route path="/en/privacy" element={<Privacy />} />

@@ -2,7 +2,7 @@
  * Vercel serverless function: POST /api/send-email
  * Keeps RESEND_API_KEY on the server — never expose it in the React app.
  */
-const { handleFormSubmission } = require('../lib/sendFormEmail');
+const { handleFormSubmission } = require('./lib/sendFormEmail');
 
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', process.env.CORS_ORIGIN || 'https://www.kindnesscare.pt');

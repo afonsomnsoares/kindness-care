@@ -63,6 +63,26 @@
   font-size: 0.88rem;
   text-align: center;
   padding: 0.75rem;
+  overflow: hidden;
+}
+
+.founder-photo.has-image {
+  border: none;
+  padding: 0;
+  background: var(--color-bg-lighter);
+}
+
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Armando’s portrait is tighter; shift down so neck/shoulders match Cláudia’s framing */
+.founder-photo-armandoManuel img {
+  object-position: center 12%;
 }
 
 @media (max-width: 900px) {
