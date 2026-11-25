@@ -12,8 +12,6 @@ function ServicePage({ i18nKey, image, contactSubject, pathKey }) {
   const contactsPath = useLocalizedPath('contacts');
   const carePath = useLocalizedPath('care');
 
-  const includes = t(`${i18nKey}.includes`, { returnObjects: true });
-  const includeList = Array.isArray(includes) ? includes : [];
   const steps = t(`${i18nKey}.process.steps`, { returnObjects: true });
   const stepList = Array.isArray(steps) ? steps : [];
 
@@ -53,18 +51,6 @@ function ServicePage({ i18nKey, image, contactSubject, pathKey }) {
         <div className="page-shell page-split">
           <div className="page-prose">
             <p className="service-lead">{t(`${i18nKey}.content.description`)}</p>
-            {includeList.length > 0 && (
-              <>
-                <h2 className="page-block-title service-includes-title">
-                  {t(`${i18nKey}.includesTitle`)}
-                </h2>
-                <ul className="service-includes">
-                  {includeList.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </>
-            )}
           </div>
           <div className="page-split-media">
             <img loading="lazy" src={image} alt={t(`${i18nKey}.content.alt`)} />

@@ -2,6 +2,12 @@
   aspect-ratio: 4 / 5;
 }
 
+.pillar-page-split-wide .page-split-media img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+
 .pillar-area-card {
   display: flex;
   flex-direction: column;

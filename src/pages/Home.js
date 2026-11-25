@@ -13,10 +13,10 @@ import parceiro2 from '../images/partner-universidade-do-minho.webp';
 import parceiro3 from '../images/partner-snqtb-saude.webp';
 import parceiro4 from '../images/partner-iasfa.webp';
 import parceiro5 from '../images/partner-acfab.webp';
-import pillarCare from '../images/pillar-care.webp';
-import pillarLongevity from '../images/pillar-longevity.webp';
-import pillarAcademy from '../images/pillar-academy.webp';
-import pillarExperiences from '../images/pillar-experiences.webp';
+import pillarCare from '../images/page-care.webp';
+import pillarLongevity from '../images/page-longevity.webp';
+import pillarAcademy from '../images/page-academy.webp';
+import pillarExperiences from '../images/page-experiences.webp';
 
 function Home() {
   const { t, i18n } = useTranslation();
@@ -76,7 +76,6 @@ function Home() {
     { id: 5, nome: t('home.partners.names.4'), imagem: parceiro5 },
   ];
 
-  const trustItems = t('home.trust.items', { returnObjects: true });
   const aboutParagraphs = t('home.about.paragraphs', { returnObjects: true });
 
   const homeSchema = {
@@ -111,16 +110,6 @@ function Home() {
               {t('home.hero.meet')}
             </Link>
           </div>
-        </div>
-      </section>
-
-      <section className="trust-section" aria-label={t('home.trust.label')}>
-        <div className="home-shell">
-          <ul className="trust-list">
-            {Array.isArray(trustItems) && trustItems.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
         </div>
       </section>
 

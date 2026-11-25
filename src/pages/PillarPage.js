@@ -39,7 +39,11 @@ function PillarPage({ pillarKey, image, imageAlt }) {
       />
 
       <section className="page-section">
-        <div className="page-shell page-split pillar-page-split">
+        <div
+          className={`page-shell page-split pillar-page-split${
+            pillarKey === 'experiences' || pillarKey === 'academy' ? ' pillar-page-split-wide' : ''
+          }`}
+        >
           <div className="page-prose">
             {introList.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>

@@ -12,7 +12,7 @@
     "valueProposal": "Value Proposal",
     "missionObjectivesValues": "Mission | Objectives | Values",
     "services": "SERVICES",
-    "homeCare": "Home Care",
+    "homeCare": "Home Support",
     "nursingRehabilitation": "Nursing and Rehabilitation",
     "medicalAssistance": "Medical Assistance",
     "caregiverSupport": "Caregiver and Family Support",
@@ -45,14 +45,14 @@
     "relatedTitle": "Other Kindness Care services"
   },
   "footer": {
-    "description": "Home care, longevity, training and support during stays. A University of Minho spin-off, with a 24-hour phone line in Braga, Porto and Viana do Castelo.",
+    "description": "Home support, longevity, training and support during stays. A University of Minho spin-off, with a 24-hour phone line in Braga, Porto and Viana do Castelo.",
     "quickLinks": "Quick Links",
     "home": "Home",
-    "history": "Our History",
+    "history": "Our Story",
     "valueProposal": "Value Proposal",
     "mission": "Mission | Objectives | Values",
     "services": "Services",
-    "homeCare": "Home Care",
+    "homeCare": "Home Support",
     "nursing": "Nursing and Rehabilitation",
     "medical": "Medical Assistance",
     "caregiver": "Caregiver Support",
@@ -64,7 +64,7 @@
     "phone2": "+351 933 929 761",
     "email": "geral@kindnesscare.pt",
     "location": "Braga | Porto | Viana do Castelo",
-    "hours": "Phone line 24h • visits by appointment",
+    "hours": "Available 24h, every day of the year",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms and Conditions",
@@ -81,19 +81,10 @@
       "whatsapp": "WhatsApp",
       "meet": "Discover Kindness"
     },
-    "trust": {
-      "label": "Reasons to trust us",
-      "items": [
-        "University of Minho spin-off",
-        "Available 24h every day of the year",
-        "Partners of Pousadas de Portugal",
-        "Braga · Porto · Viana do Castelo"
-      ]
-    },
     "about": {
       "title": "About Us",
       "alt1": "Healthcare team",
-      "alt2": "Home care",
+      "alt2": "Home support",
       "paragraphs": [
         "Kindness & Care provides home support services to people experiencing loss of functionality and consequent dependence for self-care who require specialized professional assistance. The team includes healthcare professionals involved in ongoing training and working together under the leadership of a case manager. They focus on empowering family caregivers so they can carry out their role in a healthy, sustainable, and autonomous way.",
         "We are a Spin-off of the University of Minho (UM), and our goal is to transfer the knowledge generated within the university, putting that knowledge at the service of the community.",
@@ -125,7 +116,7 @@
             "Nursing care",
             "Rehabilitation exercises",
             "Medication management",
-            "Ongoing assessment"
+            "Assessment and individual care plan"
           ],
           "button": "Learn more"
         },
@@ -136,13 +127,13 @@
             "Home medical consultations",
             "Medication support",
             "Specialized follow-up",
-            "Coordination with hospitals"
+            "Coordination with health services"
           ],
           "button": "Learn more"
         },
         {
           "title": "Caregiver and Family Support",
-          "description": "Guidance, listening, and emotional support for families and caregivers.",
+          "description": "Guidance, listening, and emotional support for families and caregivers, promoting balance and quality in daily care.",
           "features": [
             "Guidance and emotional support",
             "Active listening and follow-up",
@@ -217,8 +208,8 @@
         "button": "Send a message"
       }
     },
-    "seoTitle": "Home care in Braga, Porto and Viana",
-    "seoDescription": "Home care, longevity, training and support during stays in Braga, Porto and Viana do Castelo. 24-hour phone line.",
+    "seoTitle": "Home support in Braga, Porto and Viana",
+    "seoDescription": "Home support, longevity, training and support during stays in Braga, Porto and Viana do Castelo. 24-hour phone line.",
     "whatsappTooltip": "Chat with us on WhatsApp",
     "whatsappMessage": "Hello! I would like more information about your services."
   },
@@ -297,8 +288,8 @@
       "text": "If you’re looking for a Home Support Service that combines technical expertise with genuine humanity, come talk to us. At Kindness & Care, every story matters — including yours.",
       "button": "Contact Us"
     },
-    "seoTitle": "Our History | University of Minho Spin-off",
-    "seoDescription": "Discover the story of Kindness & Care: home care with technical excellence and genuine humanity in Braga, Porto and Viana do Castelo."
+    "seoTitle": "Our Story | University of Minho Spin-off",
+    "seoDescription": "Discover the story of Kindness & Care: home support with technical excellence and genuine humanity in Braga, Porto and Viana do Castelo."
   },
   "valueProposal": {
     "hero": {
@@ -307,8 +298,8 @@
     },
     "cards": [
       {
-        "title": "Customized Service",
-        "description": "We bet on an in-depth knowledge of the customer to anticipate and present tailored solutions."
+        "title": "Personalized Service",
+        "description": "We invest in a deep understanding of each client to anticipate and offer tailored solutions."
       },
       {
         "title": "Qualified Professionals",
@@ -320,10 +311,10 @@
       },
       {
         "title": "Continuous Training",
-        "description": "We invest in the technical and personal development of our employees."
+        "description": "We invest in the technical and human development of our employees."
       },
       {
-        "title": "Open Service",
+        "title": "Accessible Support",
         "description": "We maintain accessible communication channels with clients and families."
       },
       {
@@ -337,7 +328,7 @@
       "button": "Contact us"
     },
     "seoTitle": "Value Proposal | What Sets Us Apart",
-    "seoDescription": "Explore the Kindness & Care value proposal: specialized professionals, personalized plans and continuous home care follow-up."
+    "seoDescription": "Explore the Kindness & Care value proposal: specialized professionals, personalized plans and continuous home support follow-up."
   },
   "missionValues": {
     "hero": {
@@ -347,7 +338,7 @@
     "mission": {
       "title": "Our Mission",
       "cards": [
-        "To provide excellent home care for the elderly or individuals with impaired self-care abilities, ensuring well-being, autonomy, and quality of life.",
+        "To provide excellent home support for the elderly or individuals with impaired self-care abilities, ensuring well-being, autonomy, and quality of life.",
         "To deliver an innovative service with technical and human quality, benefiting from the knowledge transfer generated in academia."
       ]
     },
@@ -357,7 +348,7 @@
         {
           "number": "01",
           "title": "National Benchmark",
-          "description": "To become the national benchmark in home care provision, distinguished by our quality, innovation, and commitment."
+          "description": "To become the national benchmark in home support provision, distinguished by our quality, innovation, and commitment."
         },
         {
           "number": "02",
@@ -397,7 +388,7 @@
     },
     "cta": {
       "title": "Do we share the same mission?",
-      "text": "If you are looking for home care with technical excellence and humanity, the phone line is available 24 hours.",
+      "text": "If you are looking for home support with technical excellence and humanity, the phone line is available 24 hours.",
       "button": "Talk to us"
     },
     "seoTitle": "Mission, Objectives and Values",
@@ -405,21 +396,14 @@
   },
   "homeCare": {
     "hero": {
-      "title": "Home Care",
+      "title": "Home Support",
       "subtitle": "Personalized care in the comfort of your home"
     },
     "content": {
-      "title": "Home Care",
+      "title": "Home Support",
       "description": "We provide home support services to individuals who require assistance with companionship and cognitive stimulation, accompaniment to appointments, among other needs. Our goal is to help individuals maintain the conditions to remain in their own homes, with their families, with dignity.",
-      "alt": "Home Care - Care at home"
+      "alt": "Home Support - Care at home"
     },
-    "includesTitle": "What’s included",
-    "includes": [
-      "Personal hygiene and care",
-      "Meal support",
-      "Companionship and supervision",
-      "Help with daily activities and light household tasks"
-    ],
     "forWhom": "For older adults or people with reduced autonomy who want to stay at home safely, with hygiene support, companionship and help with daily routines.",
     "process": {
       "title": "How this service works",
@@ -429,7 +413,7 @@
         "Ongoing follow-up with the family and care adjustments"
       ]
     },
-    "seoTitle": "Home Care in Braga, Porto and Viana",
+    "seoTitle": "Home Support in Braga, Porto and Viana",
     "seoDescription": "Professional home support: companionship, hygiene, cognitive stimulation and accompaniment to appointments. Phone line available 24 hours."
   },
   "nursingRehabilitation": {
@@ -442,13 +426,6 @@
       "description": "A team of skilled professionals provides nursing and rehabilitation nursing care (including motor and respiratory rehabilitation, among others) at home.",
       "alt": "Home Nursing and Rehabilitation"
     },
-    "includesTitle": "What’s included",
-    "includes": [
-      "Nursing care at home",
-      "Exercise and rehabilitation programmes",
-      "Medication management and support",
-      "Ongoing assessment and follow-up"
-    ],
     "forWhom": "For anyone who needs nursing care, motor or respiratory rehabilitation, medication management or functional recovery without leaving home.",
     "process": {
       "title": "How this service works",
@@ -471,14 +448,7 @@
       "description": "An internal medicine physician provides medical consultations in the comfort of your home, eliminating the need for travel to healthcare facilities.",
       "alt": "Home Medical Assistance"
     },
-    "includesTitle": "What’s included",
-    "includes": [
-      "Medical consultations at home",
-      "Medication support",
-      "Specialised clinical follow-up",
-      "Coordination with hospitals and other health services"
-    ],
-    "forWhom": "For people with reduced mobility, chronic conditions, or anyone who needs a home medical consultation without travelling to a healthcare facility.",
+    "forWhom": "For people with reduced mobility, chronic conditions, or anyone who needs a home medical consultation without traveling to a healthcare facility.",
     "process": {
       "title": "How this service works",
       "steps": [
@@ -500,13 +470,6 @@
       "description": "We empower caregivers to feel prepared in caring for their family members and provide support for their questions and needs.",
       "alt": "Caregiver and family support"
     },
-    "includesTitle": "What’s included",
-    "includes": [
-      "Guidance and follow-up",
-      "Emotional support and active listening",
-      "Training for family caregivers",
-      "Support for family balance"
-    ],
     "forWhom": "For family members and caregivers who need guidance, listening and practical training to care sustainably and with more confidence.",
     "process": {
       "title": "How this service works",
@@ -529,13 +492,6 @@
       "description": "Support for the mother and newborn during the postpartum period, helping to maintain family balance during a challenging time of transition for the entire family.",
       "alt": "Postpartum support for mother and newborn"
     },
-    "includesTitle": "What’s included",
-    "includes": [
-      "Care for mother and newborn",
-      "Support with postpartum recovery",
-      "Breastfeeding guidance",
-      "Help with baby routines and care"
-    ],
     "forWhom": "For mothers and families in the postpartum period who need support with recovery, breastfeeding and baby routines at home.",
     "process": {
       "title": "How this service works",
@@ -551,7 +507,7 @@
   "healthTourismService": {
     "hero": {
       "title": "Health and Wellness Tourism",
-      "subtitle": "Care for guests at Pousadas de Portugal"
+      "subtitle": "Specialized healthcare in unique settings across Portugal"
     },
     "content": {
       "title": "Health and Wellness Tourism",
@@ -619,7 +575,7 @@
       "subjectLabel": "Subject",
       "subjectPlaceholder": "Select a subject",
       "subjects": {
-        "homeCare": "Home care",
+        "homeCare": "Home support",
         "nursing": "Nursing and rehabilitation",
         "medical": "Medical assistance",
         "caregiver": "Caregiver support",
@@ -736,7 +692,7 @@
           "We use your data for the following purposes:"
         ],
         "list": [
-          "Provision of home care and healthcare services;",
+          "Provision of home support and healthcare services;",
           "Management of information requests and quotes;",
           "Communication regarding appointments, service changes, and relevant information;",
           "Compliance with legal and tax obligations;",
@@ -831,7 +787,7 @@
       {
         "heading": "1. Scope and Acceptance",
         "paragraphs": [
-          "These Terms and Conditions govern the use of the Kindness & Care website (hereinafter \"site\") and the contracting of home care and healthcare services provided by the company. Use of the site implies full and unreserved acceptance of these Terms and Conditions."
+          "These Terms and Conditions govern the use of the Kindness & Care website (hereinafter \"site\") and the contracting of home support and healthcare services provided by the company. Use of the site implies full and unreserved acceptance of these Terms and Conditions."
         ]
       },
       {
@@ -849,7 +805,7 @@
           "Kindness & Care provides the following services:"
         ],
         "list": [
-          "Home Care;",
+          "Home Support;",
           "Nursing and Rehabilitation;",
           "Medical Assistance;",
           "Caregiver and Family Support;",
@@ -907,7 +863,7 @@
       }
     ],
     "seoTitle": "Terms and Conditions",
-    "seoDescription": "Read the terms and conditions for using the Kindness & Care website and home care services."
+    "seoDescription": "Read the terms and conditions for using the Kindness & Care website and home support services."
   },
   "notFound": {
     "heading": "Page Not Found",
